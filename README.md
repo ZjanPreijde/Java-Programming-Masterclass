@@ -240,6 +240,8 @@ So, use `double`s :-)
 
 - `char`, 16-bit, default `'\u0000'`, 1 character or Unicode code character
 
+- value assigned with single quotes!
+
   - ```java
     char myChar1 = 'a';
     char myChar2 = '\u00A9'; // (c)
@@ -509,6 +511,106 @@ public class Main {
     }
 }
 ```
+
+
+
+### Section 5, Control Flow Statements
+
+CFS's dealt with  here :
+
+```java
+switch ( <value> ) { case <exp>: <code> break; default: <code> } //  (break;)
+for    ( <exp> )   { <code> }      //  (break; - continue;)
+while  ( <exp> )   { <code> }      //  (break; - continue;)
+do     { <code> }  while ( <exp> ) //  (break; - continue;)
+```
+
+##### Switch Statement (Lecture 40/41)
+
+Can replace `if () {} else if() {} else if() {} else {}` statement, if same value is compared to specific single values in each expression.
+
+```java
+switch (<checkValue) {
+    case <value1>:
+        // code for checkValue == value1
+        break;
+    case <value2>:case <value3>:
+        //code for checkValue == value2/value3
+        break;
+    case <value4>:
+    case <value5>:
+        //code for checkValue == value4/value5
+        break;
+    default:
+        // code if none of above conditions is met
+        break; // Not really necessary, but recommended to do it anyway
+}
+```
+
+##### For Loop (Lecture 42/43/44)
+
+Enables executing a code block (0-N) times.
+
+```java
+for ( <init> ; boolean <loop-while-expression> ; <increment-by> ) { /* code */ }
+// Repeat 10 times
+for ( int i = 0; i < 10; i++ ) { /* code */ }
+// Increment by 2, repeat 5 times, int = 0, 2, 4, 6, 8
+for ( int i = 0; i < 10; i+=2 ) { /* code */ }
+for ( int i = 0; i < 10; i++ ) {
+    if (i == 3) { continue; } // jump to end loop, code below not executed
+    // code, not executed if i == 3
+    if (i == 7) { break; } // jump to end loop and exit loop
+    // code, not executed if i == 3 or i == 7
+}
+```
+
+The `<init>` will be incremented with `<increment-by>` each time the loop reaches the end of the code block. Then the loop returns to the top and validates the `<loop-while-expression`. When it evaluates to `false`, the loop is exited.
+
+- `continue;` jumps to the end of the loop, continues loop if `<loop-while-expression>` is still met after incrementing.
+- `break;` exits the loop immediately.
+
+Look out for Endless Loops.
+
+There is als `forEach`, will be dealt with later.
+
+##### While - Do While Loop (Lecture 45/46/47)
+
+In stead of looping a maximum defined number of loops, you might want to loop until a condition is met.
+
+```java
+// First checks, then executes
+while (<loop-while-expression>) { /* code */ }
+// First executes (at least once!) then checks
+do { /*code */ } while (<loop-while-expression); // !! semi-colon !!
+// Apparently often used :
+while (true) { if (<loop-end-condition>) { break; } /* code */ }
+```
+
+No initialization or incrementation as `for() {}`-loop has, if needed must be done by code.
+
+Look out for Endless Loops.
+
+- `continue;` jumps to the end of the loop, continues loop if `<loop-while-expression>` is still met.
+- `break;` exits the loop immediately.
+
+`do { /* code */ } while (<loop-while-condition>);` **executes at least once**, then checks loop condition!
+
+##### Parsing Values from a String (Lecture 48)
+
+Data type classes have methods to convert one type into another. Class names start with a capital.
+
+Converting a String into some other data type.
+
+- e.g. from user input from console or user interface.
+
+Convert into primitive data type
+
+- `int number = Integer.parseInt("2019");`  -> number == 2019
+  - invalid content of argument will throw exception `NumberFormatException:`
+- `double number = Double.parseDouble("2018.125");` -> number == 2018.125
+
+Pfff, some very difficult exercises, but did them (S05-07-Exercises).
 
 
 
