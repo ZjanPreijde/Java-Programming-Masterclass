@@ -610,16 +610,11 @@ Convert into primitive data type
   - invalid content of argument will throw exception `NumberFormatException:`
 - `double number = Double.parseDouble("2018.125");` -> number == 2018.125
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> fb4f4099184f49b48db99b85281477cefcf84152
-Pfff, some very difficult exercises, but did them (S05-07-Exercises).
+Some very difficult exercises, but did them (S05-07-Exercises).
 
 
 
-<<<<<<< HEAD
 ##### :-( Computer broke down
 
 While upgrading Ubuntu to 18.04 LTS I botched it mid-install. I should not do this in the middle of the night. Took me days to try to fix it. All data salvaged, clean new install over the crashed one, data restored. Lets move on :-)
@@ -698,8 +693,3 @@ public class Main {
     private static void calcMinMax() { // code using Scanner here ... }
 }
 ```
-
-
-
-=======
->>>>>>> fb4f4099184f49b48db99b85281477cefcf84152
