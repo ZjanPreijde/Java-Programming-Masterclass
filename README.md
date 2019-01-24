@@ -42,8 +42,8 @@ $ cd /Downloads/Jdk11
 $ tar -xvf jdk-11.0.1_linux-x64_bin.tar.gz
 $ sudo mkdir -p /usr/lib/jvm/jdk-11
 $ sudo mv jdk-11.0.1/* /usr/lib/jvm/jdk-11
-$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-11/bin/java"
-$ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-11/bin/javac"
+$ sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-11/bin/java" 1010
+$ sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-11/bin/javac" 1010
 ```
 
 I already had Java8 installed, so had to do some `update-alternatives`-magic to activate Java11.
@@ -239,6 +239,8 @@ So, use `double`s :-)
 ##### Primitive Data Types - The Char and Boolean (Lecture 19)
 
 - `char`, 16-bit, default `'\u0000'`, 1 character or Unicode code character
+
+- value assigned with single quotes!
 
   - ```java
     char myChar1 = 'a';
@@ -507,6 +509,189 @@ public class Main {
     public static void main(Strings[] args) {
 		// write your code here, or not, whatever
     }
+}
+```
+
+
+
+### Section 5, Control Flow Statements
+
+CFS's dealt with  here :
+
+```java
+switch ( <value> ) { case <exp>: <code> break; default: <code> } //  (break;)
+for    ( <exp> )   { <code> }      //  (break; - continue;)
+while  ( <exp> )   { <code> }      //  (break; - continue;)
+do     { <code> }  while ( <exp> ) //  (break; - continue;)
+```
+
+##### Switch Statement (Lecture 40/41)
+
+Can replace `if () {} else if() {} else if() {} else {}` statement, if same value is compared to specific single values in each expression.
+
+```java
+switch (<checkValue) {
+    case <value1>:
+        // code for checkValue == value1
+        break;
+    case <value2>:case <value3>:
+        //code for checkValue == value2/value3
+        break;
+    case <value4>:
+    case <value5>:
+        //code for checkValue == value4/value5
+        break;
+    default:
+        // code if none of above conditions is met
+        break; // Not really necessary, but recommended to do it anyway
+}
+```
+
+##### For Loop (Lecture 42/43/44)
+
+Enables executing a code block (0-N) times.
+
+```java
+for ( <init> ; boolean <loop-while-expression> ; <increment-by> ) { /* code */ }
+// Repeat 10 times
+for ( int i = 0; i < 10; i++ ) { /* code */ }
+// Increment by 2, repeat 5 times, int = 0, 2, 4, 6, 8
+for ( int i = 0; i < 10; i+=2 ) { /* code */ }
+for ( int i = 0; i < 10; i++ ) {
+    if (i == 3) { continue; } // jump to end loop, code below not executed
+    // code, not executed if i == 3
+    if (i == 7) { break; } // jump to end loop and exit loop
+    // code, not executed if i == 3 or i == 7
+}
+```
+
+The `<init>` will be incremented with `<increment-by>` each time the loop reaches the end of the code block. Then the loop returns to the top and validates the `<loop-while-expression`. When it evaluates to `false`, the loop is exited.
+
+- `continue;` jumps to the end of the loop, continues loop if `<loop-while-expression>` is still met after incrementing.
+- `break;` exits the loop immediately.
+
+Look out for Endless Loops.
+
+There is als `forEach`, will be dealt with later.
+
+##### While - Do While Loop (Lecture 45/46/47)
+
+In stead of looping a maximum defined number of loops, you might want to loop until a condition is met.
+
+```java
+// First checks, then executes
+while (<loop-while-expression>) { /* code */ }
+// First executes (at least once!) then checks
+do { /*code */ } while (<loop-while-expression); // !! semi-colon !!
+// Apparently often used :
+while (true) { if (<loop-end-condition>) { break; } /* code */ }
+```
+
+No initialization or incrementation as `for() {}`-loop has, if needed must be done by code.
+
+Look out for Endless Loops.
+
+- `continue;` jumps to the end of the loop, continues loop if `<loop-while-expression>` is still met.
+- `break;` exits the loop immediately.
+
+`do { /* code */ } while (<loop-while-condition>);` **executes at least once**, then checks loop condition!
+
+##### Parsing Values from a String (Lecture 48)
+
+Data type classes have methods to convert one type into another. Class names start with a capital.
+
+Converting a String into some other data type.
+
+- e.g. from user input from console or user interface.
+
+Convert into primitive data type
+
+- `int number = Integer.parseInt("2019");`  -> number == 2019
+  - invalid content of argument will throw exception `NumberFormatException:`
+- `double number = Double.parseDouble("2018.125");` -> number == 2018.125
+
+
+
+Pfff, some very difficult exercises, but did them (S05-07-Exercises).
+
+
+
+##### :-( Computer broke down
+
+While upgrading Ubuntu to 18.04 LTS I botched it mid-install. I should not do this in the middle of the night. Took me days to try to fix it. All data salvaged, clean new install over the crashed one, data restored. Lets move on :-)
+
+
+
+##### Aside :  running from the shell prompt
+
+Not (yet) in course :
+
+IntelliJ stores a compiled class in `out/production/<ProjectName>`. To run a class from the shell prompt :
+
+- if no package was used : `java <ClassName>` 
+  - `$ java Helloworld`
+- if a package was used : `java package.path.<ClassName>`
+  - `$ java com.masterclass.Main` 
+
+
+
+
+##### Reading User Input (Lecture 49/50/51/52)
+
+Class called *Scanner*, simple text scanner, that can parse primitive types and strings.
+
+It uses methods like `.parseInt()` internally. Method `.next()` returns result.
+
+We've been outputting to screen with `System.out`, now will pass  `System.in` to the class Scanner, and let and Scanner parse the input.
+
+```java
+// Create an instance of class Scanner
+Scanner scanner = new Scanner(System.in);
+System.out.println(" Enter your name : ");
+String name = scanner.nextLine();
+scanner.close();
+System.out.println("Your name is " + name);
+```
+
+`.nextLine()` returns the input as a string
+
+It also has methods to handle other data types :
+
+```java
+// In stead of 
+System.out.println(" Enter your year of birth : ");
+int yearOfBirth = Integer.parseInt(scanner.nextLine());
+// you can 
+System.out.println(" Enter your month of birth : ");
+int monthOfBirth = scanner.nextInt();
+scanner.nextLine();
+```
+
+! After using `.nextInt()` to retrieve an integer, there is still a *next line character* in the buffer, from pressing `<Enter>` confirming the input. We must clear the buffer by just calling `scanner.nextLine()`.
+
+Entering text when being asked for input through `.nextInt()` will result in an error.
+
+```java
+boolean hasNextInt = scanner.hasNextInt();
+if (hasNextInt) { int number = scanner.nextInt(); scanner.nextLine(); }
+```
+
+```java
+int min = Integer.MIN_VALUE;
+int max = Integer.MAX_VALUE;
+```
+
+Problem, when I invoke a method using an object of the Scanner class twice, the second time it will not scan any input. Why is this? Used the teachers code in stead of mine, and same thing happened.
+
+```java
+package com.masterclass;
+import java.util.Scanner;
+public class Main {
+    public static void main (String[] args) {
+        calcMinMax(); // runs fine
+        calcMinMax(); // runs but does not await input.
+    }
+    private static void calcMinMax() { // code using Scanner here ... }
 }
 ```
 
