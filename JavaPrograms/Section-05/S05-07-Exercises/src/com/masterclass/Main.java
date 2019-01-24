@@ -21,7 +21,10 @@ public class Main {
          FlourPacker();
          // Calculate the largest prime of a given number
          LargestPrime();
+<<<<<<< HEAD
          // Print a square with border lines and diagonals
+=======
+>>>>>>> fb4f4099184f49b48db99b85281477cefcf84152
          DiagonalStar();
     }
 
@@ -86,6 +89,11 @@ public class Main {
         System.out.println(" 20 -> ");
         printSquareStar(20);
 
+<<<<<<< HEAD
+=======
+        printMegaBytesAndKiloBytes(10);
+
+>>>>>>> fb4f4099184f49b48db99b85281477cefcf84152
     }
     public static void printSquareStar(int number) {
         if ( number < 5 ) {
@@ -96,6 +104,7 @@ public class Main {
         for (int row = 1; row <= number; row ++) {
             fullRow = "";
             for (int col = 1; col <= number; col++) {
+<<<<<<< HEAD
 //                Boolean printStar = row == 1 || col == 1 || col == row
 //                        || number == row || number == col || number == (col + row - 1 );
 //                fullRow += printStar ? "*" : " ";
@@ -103,6 +112,14 @@ public class Main {
                 fullRow += ( row == 1 || col == 1 || col == row
                         || number == row || number == col || number == (col + row - 1 ) )
                         ? "*" : " ";
+=======
+                Boolean printStar = false
+                        || row == 1   ||  row             == number
+                        || col == 1   ||  col             == number
+                        || col == row || (col + row - 1 ) == number;
+
+                fullRow += printStar ? "*" : " ";
+>>>>>>> fb4f4099184f49b48db99b85281477cefcf84152
             }
             System.out.println(fullRow);
         }
