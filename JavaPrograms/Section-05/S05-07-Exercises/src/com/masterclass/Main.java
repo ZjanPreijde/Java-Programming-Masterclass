@@ -21,12 +21,11 @@ public class Main {
          FlourPacker();
          // Calculate the largest prime of a given number
          LargestPrime();
-         // Print a square with border lines and diagonals
          DiagonalStar();
     }
 
     private static void FlourPacker() {
-        printHeader("1. canPack() :");
+        printHeader("1. TDD canPack() :");
         System.out.println("1, 0, 4   -> false : " + canPack(1,0,4));
         System.out.println("1, 0, 5   ->  true : " + canPack(1,0,5));
         System.out.println("0, 5, 4   ->  true : " + canPack(0,5,4));
@@ -52,7 +51,7 @@ public class Main {
     }
 
     private static void LargestPrime() {
-        printHeader("2. getLargestPrime() :");
+        printHeader("2. TDD getLargestPrime() :");
         System.out.println("21  ->  7 : " + getLargestPrime(21));
         System.out.println("271 -> 31 : " + getLargestPrime(217));
         System.out.println("0   -> -1 : " + getLargestPrime(0));
@@ -74,7 +73,7 @@ public class Main {
     }
 
     private static void DiagonalStar() {
-        printHeader("3. printSquareStar() :");
+        printHeader("3. TDD printSquareStar() :");
         System.out.println(" 4 -> Invalid Value");
         printSquareStar(4);
         System.out.println(" 5 -> ");
@@ -96,9 +95,9 @@ public class Main {
         for (int row = 1; row <= number; row ++) {
             fullRow = "";
             for (int col = 1; col <= number; col++) {
-                fullRow += ( row == 1 || col == 1 || col == row
-                        || number == row || number == col || number == (col + row - 1 ) )
-                        ? "*" : " ";
+                fullRow += (row == 1 || col == 1 || col == row ||
+                        number == row || number == col || number == ( col + row - 1 ) )
+                    ? "*" : " ";
             }
             System.out.println(fullRow);
         }

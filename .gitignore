@@ -1,9 +1,2 @@
-# Ignore all
-*
-# Except
-!.gitignore
-!README.md
-!*.java
-!*/
 OriginalSources
 

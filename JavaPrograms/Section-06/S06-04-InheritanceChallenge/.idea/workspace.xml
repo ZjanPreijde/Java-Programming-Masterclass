@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f83169a4-3334-47e0-9784-2402d9f96f81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/S02-HelloWorld.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/out/production/S02-HelloWorld/Hello.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/src/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-02/S02-HelloWorld/src/.secret" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/S03-ByteShortInt.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/out/production/untitled104/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-ByteShortInt/untitled104.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/S03-CharAndBoolean.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-CharAndBoolean/out/production/S03-CharAndBoolean/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/S03-FloatAndDouble.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-FloatAndDouble/out/production/S03-FloatAndDouble/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/S03-HelloWorld.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/out/production/S03-HelloWorld/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/src/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-HelloWorld/src/.secret" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/S03-Operators.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Operators/out/production/S03-Operators/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/S03-Strings.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-03/S03-Strings/out/production/S03-Strings/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/S04-01-KeywordsAndExpressions.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-01-KeywordsAndExpressions/out/production/S04-01-KeywordsAndExpressions/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/S04-02-StatementsWhitespaceAndIndenting.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-02-StatementsWhitespaceAndIndenting/out/production/S04-02-StatementsWhitespaceAndIndenting/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/S04-03-IfKeywordAndCodeBlocks.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-03-IfKeywordAndCodeBlocks/out/production/S04-03-IfKeywordAndCodeBlocks/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/S04-04-Methods.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-04-Methods/out/production/S04-04-Methods/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/S04-05-Exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/out/production/S04-05-Exercises/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/S04-06-MethodOverloading.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-06-MethodOverloading/out/production/S04-06-MethodOverloading/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/S04-07-Exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-04/S04-07-Exercises/out/production/S04-07-Exercises/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/S05-01-Switch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-01-Switch/out/production/S05-01-Switch/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/S05-02-Exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-02-Exercises/out/production/S05-02-Exercises/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/S05-03-ForLoop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-03-ForLoop/out/production/S05-03-ForLoop/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/S05-04-WhileDoWhile.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-04-WhileDoWhile/out/production/S05-04-WhileDoWhile/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/S05-05-Exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-05-Exercises/out/production/S05-05-Exercises/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/S05-06-ParsingValuesFromString.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-06-ParsingValuesFromString/out/production/S05-06-ParsingValuesFromString/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/S05-07-Exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/S05-07-Exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/out/production/S05-07-Exercises/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/S05-08-ReadingUserInput.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/src/com/masterclass/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/S05-08-ReadingUserInput.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/out/production/S05-08-ReadingUserInput/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/S06-01-Classes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/out/production/S06-01-Classes/com/masterclass/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/out/production/S06-01-Classes/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/src/com/masterclass/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-01-Classes/src/com/masterclass/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/S06-02-Constructors.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/out/production/S06-02-Constructors/com/masterclass/BankAccount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/out/production/S06-02-Constructors/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/out/production/S06-02-Constructors/com/masterclass/VipCustomer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/src/com/masterclass/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/src/com/masterclass/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-02-Constructors/src/com/masterclass/VipCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/S06-03-Inheritance.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/out/production/S06-03-Inheritance/com/masterclass/Animal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/out/production/S06-03-Inheritance/com/masterclass/Dog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/out/production/S06-03-Inheritance/com/masterclass/Fish.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/out/production/S06-03-Inheritance/com/masterclass/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/src/com/masterclass/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/src/com/masterclass/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/src/com/masterclass/Fish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../S06-03-Inheritance/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/F1Car.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/Car.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="607">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/Vehicle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/masterclass/F1Car.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/Car.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/Vehicle.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="97" />
+    <option name="y" value="47" />
+    <option name="width" value="1813" />
+    <option name="height" value="789" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="S06-04-InheritanceChallenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S06-04-InheritanceChallenge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="S06-04-InheritanceChallenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S06-04-InheritanceChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="S06-04-InheritanceChallenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S06-04-InheritanceChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="masterclass" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548430134533" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.masterclass.Main" />
+      <module name="S06-04-InheritanceChallenge" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f83169a4-3334-47e0-9784-2402d9f96f81" name="Default Changelist" comment="" />
+      <created>1548420206663</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548420206663</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Learn" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32937366" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/F1Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
