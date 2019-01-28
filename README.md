@@ -3,22 +3,18 @@
 Udemy Course :
 https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 
-
-
 *14-01-2019 - ...*
-
-24 sections
 
 | Section    | Description                                                | Finished   |
 | ---------- | ---------------------------------------------------------- | ---------- |
-| Section 1  | Course Introduction                                        | 14-01-2019 |
-| Section 2  | Setup and First Steps                                      | 14-01-2019 |
-| Section 3  | Variables, Datatypes and Operators                         | 16-01-2019 |
-| Section 4  | Expressions, Statements, Code blocks, Methods and more     | 17-01-2019 |
-| Section 5  | Control Flow Statements                                    | 24-01-2019 |
-| Section 6  | OOP Part 1 - Classes, Constructors and Inheritance         | 25-01-2019 |
-| Section 7  | OOP Part 2 - Composition, Encapsulation, and Polymorphism  |            |
-| Section 8  | Arrays, Java inbuilt Lists, Autoboxing and Unboxing        |            |
+| [Section 1](#section-01) | Course Introduction                                        | 14-01-2019 |
+| [Section 2](#section-02)  | Setup and First Steps                                      | 14-01-2019 |
+| [Section 3](#section-03)  | Variables, Datatypes and Operators                         | 16-01-2019 |
+| [Section 4](#section-04)  | Expressions, Statements, Code blocks, Methods and more     | 17-01-2019 |
+| [Section 5](#section-05)  | Control Flow Statements                                    | 24-01-2019 |
+| [Section 6](#section-06)  | OOP Part 1 - Classes, Constructors and Inheritance         | 25-01-2019 |
+| [Section 7](#section-07) | OOP Part 2 - Composition, Encapsulation, and Polymorphism  | 28-01-2019 |
+| [Section 8](#section-08) | Arrays, Java inbuilt Lists, Autoboxing and Unboxing        |            |
 | Section 9  | Inner and Abstract Classes & Interfaces                    |            |
 | Section 10 | Java Generics                                              |            |
 | Section 11 | Naming Conventions and Packages. static and final keywords |            |
@@ -35,13 +31,14 @@ https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 | Section 22 | Migrating Java Projects to Java 9                          |            |
 | Section 23 | Archived Videos                                            |            |
 | Section 24 | Bonus Material                                             |            |
-|            |                                                            |            |
 
-
+<a name="section-01"></a>
 
 ### Section 1, Course Introduction
 
 *14-01-2019, finished 14-01-2019*
+
+<a name="section-02"></a>
 
 ### Section 2, Setup and First Steps
 
@@ -129,9 +126,9 @@ Created first HelloWorld Java class, it runs in IntelliJ and in terminal in ./ou
 
 ```java
 public class Hello {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+  }
 }
 ```
 
@@ -141,7 +138,7 @@ public class Hello {
 
 `main(String[] args)` means that any given arguments are strings,. When you run `$ java myProgram multiply 2 3`, `args[0] == "multiply"`, `args[1] == "2"` and `args[2] == "3"`.
 
-
+<a name="section-03"></a>
 
 ### Section 3, Variables, Datatypes and Operators
 
@@ -334,7 +331,7 @@ Summary of operators : https://docs.oracle.com/javase/tutorial/java/nutsandbolts
 
 Java Operator Precedence Table : http://cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html
 
-
+<a name="section-04"></a>
 
 ### Section 4, Java Tutorial: Expressions, Statements, Code blocks, Methods and more.
 
@@ -379,8 +376,7 @@ With one-line statements after an if statement, you can just finish with a colon
 
 ```java
 int  myInt = 500;
-if (myInt > 450)
-	System.out.println("Jeez, your Int is high!");
+if (myInt > 450) System.out.println("Jeez, your Int is high!");
 ```
 
 When multiple statements follow the if statement, you make a code block with { }.
@@ -388,11 +384,9 @@ When multiple statements follow the if statement, you make a code block with { }
 ```java
 int myInt = 500;
 if (myInt > 450) {
-    System.out.println("Jeez, your Int is high!"
-       + " I will give you a bonus");
-    int myIntWas = myInt;
-    myInt += 100;
-    System.out.println("Your Int was " myIntWas + ". It is now " + myInt);   
+  System.out.println("Jeez, your Int is high!" + " I will give you a bonus");
+  int myIntNow = myInt + 100;
+  System.out.println("Your Int was " myInt + ". It is now " + myIntNow);   
 }
 ```
 
@@ -431,7 +425,7 @@ Methods can receive arguments
 
 ```java
 public static void myMethod1(boolean myBoolean, int myInt, String myString) {
-    // Code goes here
+  // Code goes here
 }
 ```
 
@@ -528,12 +522,14 @@ Constants in class, use `final`. More on this later.
 
 ```java
 public class Main {
-    private static final String INVALID_VALUE_MESSAGE = "Invalid Value";
-    public static void main(Strings[] args) {
-		/* write your code here, or not, whatever */   } }
+  private static final String INVALID_VALUE_MESSAGE = "Invalid Value";
+  public static void main(Strings[] args) {
+  /* write your code here, or not, whatever */   } }
 ```
 
 
+
+<a name="section-05"></a>
 
 ### Section 5, Control Flow Statements
 
@@ -542,7 +538,7 @@ public class Main {
 CFS's dealt with  here :
 
 ```java
-switch ( <value> ) { case <exp>: <code> break; default: <code> } //  (break;)
+switch ( <value> ) { case <value>: <code> break; default: <code> } //  (break;)
 for    ( <exp> )   { <code> }      //  (break; - continue;)
 while  ( <exp> )   { <code> }      //  (break; - continue;)
 do     { <code> }  while ( <exp> ) //  (break; - continue;)
@@ -553,20 +549,20 @@ do     { <code> }  while ( <exp> ) //  (break; - continue;)
 Can replace `if () {} else if() {} else if() {} else {}` statement, if same value is compared to specific single values in each expression.
 
 ```java
-switch (<checkValue) {
-    case <value1>:
-        // code for checkValue == value1
-        break;
-    case <value2>:case <value3>:
-        //code for checkValue == value2/value3
-        break;
-    case <value4>:
-    case <value5>:
-        //code for checkValue == value4/value5
-        break;
-    default:
-        // code if none of above conditions is met
-        break; // Not really necessary, but recommended to do it anyway
+switch (<checkValue>) {
+  case <value1>:
+    // code for checkValue == value1
+    break;
+  case <value2>:case <value3>:
+    //code for checkValue == value2/value3
+    break;
+  case <value4>:
+  case <value5>:
+    //code for checkValue == value4/value5
+    break;
+  default:
+    // code if none of above conditions is met
+    break; // Not really necessary, but recommended to do it anyway
 }
 ```
 
@@ -581,10 +577,10 @@ for ( int i = 0; i < 10; i++ ) { /* code */ }
 // Increment by 2, repeat 5 times, int = 0, 2, 4, 6, 8
 for ( int i = 0; i < 10; i+=2 ) { /* code */ }
 for ( int i = 0; i < 10; i++ ) {
-    if (i == 3) continue; // jump to end loop, code below not executed
-    /* code, not executed if i == 3 */
-    if (i == 7) break;    // jump to end loop and exit loop
-    /* code, not executed if i == 3 or i == 7 */  }
+  if (i == 3) continue; // jump to end loop, code below not executed
+  /* code, not executed if i == 3 */
+  if (i == 7) break;    // jump to end loop and exit loop
+  /* code, not executed if i == 3 or i == 7 */  }
 ```
 
 The `<init>` will be incremented with `<increment-by>` each time the loop reaches the end of the code block. Then the loop returns to the top and validates the `<loop-while-expression`. When it evaluates to `false`, the loop is exited.
@@ -708,21 +704,19 @@ Scanner can only be instantiated once!!
 package com.masterclass;
 import java.util.Scanner;
 public class Main {
-    public static void main (String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        calcMinMax(scanner); /* runs fine */
-        calcMinMax(scanner); /* runs fine as well */
-        scanner.close();
-    }
-    private static void calcMinMax(Scanner scanner) {
-        /* code ... */ } }
+  public static void main (String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    calcMinMax(scanner); /* runs fine */
+    calcMinMax(scanner); /* runs fine as well */
+    scanner.close();  }
+  private static void calcMinMax(Scanner scanner) { /* code ... */  }  }
 ```
 
-
+<a name="section-06"></a>
 
 ### Section 6, OOP Part 1 - Classes, Constructors and Inheritance
 
-*24-01-2019, finished .25-01-2019*
+*24-01-2019, finished 25-01-2019*
 
 #### Classes (Lecture 54/55)
 
@@ -738,14 +732,14 @@ In IntelliJ in project explorer, click on *src*, then right click on *package.na
 // Car.java
 package com.masterclass;
 public class Car {
-    // State, encapsulated, not accessible
-    private String brand, model; // defaults null, null
-    private int doors, wheels;   // defaults 0, 0
-    // State, accessible
-    public  String description;  // default null
+  // State, encapsulated, not accessible
+  private String brand, model; // defaults null, null
+  private int doors, wheels;   // defaults 0, 0
+  // State, accessible
+  public  String description;  // default null
 
-    public void setModel(String model) { this.model = model; } /* setter */
-    public String getModel()           { return this.model; }  /* getter */  }
+  public void setModel(String model) { this.model = model; } /* setter */
+  public String getModel()           { return this.model; }  /* getter */  }
 ```
 
 `public` is an *access modifier*, what access do we allow others to this class.
@@ -768,12 +762,12 @@ Now the *Car* class is available.
 // Main.java
 package com.masterclass;
 public class Main {
-    public static void main(String[] args) {
-        Car porsche = new Car();
-        porsche.setModel("Carrera");               /* needs a 'setter'    */
-        String myModel = porsche.getModel();       /* needs a 'getter'    */
-        porsche.description = " This a nice car";  /* directly accessible */
-        String myDescription = porsche.description /* directly accessible */ } }
+  public static void main(String[] args) {
+    Car porsche = new Car();
+    porsche.setModel("Carrera");               /* needs a 'setter'    */
+    String myModel = porsche.getModel();       /* needs a 'getter'    */
+    porsche.description = " This a nice car";  /* directly accessible */
+    String myDescription = porsche.description /* directly accessible */ } }
 ```
 
 #### Constructors (Lecture 56/57)
@@ -800,12 +794,12 @@ Calling another constructor **must** be the first statement in the constructor c
 	private String brand, model; // defaults null, null
     private int doors, wheels;   // defaults 0, 0
 	public Car() { /* Empty constructor called*/ 
-    	this(4, 4); }
+    this(4, 4); }
 	public Car(int doors, int wheels) {
-        this("Brand", "Model", doors, wheels); }
-    public Car(String brand, String model, int doors, int wheels) {
-        this.brand  = brand; this.model  = model;
-        this.doors  = doors; this.wheels = wheels; } // ...
+    this("Brand", "Model", doors, wheels); }
+  public Car(String brand, String model, int doors, int wheels) {
+    this.brand  = brand; this.model  = model;
+    this.doors  = doors; this.wheels = wheels; } // ...
 ```
 
 In the constructors the setter methods `setValue(value);` can be used. There is discussion in the community about what should be used. There are scenario's where setter methods do not work. By setting the value directly using `this.value = value;`, that will not be a problem.
@@ -825,33 +819,32 @@ If you want to execute a method in the superclass, you use `super.methodName()`.
 
 ```java
 public class Person { 
-    private String name; private int age; private String occupation;
-    public Person(String name, int age, String occupation) {
-        this.name = name; this.age = age; this.occupation = occupation; }
-    public void printData() {
-        System.out.println(
-            occupation + " " + name + " is " + age + " years old."); }
+  private String name; private int age; private String occupation;
+  public Person(String name, int age, String occupation) {
+    this.name = name; this.age = age; this.occupation = occupation; }
+  public void printData() {
+    System.out.println(occupation + " " + name + " is " + age + " years old."); }
 }
 public class Student extends Person {
-    private String studies;
-    public Student(String name, int age, String studies) {
-        super(name, age, "Student");   /* sets name, age, occupation */
-        this.studies = studies;	} 
-    public void printData() {
-        super.printData();             /* prints occupation, name, age */
-        System.out.println(name + " studies " + studies) }
+  private String studies;
+  public Student(String name, int age, String studies) {
+    super(name, age, "Student");   /* sets name, age, occupation */
+    this.studies = studies;	} 
+  public void printData() {
+    super.printData();             /* prints occupation, name, age */
+    System.out.println(name + " studies " + studies) }
 }
 public class Teacher extends Person { 
-    private String teaches; 
-    public Teacher(String name, int age, String teaches) {
-        super(name, age, "Teacher");   /* sets name, age, occupation */
-        this.teaches = teaches;	} 
-    public void printData() {
-        super.printData();             /* prints occupation, name, age */
-        System.out.println(name + " teaches " + teaches) }
-    public void printDataReverse() {
-        System.out.println(name + " teaches " + teaches) 
-        super.printData();             /* prints name, age, occupation */  }
+  private String teaches; 
+  public Teacher(String name, int age, String teaches) {
+    super(name, age, "Teacher");   /* sets name, age, occupation */
+    this.teaches = teaches;	} 
+  public void printData() {
+    super.printData();             /* prints occupation, name, age */
+    System.out.println(name + " teaches " + teaches) }
+  public void printDataReverse() {
+    System.out.println(name + " teaches " + teaches) 
+    super.printData();             /* prints name, age, occupation */  }
 }
 ```
 
@@ -904,21 +897,22 @@ An *abstract class* is still a *super class*, so its *constructors* run when som
 
 ```java
 class  ClassName {
-    private int a, b;
-    public ClassName()             { this(0); }
-    public ClassName(int a)        { this(a, 0): }
-    public ClassName(int a, int b) { this.a = a; this.b = b; } }
+  private int a, b;
+  public ClassName()             { this(0); }
+  public ClassName(int a)        { this(a, 0): }
+  public ClassName(int a, int b) { this.a = a; this.b = b; } }
 ```
 
 ```java
 class Shape { 
-    private int x, y; 
-    public Shape(int x, int y) { this.x = x; this.y = y; } }
+  private int x, y; 
+  public Shape(int x, int y) { this.x = x; this.y = y; } }
 class Rectangle {
-    private int width, height;
-    public Rectangle(int width, int height) { this(width, height, 0, 0); }
-    public Rectangle(int width, int height, int x, int y) {
-        super(x, y); this.width = width; this.height = height; } }
+  private int width, height;
+  public Rectangle(int width, int height) { this(width, height, 0, 0); }
+  public Rectangle(int width, int height, int x, int y) {
+    super(x, y);
+    this.width = width; this.height = height; } }
 ```
 
 #### Method Overloading vs Overriding Recap (Lecture 61)
@@ -959,15 +953,13 @@ Method overriding
 Example of *subclass thereof*, covariant return type :
 
 ```java
-class Burger ( /* ... */ })
-class HealthyBurger ( /* ... */ })
+class Burger {} /* ... */ }
+class HealthyBurger {} /* ... */ }
 class BurgerFactory {
-    public Burger createBurger() {
-        return new Burger();  }  }
+  public Burger createBurger() { return new Burger();  }  }
 class HealthyBurgerFactory {
-    @Override
-    public HealthyBurger createBurger() {
-        return new HealthyBurger();  }  }
+  @Override
+  public HealthyBurger createBurger() { return new HealthyBurger();  }  }
 ```
 
 #### Static vs Instance methods (Lecture 63)
@@ -986,10 +978,10 @@ Whenever there is a method that does not use *instance fields*, that method shou
 ```java
 class Calculator { public static int sum(int a, int b) { return a + b; } }
 public class Main {
-    public static void main(String[] args) {
-        printResult("4 + 5", Calculator.sum(4,5)); /* short for Main.printResult */ }
-    public static void printResult(String arguments, int result) {
-        System.out.println(arguments + " = " + result) } }
+  public static void main(String[] args) {
+    printResult("4 + 5", Calculator.sum(4,5)); /* short for Main.printResult */ }
+  public static void printResult(String arguments, int result) {
+    System.out.println(arguments + " = " + result) } }
 ```
 
 `static` methods do not need an *instance* of it's class to be called.
@@ -1018,14 +1010,13 @@ Static variables
 
 ```java
 class Person {
-    private static String name;
-    public Person(String name) { Person.name = name; }
-    public String getName()    { return name; }
-}
+  private static String name;  /* static */
+  public Person(String name) { Person.name = name; }
+  public String getName()    { return name; }  }
 public class Main {
-    public static void main {
-        Person frank = new Person("Frank"); /* frank.getName() => "Frank" */
-        Person bob   = new Person("Bob");   /* frank.getName() => "Bob"   */ } }
+  public static void main {
+    Person frank = new Person("Frank"); /* frank.getName() => "Frank" */
+    Person bob   = new Person("Bob");   /* frank.getName() => "Bob"   */ } }
 ```
 
 Instance variables (fields)
@@ -1035,13 +1026,170 @@ Instance variables (fields)
 
 ```java
 class Person {
-    private String name;
-    public Person(String name) { this.name = name; }
-    public String getName()    { return name; }
-}
+  private String name;  /* non-static */
+  public Person(String name) { this.name = name; }
+  public String getName()    { return name; }  }
 public class Main {
-    public static void main {
-        Person frank = new Person("Frank"); /* frank.getName() => "Frank" */
-        Person bob   = new Person("Bob");   /* frank.getName() => "Frank" */ } }
+  public static void main {
+    Person frank = new Person("Frank"); /* frank.getName() => "Frank" */
+    Person bob   = new Person("Bob");   /* frank.getName() => "Frank" */ } }
 ```
 
+<a name="section-07"></a>
+
+### Section 7, OOP Part 2 - Composition, Encapsulation, and Polymorphism
+
+*28-01-2019, finished 28-01-2019*
+
+#### Composition Part 1 (Lecture 68/69)
+
+Inheritance deals with a *Is-a relationship*.
+
+```java
+public class Car extends Vehicle { /* Car IS a Vehicle */ } 
+```
+
+Composition deals with a *Has-a relationship*.
+
+```java
+public class Engine {
+  private int capacity; }
+public class Car extends Vehicle { /* Car IS a Vehicle */
+  private Engine engine;           /* Car HAS an Engine */ }
+```
+
+`private` / `public`
+
+If you declare the *engine* private, you will have to access the monitor with a getter
+
+- `myCar.getEngine().capacity` 
+
+If you declare the *engine* public, you can access it as a field
+
+- `myCar.engine.capacity`
+
+#### Encapsulation (Lecture 70/71)
+
+Mechanism that allows for restricting external access to certain components in the objects.
+
+> **Encapsulation:**
+>
+> The whole idea behind encapsulation is to hide the implementation details from users. If a data member is private it means it can only be accessed within the same class. No outside class can access a private data member (variable/method) of another class. However if we setup public getter and setter methods to read and set/update, then an outside class can access those private data fields via public methods. This way data can only be accessed by public methods thus making the private fields and their implementation hidden for outside classes. That’s why encapsulation is known as **data hiding.**
+>
+> **Advantages of encapsulation:**
+>
+> 1. It improves maintainability and flexibility and re-usability: implementation code of *setters* and *getters* can be changed at any point in time. Since the implementation is purely hidden for outside classes they would still be accessing private fields using the same public methods. Hence the code can be maintained at any point of time without breaking the classes that uses the code. This improves the re-usability of the underlying class.
+> 2. The fields can be made read-only (If we don’t define setter methods in the class) or write-only (If we don’t define the getter methods in the class). For e.g. If we have a field which doesn't need to change at any cost then we simply define the variable as private and instead of set and get both we just need to define the get method for that variable. Since the set method is not present there is no way an outside class can modify the value of that field.
+> 3. User would not be knowing what is going on behind the scene. They would only be knowing that to update a field call `set method` and to read a field call `get method` but what these set and get methods are doing is purely hidden from them.
+>
+> Encapsulation is also known as “**data Hiding**”.
+>
+> 1. Objects encapsulate data and implementation details. To the outside world, an object is a black box that exhibits a certain behavior.
+> 2. The behavior of this object is what which is useful for the external world or other objects.
+> 3. An object exposes its behavior by means of public methods or functions.
+> 4. The set of functions an object exposes to other objects or external world acts as the interface of the object.
+
+```java
+public class Player { public String name; public int health; }
+Player player = new Player;
+player.name = "Frank";  // fields directly accessible, .health is not set
+```
+
+- If code uses directly accessible fields, it makes it too easy to manipulate those values.
+- And if the class definition changes (e.g. name -> fullName), any code directly setting that value must be updated.
+- Possibility to forget to initialize fields.
+
+By declaring the fields `private` it is impossible to access them directly, use *constructors* and *setters* and *getters*.
+
+```java
+public class Player {
+  private String name; private int health;
+  public Player(name, health) { this.name = name; this.health = health; }
+  public getName() { return this.name; }
+  public setName(String name) { this.name = name; } }
+```
+
+If a field name is changed, the *get* method name can stay the same, so calling code does not have to be changed. 
+
+We only have to make changes in the class where we refer to `this.<oldFieldName> `/`<oldFieldName> `
+
+```java
+public class Player {
+  private String fullName; private int health;
+  public Player(name, health) { this.fullName = name; this.health = health; }
+  public String getName() { return this.fullName; }
+  public String setName(String name) { this.fullName = name; } }
+```
+
+Internally we could keep the original *get* method and make it point to the right *get* method.
+
+```java
+public String getName() { return getFullName(); }
+public String getFullName { return this.fullName; }
+```
+
+#### Polymorphism (Lecture 72/73)
+
+> **Polymorphism:**
+>
+> Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
+>
+> Any Java object that can pass more than one IS-A test is considered to be polymorphic. In Java, all Java objects are polymorphic since any object will pass the IS-A test for their own type and for the class Object.
+>
+> It is important to know that the only possible way to access an object is through a reference variable. A reference variable can be of only one type. Once declared, the type of a reference variable cannot be changed.
+>
+> The reference variable can be reassigned to other objects provided that it is not declared final. The type of the reference variable would determine the methods that it can invoke on the object.
+>
+> A reference variable can refer to any object of its declared type or any subtype of its declared type. A reference variable can be declared as a class or interface type.
+
+> Teacher : Mechanism that allows actions to act differently based on the actual object that the action is being performed on.
+
+```java
+class SuperClass                   { public String myCur() { return "$"; } }
+class SubClass1 extends SuperClass { public String myCur() { return "€"; } }
+class SubClass2 extends SuperClass { /* no myCur() */ }
+SuperClass class;
+class = new SuperClass(); class.myCur(); /* from SuperClass -> "$"  */
+class = new SubClass1() ; class.myCur(); /* from SubClass1  -> "€"  */
+class = new SubClass2() ; class.myCur(); /* from SuperClass -> "$"  */
+/* You can define the return type of a function as the type of the superclass
+   and return a subclass of it ( IS-A relationship ) */
+public SuperClass getAClass() { return new SubClass1(); }
+class = getAClass()     ; class.myCur(); /* from SubClass1  -> "€"  */
+```
+
+> Teacher: It will automatically, if you're inheriting from another class, and you've got a method, and you overwrite that method, that's what polymorphism is, it's giving unique functionality, for the class that has inherited from a base class. It is incredibly usefull, and really enables writing quite generic code.
+
+Huh? 
+
+*Overriding is a type of polymorphism* was mentioned in an answer somewhere.
+
+It is not explained very well, or rather, I don't yet understand it very well. But lots of knowledge on the internet to be found. 
+
+- https://www.tutorialspoint.com/java/java_polymorphism.htm
+- https://www.quora.com/What-are-encapsulation-inheritance-polymorphism-and-abstraction
+- https://www.javatpoint.com/java-oops-concepts
+
+#### Final OOP Master Challenge (Lecture 74/75)
+
+*Challenge to use all to principles of OOP  learned so far.*
+
+Thing I found out when I got stuck for a while :
+
+```java
+class Burger {  /* ... */}
+class DeluxeBurger extends Burger { /* ... */ }
+Burger burger = DeluxeBurger();
+/* Now to access a method in DeluxeBurger : */
+((HealthyBurger) burger).<methodName()>;
+```
+
+
+
+<a name="section-08"></a>
+
+### Section 8, Arrays, Java inbuilt Lists, Autoboxing and Unboxing
+
+*29-01-2019, finished ...*
+
+#### 
