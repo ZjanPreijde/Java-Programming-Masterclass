@@ -4,6 +4,7 @@ public class HealthyBurger extends Burger {
     private Addition addition5 = new Addition("Mayonaise", 2);
     private Addition addition6 = new Addition("Ketchup", 2);
     private boolean selected5, selected6;
+
     public HealthyBurger(String meat, double price) {
         super("Brown rye", meat, price, "Healthy");
     }
@@ -29,10 +30,4 @@ public class HealthyBurger extends Burger {
                 + (isSelected5() ? " + " + addition5.getDesc() + "(" + addition5.getPrice() + ")" : "")
                 + (isSelected6() ? " + " + addition6.getDesc() + "(" + addition6.getPrice() + ")" : "");
     }
-    public String getBurgerData() {
-        return "Burger " + getName() + "(" + getPrice() + ") -> "
-                + getMeat() + " on " + getRollType() + this.getAddDesc()
-                + ", price " + (getPrice() + this.getAddPrice());
-    }
-
 }

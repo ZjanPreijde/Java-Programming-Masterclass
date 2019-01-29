@@ -1192,4 +1192,155 @@ Burger burger = DeluxeBurger();
 
 *29-01-2019, finished ...*
 
-#### 
+#### Arrays (Lecture 76/77/78)
+
+Arrays can hold multiple values of the same type. Arrays are *zero indexed*, start at 0.
+
+```java
+/* Initialize integer array with 10 elements */
+int[] myInts;  myInts = new int[10];
+double[] myDoubles = new double[10];
+/* Elements are initialized with there default values, null for String objects!
+   myIntArray[0] == 0, myDoubleArray[1] == 0.0d */
+/* Assign a value */
+myInts[5] = (5 + 1); /*  arrays start at [0], 5 is in position 6 */
+/* Assign values with loop */
+for ( int i = 0; i < 10; i++ ) { myInts[i] = i * 100; }
+/* or better : use Array.length */
+for ( int i = 0; i < myInts.length; i++ ) { myInts[i] = (i + 1) * 50; }
+/* Method overloading, argument type determines which method is called */
+public static void printArray(int[] array) 
+	{ for (int i = 0; i < array.length; i++) { /* ... */ } }
+public static void printArray(String[] array) 
+	{ for (int i = 0; i < array.length; i++) { /* ... */ } }
+```
+
+An array can be initialized by using an array initializer block `{ , , }`, also known as an anonymous array.
+
+```java
+/* Initialize array and assign multiple values in 1 go, 
+   only allowed when initializing, length will be nr of elements provided */
+String[] myStrings = new String[] { "A", "B", "C", "D", "E" };
+```
+
+Aside : when dividing 2 integers, make sure at least one of the actors is cast to `double`. Which one does not matter, both is also fine.
+
+```java
+public static double averageArray(int[] array) {
+	return sumArray(array) / (double) array.length ;  }
+```
+
+3 methods to clone an array , all as fast as the other. `clone()` needs no argument ,but always does full copy :
+
+```java
+int[] copy = array.clone();
+int[] copy = Array.copyOf(array);
+int[] copy = System.arrayCopy(array);
+```
+
+#### Reference Types vs Value types (Lecture 79)
+
+Primitive data types are Value Types, they hold a value.
+
+Array and String are Reference Types, the reference to a place in memory.
+
+```java
+int a = 0; int b = a; a = 1; // -> a == 1, b == 0
+```
+
+Though Strings are objects, the behave the same as primitive data types
+
+```java
+String a = "a"; String b = a; a = "z"; // a == "z", b == "a"
+```
+
+Arrays are Reference Type objects, assigning an array the reference of another array, they both point to the same place in memory
+
+```java
+int[] myInts1 = new int[] {1,2}; int myInts2 = ints1; myInts[0] = 9;
+	// ints1[0] == 9, ints2[0] == 9
+```
+
+`new int[]`, `array.clone()`, `Arrays.copyOf(array)`, `System.arrayCopy(array)` create new references.
+
+`Arrays.toString( array )` concatenates content of array into a `String`, separated by a comma and space.
+
+When an array is passed into a method, a new temporary reference is made in memory.  Reinitializing the array in the method will have no effect on the original array.
+
+```java
+int[] myInts1 = new int[2]; // ints[0] == 0
+myInts1 = add1To0(myInts);  // ints[0] == 1
+public static void add1To0(int[] array) { 
+	/* All references are updated */
+  array[0]++;
+  /* Temporary argument-reference is reinitialized to new reference,
+      no change to original */
+  array = new int[] {5,5,5,5};  }
+```
+
+#### List and ArrayList (Lecture 82-87)
+
+Resize an array
+
+```java
+private static int[] myInts = new int[5];
+resizeArray(10)
+private static void resizeArray(int newLength) {
+  int[] orgInts = myInts;
+  myInts = new int[length];
+  for (int i = 0; i < orgInts; i++) { myInts[i] = myOrgs[i] }  }
+```
+
+Quite a silly example, as you can not pass the array, so array has to be called `myInts`. This is better :
+
+```java
+private static int[] myInts = new int[5]; // -> [0,0,0,0,0]
+myInts = resizeArray(myInts, 10);         // -> [0,0,0,0,0,0,0,0,0,0]
+private static int[] resizeArray(int[] array, int newLength) {
+  int[] orgInts = array;
+  array = new int[newLength];
+  for (int i = 0; i < orgInts.length; i++) { array[i] = myOrgs[i]; }
+  return array;  }
+```
+
+Lists, another way of looking at arrays as an array is a list, a sequence of values/references.
+
+> Oracle : https://docs.oracle.com/javase/8/docs/api/java/util/List.html
+>
+> public interface `List<E>`  (E - the type of elements in this list)
+>
+> extends `Collection<E>`
+>
+> An ordered collection (also known as a *sequence*). The user of the List interface has precise control over where in the list each element is inserted. The user can access elements by their integer index (position in the list), and search for elements in the list.
+
+Very much like arrays.
+
+`Class ArrayList<ElementType>`  is  a resizable array. ElementType is the data type you want to store.
+
+`ArrayList<String> myList = new ArrayList<String>();`  to initialize a List interface of type String. The `()` calls the constructor of the `class ArrayList`.
+
+ The class takes care of the sizing etc all by it self.
+
+- `myList.add( String string );` adds an element to the list with given value.
+- `myList.size()` for length
+- `myList.get( <index> )` to retrieve the value
+- `myList.set( <index>, <newValue> )` to modify a value
+- `myList.remove( <index> )` to remove an element
+- `myList.addAll( <otherListOfSameType> )` to copy all elements from one list into another
+
+`ArrayList<String> myList = new ArrayList<String>( <otherListOfSameType> );`  will initialize a List interface of type string and initialize the contents with the contents of `<otherListOfSameType>`
+
+List to array :
+
+```java
+// Assuming the class has a getter for the List
+String[] myArray = new String[myList.size()];
+myArray = myList.getList().toArray(myArray); // myArray mentioned twice?
+```
+
+
+
+
+
+
+
