@@ -6,7 +6,7 @@ public class MobilePhone {
     private ArrayList<Contact> contactList;
 
     public MobilePhone() {
-        this.contactList = new ArrayList<Contact>();
+        this.contactList = new ArrayList<>();
     }
 
     public Result getStringContactList() {

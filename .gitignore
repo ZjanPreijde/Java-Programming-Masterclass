@@ -1,2 +1,4 @@
 OriginalSources
+**.secret*
+**.env*
 

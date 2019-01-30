@@ -316,14 +316,16 @@ myString3 = "My dog is " + myBoolean;
 - quick multiply/divide/remainder n, `*=`, `/=`, `%=`
 - logical not, `!`, `!(<comparison>)`, `boolean isDone = false; isDone = !isDone; // now true`
 - logical and/or, `&&,` `||`
-- is equal, is not equal, `==`, `!=`
+- is equal, is not equal, `==`, `!=`   (learned later: to compare object values use `.equals()`)
+- Java does <u>not</u> know  is not equal `<>` 
 - is greater than/is greater than or equal to, `>`, `>=`
 - is less than/less than or equal to, `<`, `<=`
-
-- when comparing expressions, put expressions between parentheses ( = brackets)
-- as `=` assigns a value, make especially sure with booleans you use `==` in comparisons
+- when comparing expressions, put expressions between parentheses ( = round brackets)
+- as `=` assigns a value, make sure you use `==` in comparisons
   - `boolean isCar = false; if (isCar = true) ...;`
-  - will make `isCar` `true` and expression evaluates to `true`
+  - will set `isCar`  to `true` and expression evaluates to `true`
+  - `int balance = 100000; if (balance = 0) ...;`
+  - will set `balance` to `0` and expression evaluates to `true`
 - ternary operator, `<expression> ? <value-if-true> : <value-if-false>;`
 - precedence, `int result = 50 + 50 * 50;` value is 2550, `int result = (50 + 50) * 50;` value is 5000
 
@@ -1278,7 +1280,7 @@ public static void add1To0(int[] array) {
   array = new int[] {5,5,5,5};  }
 ```
 
-#### List and ArrayList (Lecture 82-87)
+#### List and ArrayList (Lecture 82-88)
 
 Resize an array
 
@@ -1315,27 +1317,92 @@ Lists, another way of looking at arrays as an array is a list, a sequence of val
 
 Very much like arrays.
 
-`Class ArrayList<ElementType>`  is  a resizable array. ElementType is the data type you want to store.
+`Class ArrayList<ElementType>`  is  a resizable array. `ElementType` is the data type you want to store, can be a Java *class* or own *class*, <u>not</u> a *primitive datatype*!.
+
+*Wrapper classes* can be coded, but Java already provides these for each *primitive datatype*, e.g. `int` -> `Integer`.
 
 `ArrayList<String> myList = new ArrayList<String>();`  to initialize a List interface of type String. The `()` calls the constructor of the `class ArrayList`.
 
  The class takes care of the sizing etc all by it self.
 
-- `myList.add( String string );` adds an element to the list with given value.
-- `myList.size()` for length
+- `myList.add( <ObjectType> <object> );` adds an element to the list with given value
+- `myList.addAll( <otherListOfSameType> )` to copy all elements from one list into another
 - `myList.get( <index> )` to retrieve the value
 - `myList.set( <index>, <newValue> )` to modify a value
 - `myList.remove( <index> )` to remove an element
-- `myList.addAll( <otherListOfSameType> )` to copy all elements from one list into another
+- `myList.size()` for length
+- `myList.indexOf( <object> )` to return `<index>` of `<object>` in myList, returns `-1` if not found
 
 `ArrayList<String> myList = new ArrayList<String>( <otherListOfSameType> );`  will initialize a List interface of type string and initialize the contents with the contents of `<otherListOfSameType>`
 
 List to array :
 
 ```java
-// Assuming the class has a getter for the List
+// Assuming class for myList object has a getter getList()
 String[] myArray = new String[myList.size()];
 myArray = myList.getList().toArray(myArray); // myArray mentioned twice?
+```
+
+When you compare values between objects, always use  `<object>.equals()`  / `!<object>.equals()` in stead of `==` /  `!=`
+
+Overloading again is very useful.
+
+```java
+public Contact findContact(Contact contact) { /* Can use .indexOf() */ }
+public Contact findContact(String name) { /* More elaborate search loop, .equals() */ }
+```
+
+Once the element type is established, no need to mention it again when initializing it
+
+```java
+ArrayList<Contact> contactList, contactList2;
+contactList  = new ArrayList<Contact>(); /* Contact is not needed */
+contactList2 = new ArrayList<>();
+```
+
+#### Autoboxing and Unboxing (Lecture 89-92)
+
+- *Autoboxing*,  casting *primitive datatype* to corresponding *datatype  class*
+- *Unboxing*,  casting *datatype  class* to corresponding *primitive datatype*
+- Java can do some of the  Autoboxing and Unboxing for us at compile time for proprietary *primitives* and *datatype classes* at compile time, Java adds appropriate code.
+- This way code can be much  concise and readable.
+
+```java
+// No Autoboxing, Unboxing
+// deprecated since J9 : Integer myInteger = new Integer(54); 
+Integer myInteger = 54;  int myPrimitiveInt = myInteger.intValue();
+// deprecated since J9 : Double  myDouble  = new Double(3.14);
+Double myDouble = 3.14;  double myPrimitiveDouble = myDouble.doubleValue();
+ArrayList<Integer> integerAList = new ArrayList<Integer>();
+for (int i = 0; i < 10; i++) {  integerAList.add( Integer.valueOf(i) );  }
+for (int i = 0; i < integerAList.size(); i++) {
+  System.out.println( i + " => " + integerAList.get( i ).intValue() );
+}
+```
+
+```java
+// Autoboxing, Unboxing
+Integer myInteger = 54;  int myInt = myInteger;
+Double myDouble = 3.14;  double myPrimitiveDouble = myDouble;
+ArrayList<Integer> integerAList = new ArrayList<Integer>();
+for (int i = 0; i < 10; i++) {  integerAList.add( i );  }
+for (int i = 0; i < integerAList.size(); i++) {
+  System.out.println( i + " => " + integerAList.get( i ) );
+}
+```
+
+
+Java compiles declarations at compile time if it can, e.g. if an `int` is assigned to an `Integer` :
+
+```java
+Integer myInteger = 56;  // Java compiles it to : Integer myInt = Integer.valueOf(56);
+Integer myInteger = 5.5; // Can not compile, incompatible types Integer <-> double
+```
+
+Very elaborate challenge : banks, branches, customers, transactions. Took me all day :
+
+```
+	/JavaPrograms/Section-08/S08-08-AutoboxUnboxChallenge
 ```
 
 
@@ -1344,3 +1411,9 @@ myArray = myList.getList().toArray(myArray); // myArray mentioned twice?
 
 
 
+
+
+
+
+
+#### Bottom anchor

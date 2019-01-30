@@ -1,38 +1,41 @@
-// System.out.print**() short hand
+    // System.out.print**() short hand
     private static void o(String text) {
-        System.out.print("- " + text);
+        o(text, true);
     }
     private static void o(String text, boolean prefix) {
-        System.out.print((prefix ? "- " : "") + text);
+        o(text, (prefix ? "- " : ""), "");
     }
-    private static void o(String text, boolean prefix, boolean newLine) {
-        System.out.print((prefix ? "- " : "") + text + (newLine ? "\n" : "" ));
+    private static void o(String text, String prefix) {
+        o(text, prefix, "");
     }
+    private static void o(String text, String prefix, String suffix) {
+        System.out.print(prefix + text + suffix);
+    }
+
     private static void oln(String text) {
-        System.out.println("= " + text);
+        oln(text, true);
     }
     private static void oln(String text, boolean prefix) {
-        System.out.println((prefix ? "= " : "") + text);
+        oln(text, (prefix ? "= " : ""), "");
+    }
+    private static void oln(String text, String prefix) {
+        oln(text, prefix, "");
+    }
+    private static void oln(String text, String prefix, String suffix) {
+        System.out.print(prefix + text + suffix);
     }
 
 // Print array
     public static void printArray(int[] array) {
         oln(Arrays.toString(array));
     }
-//    public static void printArray(int[] array) {
-//        for (int i = 0; i < array.length; i++) {
-//            o("" + array[i]);
-//        }
-//        o("", false, true);
-//    }
-
 
 // User input
 // public class Main {
     private static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
-        int[] myIntArray = getIntegers(5);
-    }
+//    public static void main(String[] args) {
+//        int[] myIntArray = getIntegers(5);
+//    }
 
     public static int[] getIntegers(int number) {
         oln("Enter " + number + " integer values.\r");
