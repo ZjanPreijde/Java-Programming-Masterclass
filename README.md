@@ -14,7 +14,7 @@ https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 | [Section 5](#section-05)  | Control Flow Statements                                    | 24-01-2019 |
 | [Section 6](#section-06)  | OOP Part 1 - Classes, Constructors and Inheritance         | 25-01-2019 |
 | [Section 7](#section-07) | OOP Part 2 - Composition, Encapsulation, and Polymorphism  | 28-01-2019 |
-| [Section 8](#section-08) | Arrays, Java inbuilt Lists, Autoboxing and Unboxing        |            |
+| [Section 8](#section-08) | Arrays, Java inbuilt Lists, Autoboxing and Unboxing        | 31-01-2019 |
 | Section 9  | Inner and Abstract Classes & Interfaces                    |            |
 | Section 10 | Java Generics                                              |            |
 | Section 11 | Naming Conventions and Packages. static and final keywords |            |
@@ -1204,7 +1204,7 @@ Burger burger = DeluxeBurger();
 
 ### Section 8, Arrays, Java inbuilt Lists, Autoboxing and Unboxing
 
-*29-01-2019, finished ...*
+*29-01-2019, finished 31-01-2019
 
 #### Arrays (Lecture 76/77/78)
 
@@ -1511,7 +1511,7 @@ private static boolean addInOrderLLString(
   // Not added yet, add it now to the end
   listIterator.add( newString );
   return true;
-}
+} // end method
 ```
 
 Java has implemented the LinkedList as a *double link list*, links have pointers to both *next* and *previous* item.
@@ -1547,8 +1547,15 @@ while (!quit) {
       break;
     default:
       break;
-} }
+} } // end while
+```
 
+Alternative loop
+
+```java
+for (<MyClass> checkedObject: this.objects) {
+  if (checkedObject.getField().equals(<someValue>)) { /* do something */ }
+    else { /* do domething else */ }  } // end for
 ```
 
 
