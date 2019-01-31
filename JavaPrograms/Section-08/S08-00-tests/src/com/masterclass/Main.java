@@ -4,9 +4,15 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // test01();
-        test02();
-        test03();
+//        test01();
+//        test02();
+//        test03();
+        test04();
+    }
+    private static void test04() {
+        char a = 'a'; char b = 'b';
+//        String ab = a + b; //-> Error
+        String test = "" + a + b;
     }
     private static void test03() {
         // With autoboxing and unboxing

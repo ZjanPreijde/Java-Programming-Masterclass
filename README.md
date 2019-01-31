@@ -3,7 +3,7 @@
 Udemy Course :
 https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 
-*14-01-2019 - ...*
+*14-01-2019 - ...*										[Go to Bottom](#bottom)	<a name="top"></a>
 
 | Section    | Description                                                | Finished   |
 | ---------- | ---------------------------------------------------------- | ---------- |
@@ -32,13 +32,13 @@ https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 | Section 23 | Archived Videos                                            |            |
 | Section 24 | Bonus Material                                             |            |
 
-<a name="section-01"></a>
+<a class="page-break" name="section-01"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 1, Course Introduction
 
 *14-01-2019, finished 14-01-2019*
 
-<a name="section-02"></a>
+<a name="section-02"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 2, Setup and First Steps
 
@@ -138,7 +138,7 @@ public class Hello {
 
 `main(String[] args)` means that any given arguments are strings,. When you run `$ java myProgram multiply 2 3`, `args[0] == "multiply"`, `args[1] == "2"` and `args[2] == "3"`.
 
-<a name="section-03"></a>
+<a class="page-break" name="section-03"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 3, Variables, Datatypes and Operators
 
@@ -286,7 +286,19 @@ Unicode is extended (24-bit?), now holds more than 16-bit `char` can hold, so `c
 
 `String` is not a primitive data type, it is a `class`. But it is so strongly integrated in Java language that it is used like a primitive. You can declare a `String` type variable the same way as primitives.
 
-All primitives have a default value. As String is an object (instance of class String), it's default value is `null`.
+- all primitives have a corresponding default value
+
+- as String is an object (instance of class String), it's default value is `null`
+
+- value assigned with double quotes! 
+
+- char and String are surprisingly incompatible
+
+  - ```java
+    char a = 'a'; char b = 'b'; 
+    String ab = a + b;      // -> Error
+    String ab = "" + a + b; // -> Works fine
+    ```
 
 ```java
 String myString1 = "This is a string";
@@ -333,7 +345,7 @@ Summary of operators : https://docs.oracle.com/javase/tutorial/java/nutsandbolts
 
 Java Operator Precedence Table : http://cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html
 
-<a name="section-04"></a>
+<a class="page-break" name="section-04"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 4, Java Tutorial: Expressions, Statements, Code blocks, Methods and more.
 
@@ -531,7 +543,7 @@ public class Main {
 
 
 
-<a name="section-05"></a>
+<a class="page-break" name="section-05"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 5, Control Flow Statements
 
@@ -714,7 +726,7 @@ public class Main {
   private static void calcMinMax(Scanner scanner) { /* code ... */  }  }
 ```
 
-<a name="section-06"></a>
+<a class="page-break" name="section-06"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 6, OOP Part 1 - Classes, Constructors and Inheritance
 
@@ -1037,7 +1049,7 @@ public class Main {
     Person bob   = new Person("Bob");   /* frank.getName() => "Frank" */ } }
 ```
 
-<a name="section-07"></a>
+<a class="page-break" name="section-07"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 7, OOP Part 2 - Composition, Encapsulation, and Polymorphism
 
@@ -1188,7 +1200,7 @@ Burger burger = DeluxeBurger();
 
 
 
-<a name="section-08"></a>
+<a class="page-break" name="section-08"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
 
 ### Section 8, Arrays, Java inbuilt Lists, Autoboxing and Unboxing
 
@@ -1326,11 +1338,13 @@ Very much like arrays.
  The class takes care of the sizing etc all by it self.
 
 - `myList.add( <ObjectType> <object> );` adds an element to the list with given value
+- `myList.add( <index>, <ObjectType> <object> );` inserts an element to the list in given position with given value
 - `myList.addAll( <otherListOfSameType> )` to copy all elements from one list into another
 - `myList.get( <index> )` to retrieve the value
 - `myList.set( <index>, <newValue> )` to modify a value
 - `myList.remove( <index> )` to remove an element
 - `myList.size()` for length
+- `myList.isEmpty()`, for ... :-)
 - `myList.indexOf( <object> )` to return `<index>` of `<object>` in myList, returns `-1` if not found
 
 `ArrayList<String> myList = new ArrayList<String>( <otherListOfSameType> );`  will initialize a List interface of type string and initialize the contents with the contents of `<otherListOfSameType>`
@@ -1405,6 +1419,137 @@ Very elaborate challenge : banks, branches, customers, transactions. Took me all
 	/JavaPrograms/Section-08/S08-08-AutoboxUnboxChallenge
 ```
 
+#### LinkedList (Lecture 93-99)
+
+`Array[]` and `ArrayList<E>` have value/object 1 on position 0, value/object 2 on position 1, etc (*zero-indexed*).
+
+`<LinkedList>` is another type of list, it adds an *address* to the list.
+
+| Index | Address | Value |
+| ----- | ------- | ----- |
+| 0     | 100     | 34    |
+| 1     | 104     | 18    |
+| 2     | 108     | 91    |
+| 3     | 112     | 453   |
+
+Internally Java calculates this *Address* by `Address = baseAddress + ( Index * 4 )` where `baseAddress = 100`. So for *Index 3* that would evaluate to 112.
+
+It has to do with memory allocation/memory address or something, not so sure whether that is useful info right now, but let's see.
+
+A technical talk about internals, how references point to memory addresses, and how this different for variable length values (Strings, Objects) and how Java handles that internally, and more things we don't have to worry about.
+
+```java
+Customer frank = new Customer("Frank"), simon = frank;
+simon.setName("Simon"); //-> frank.name : "Simon", simon.name : " Simon"
+// simon and frank reference the same object
+```
+
+```java
+ArrayList<Integer> iList = new ArrayList<>;
+iList.add(1); iList.add(3); iList.add(4);
+iList.add(1, 2); // Inserts 2 at position 1
+```
+
+When inserting a value in an `ArrayList<E>`,  for all elements following from that position downwards Java has to reassign a memory address. For large arrays that can be time/resource consuming.
+
+`LinkedList<>` is an alternative that accommodates this. One element points to the next through links. In stead of inserting a value, it changes the links of the elements, so the element after which it is inserted links to the new element, and the new element links to the element that held that position before it was inserted.
+
+- list = [a, c, d], links = [a->c, c->d]
+- insert **b** at (zero-based) position 1
+- list = [a, c, d, **b**], links = [a->**b**, c->d, **b**->c], 1 link us updated, 1 link is added
+- remove **c** at (zero-based) position 3
+- list = [a, d, b], links = [a->b, b->d], 1 link is updated, 1 link is removed.
+- so in the actual lists, it is just added at the end, the links define what position they hold.
+- I wonder what the costs in time/resource consumption are removing an element in the list would be
+
+To be able to iterate through a LinkedList<> we need an ... Iterator :-) It uses `.hasnext()`, `.next()`
+
+```java
+private static void printLLString(LinkedList<String> linkedList) {
+    Iterator<String> i = linkedList.iterator();
+    while (i.hasNext()) {
+        System.out.println("Value " + i.next());
+    }
+    System.out.println("------------");
+}
+
+```
+
+Each Iterator has `.hasNext()`, `.next()`, `remove()` `(, .forEachRemaining( ...)` ).
+
+`ListIterator<E>`  also has `.hasPrevious()`, `.previous()`, `.nextIndex()`, `.previousIndex()` and more.
+
+`.hasNext()` and `.hasPrevious()` tell us whether there is another element, `.next()` and `.previous()` go there.
+
+It uses the `LinkedList<E>.listIterator()` , not `LinkedList<E>.iterator()`. Example of use :
+
+```java
+// Add string in alphabetical order in LinkedList<String> linkedList
+private static boolean addInOrderLLString(
+      LinkedList<String> linkedList, String newString, boolean allowDoubles) {
+  ListIterator<String> listIterator = linkedList.listIterator();
+  while (listIterator.hasNext()) {
+    int comparison = listIterator.next().compareTo(newString);
+    if ( comparison == 0 ) {
+      // Already exists
+      if ( !allowDoubles ) {
+        // No doubles
+        return false;
+      }
+      // Double allowed, insert here
+      listIterator.add( newString );
+      return true;
+    } 
+    if ( comparison > 0  {
+      // Should be inserted before this one, hasNext already has us on this element,
+      //  so we have to go back one before inserting it.
+      listIterator.previous();
+      listIterator.add( newString );
+      return true;
+    }
+  }
+  // Not added yet, add it now to the end
+  listIterator.add( newString );
+  return true;
+}
+```
+
+Java has implemented the LinkedList as a *double link list*, links have pointers to both *next* and *previous* item.
+
+Because of the nature of `LinkedList`s there is no  real pointer to where it is (or something, having to do with avoiding infinite loops), anyway, to make `.next()` and `.previous()` work like you would expect, there is a little more work to determine which way we are going. Check `boolean goingforward` and extra `.next()/.previous()` in *Section-08/S08-09-LinkedLists*.
+
+Something  like this (check well for `true`, `false` and `!`)  :
+
+```java
+boolean quit = false, goingForward = true;
+ListIterator<String> listIterator = collection.listIterator();
+while (!quit) {
+  String direction = getDirection());
+  switch(action) {
+    case "quit":
+      quit = true;
+      break;
+    case "next":
+      if (!goingForward) {
+        if (listIterator.hasNext())     { listIterator.next(); }
+        goingForward = true;
+      }
+      if (listIterator.hasNext())       { /*OK use .next() */ }
+        else                            { /* End */ goingForward = false; }
+      break;
+    case "previous":
+      if (goingForward) {
+        if (listIterator.hasPrevious()) { listIterator.previous(); }
+        goingForward = false;
+      }
+      if (listIterator.hasPrevious())   { /* OK, use .previous() */ }
+        else                            { /*Begin */ goingForward = true; }
+      break;
+    default:
+      break;
+} }
+
+```
 
 
 
@@ -1416,4 +1561,7 @@ Very elaborate challenge : banks, branches, customers, transactions. Took me all
 
 
 
-#### Bottom anchor
+<a name="bottom"></a>
+
+
+### Bottom anchor

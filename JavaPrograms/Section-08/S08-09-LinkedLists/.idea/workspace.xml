@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="129e48d1-8501-499d-bffb-0c78cd772365" name="Default Changelist" comment="">
+    <list default="true" id="46ffb7e5-3b58-4563-bc7a-523acf137a4b" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../S08-10-LinkedListsChallenge/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../0. Snippets/Snippets.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../0. Snippets/Snippets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S08-00-tests/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S08-00-tests/com/masterclass/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S08-00-tests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../S08-00-tests/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S08-00-tests/out/production/S08-00-tests/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S08-00-tests/out/production/S08-00-tests/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S08-00-tests/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S08-00-tests/src/com/masterclass/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../S08-08-AutoboxUnboxChallenge/out/production/S08-08-AutoboxUnboxChallenge/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S08-08-AutoboxUnboxChallenge/out/production/S08-08-AutoboxUnboxChallenge/com/masterclass/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../S08-08-AutoboxUnboxChallenge/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S08-08-AutoboxUnboxChallenge/src/com/masterclass/Main.java" afterDir="false" />
@@ -25,29 +25,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="252">
+              <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/masterclass/TestTemplate.java">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/Demo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="162">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/masterclass/Test.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/masterclass/Test.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/Customer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -59,23 +58,32 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>newDestination</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>newString</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/com/masterclass/Snippets.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/Customer.java" />
+        <option value="$PROJECT_DIR$/src/Snippets.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/masterclass/Test.form" />
-        <option value="$PROJECT_DIR$/src/com/masterclass/TestClassTemplate.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/Demo.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1987" />
-    <option name="y" value="-2" />
-    <option name="width" value="1853" />
-    <option name="height" value="1082" />
+    <option name="width" value="1843" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -85,42 +93,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="S08-00-tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="S08-00-tests" type="462c0819:PsiDirectoryNode" />
+              <item name="S08-09-LinkedLists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S08-09-LinkedLists" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="S08-00-tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="S08-00-tests" type="462c0819:PsiDirectoryNode" />
+              <item name="S08-09-LinkedLists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S08-09-LinkedLists" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="S08-00-tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="S08-00-tests" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="masterclass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="S08-00-tests" type="b2602c69:ProjectViewProjectNode" />
-              <item name="S08-00-tests" type="462c0819:PsiDirectoryNode" />
+              <item name="S08-09-LinkedLists" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S08-09-LinkedLists" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="masterclass" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="e9f4de52:FormNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548967683423" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548942458506" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -134,10 +134,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Demo">
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.masterclass.Demo" />
+      <module name="S08-09-LinkedLists" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masterclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.masterclass.Main" />
-      <module name="S08-00-tests" />
+      <module name="S08-09-LinkedLists" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -145,8 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Demo" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -156,11 +174,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="129e48d1-8501-499d-bffb-0c78cd772365" name="Default Changelist" comment="" />
-      <created>1548752371988</created>
+      <changelist id="46ffb7e5-3b58-4563-bc7a-523acf137a4b" name="Default Changelist" comment="" />
+      <created>1548926918837</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1548752371988</updated>
+      <updated>1548926918837</updated>
     </task>
     <servers />
   </component>
@@ -168,7 +186,7 @@
     <frame x="1987" y="-2" width="1853" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1803005" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08681135" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -194,51 +212,29 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Run" order="8" weight="0.33277684" />
+      <window_info anchor="right" id="Run" order="8" weight="0.28046745" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Test2.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Heading.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Header.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Test.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Test.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="947" column="23" selection-start-line="947" selection-start-column="23" selection-end-line="947" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="2895" column="25" selection-start-line="2895" selection-start-column="25" selection-end-line="2895" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/TestClassTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Snippets.java" />
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="252">
+          <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/TestTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state relative-caret-position="198">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Demo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>

@@ -5,29 +5,10 @@ import java.util.ArrayList;
 
 public class Main {
 //    private static Scanner scanner = new Scanner(System.in);
+    // Suppress  Success == true  result messages?
+    private static boolean suppressSuccess = true;
 
     public static void main(String[] args) {
-        // You job is to create a simple banking application.
-        // There should be a Bank class
-        // It should have an arraylist of Branches
-        // Each Branch should have an arraylist of Customers
-        // The Customer class should have an arraylist of Doubles (transactions)
-        // Customer:
-        // Name, and the ArrayList of doubles.
-        // Branch:
-        // Need to be able to add a new customer and initial transaction amount.
-        // Also needs to add additional transactions for that customer/branch
-        // Bank:
-        // Add a new branch
-        // Add a customer to that branch with initial transaction
-        // Add a transaction for an existing customer for that branch
-        // Show a list of customers for a particular branch and optionally a list
-        // of their transactions
-        // Demonstration autoboxing and unboxing in your code
-        // Hint: Transactions
-        // Add data validation.
-        // e.g. check if exists, or does not exist, etc.
-        // Think about where you are adding the code to perform certain actions
 //        test01();
         test02();
     }
@@ -40,10 +21,10 @@ public class Main {
 
         // TDD, Test Driven Development
 
-        // -> Error, no bankName
+        // -> Error, no bankName :
         bank   = bankAction("addBank", "");
         bank   = bankAction("addBank", "ABN-AMRO");
-        // -> Error, no branchName
+        // -> Error, no branchName :
         branch = bankAction("addBranch", bank, "");
         branch = bankAction("addBranch", bank, "100th Street");
         branch = bankAction("addBranch", bank, "101st Street");
@@ -51,12 +32,13 @@ public class Main {
         branch = bankAction("addBranch", bank, "103rd Street");
         // -> Error, branch already exists for bank
         branch = bankAction("addBranch", bank, "103rd Street");
+        // List branches, no customers
         bankAction("listBranches", bank);
 
         // String branchName -> bank must be passed
         customer = branchAction("addCustomer"
-                , bank, "101st Street", "Shallow Sjaman", 0d);
-        // -> Error, customer already exists
+                , bank, "101st Street", "Shallow Sjaman", 50d);
+        // -> Error, customer already exists :
         customer = branchAction("addCustomer"
                 , bank, "101st Street", "Shallow Sjaman", 0d);
         branch = bankAction("findBranch"
@@ -64,22 +46,23 @@ public class Main {
 
         // Branch branch -> no bank needed
         customer = branchAction("findCustomer"
-                , branch, "Shallow Sjaman", 0d);
+                , branch, "Shallow Sjaman");
         customer = branchAction("addCustomer"
-                , branch, "Wild Wendy", 100d);
+                , branch, "Wild Wendy");
         // -> Error, customer already exists
         customer = branchAction("addCustomer"
                 , branch, "Wild Wendy", 100d);
         branchAction("listCustomers", branch, "", 0d);
 
+        // List branches, with customers
         bankAction("listBranches", bank);
 
         customer = branchAction("findCustomer"
-                , branch, "Wild Wendy", 0d);
-        // -> Error, customer not found
+                , branch, "Wild Wendy");
+        // -> Error, customer not found :
         transaction = customerAction("addTransaction"
                 , branch, "Wild Susan", 10d);
-        // -> Error, amount 0
+        // -> Error, amount 0 :
         transaction = customerAction("addTransaction"
                 , branch, "Wild Wendy" , 0d);
         transaction = customerAction("addTransaction"
@@ -114,6 +97,7 @@ public class Main {
     }
 
     private static Bank bankAction(String action, String bankName, Result result) {
+        result.setSuppress(suppressSuccess);
         Bank bank = null;
         switch (action) {
             case "addBank":
@@ -144,6 +128,7 @@ public class Main {
         return bankAction(action, bank, branchName, result);
     }
     private static Branch bankAction(String action, Bank bank, String branchName, Result result) {
+        result.setSuppress(suppressSuccess);
         Branch branch = null;
         if ( bank == null) {
             result.setFail(action + ". No bank given");
@@ -180,13 +165,16 @@ public class Main {
 
     // Customer branchAction
     // branchName String, with bank
+    // Overloading
     private static Customer branchAction(String action, Bank bank, String branchName
             , String customerName, double amount) {
         Result result = new Result();
         return branchAction(action, bank, branchName, customerName, amount, result);
     }
+    // Overloaded
     private static Customer branchAction(String action, Bank bank, String branchName
             , String customerName, double amount, Result result) {
+        result.setSuppress(suppressSuccess);
         Customer customer = null;
         Branch branch = bankAction("findBranch", bank, branchName, result);
         if (branch == null) {
@@ -195,6 +183,11 @@ public class Main {
         return branchAction(action, branch, customerName, amount, result);
     }
     // branch Branch, no bank
+    // Overloading
+    private static Customer branchAction(String action, Branch branch) {
+        Result result = new Result();
+        return branchAction(action, branch, "", 0d);
+    }
     private static Customer branchAction(String action, Branch branch
             , String customerName) {
         Result result = new Result();
@@ -205,8 +198,10 @@ public class Main {
         Result result = new Result();
         return branchAction(action, branch, customerName, amount, result);
     }
+    // Overloaded
     private static Customer branchAction(String action, Branch branch
             , String customerName, double amount, Result result) {
+        result.setSuppress(suppressSuccess);
         Customer customer = null;
         if ( branch == null) {
             result.setFail(action + ". No branch given");
@@ -243,13 +238,16 @@ public class Main {
     }
 
     // Transaction customerAction
+    // Overloading
     private static Transaction customerAction(String action, Branch branch
             , String customerName, double amount) {
         Result result = new Result();
         return customerAction(action, branch, customerName, amount, result);
     }
+    // Overloaded
     private static Transaction customerAction(String action, Branch branch
             , String customerName, double amount, Result result) {
+        result.setSuppress(suppressSuccess);
         Transaction transaction = null;
         Customer customer = null;
         if (action != "listTransactions") {
@@ -288,6 +286,7 @@ public class Main {
         printResult(result);
         return transaction;
     }
+
     private static void printResult(Result result) {
         if ( ( !result.isSuccess() || !result.isSuppress() ) ) oln(result.toString());
         result.reset();
