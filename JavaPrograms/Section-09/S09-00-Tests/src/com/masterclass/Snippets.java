@@ -2,38 +2,8 @@ import java.util.*;
 
 public class Snippets {
     // - Helpers -
-    private static Scanner scanner = new Scanner(System.in);
 
-    // User input
-    private static int[] getIntegers(int number) {
-        oln("Enter " + number + " integer values.\r");
-        int[] values = new int[number];
-        int i = 0;
-        while (i < values.length) {
-            o("Enter number " + (i + 1) + " : ");
-            if (scanner.hasNextInt()) {
-                values[i] = scanner.nextInt();
-                i++;
-            }
-            scanner.nextLine();
-            o("", false, false);
-        }
-        return values;
-    }
-    private static int getInt() {
-        return getInt("Enter your choice ");
-    }
-    private static int getInt(String prompt) {
-        int i = 0;
-        o(prompt + " : ");
-        if (scanner.hasNextInt()) {
-            i = scanner.nextInt();;
-        }
-        scanner.nextLine();
-        return i;
-    }
-
-// System.out.print() short hand
+    // System.out.print**() short hand
     private static void o(String text) {
         o(text, true);
     }
@@ -50,7 +20,6 @@ public class Snippets {
         System.out.print(prefix + text + suffix);
     }
 
-// System.out.println() short hand
     private static void oln(String text) {
         oln(text, true);
     }
@@ -75,7 +44,7 @@ public class Snippets {
     private static void printALInteger(ArrayList<Integer> array) {
         oln("------------", "");
         for (int i = 0; i < array.size(); i++) {
-            oln(i + " : " + array.get(i), "> ");
+            oln(i + " : " + array.get(i), ">");
         }
         oln("============", "");
     }
@@ -83,7 +52,7 @@ public class Snippets {
     private static void printALString( ArrayList<String> array ) {
         oln("------------", "");
         for (int i = 0; i < array.size(); i++) {
-            oln(i + " : " + array.get(i), "> ");
+            oln(i + " : " + array.get(i), ">");
         }
         oln("============", "");
     }
@@ -95,7 +64,7 @@ public class Snippets {
         Iterator<String> iterator = linkedList.iterator();
         oln("------------", "");
         while (iterator.hasNext()) {
-            oln(prefix + iterator.next(), "> ");
+            oln(prefix + iterator.next(), ">");
         }
         oln("============", "");
     }
@@ -128,6 +97,40 @@ public class Snippets {
         // Not inserted yet, insert at end
         listIterator.add(newString);
         return true;
+    }
+
+
+// User input
+// public class Main {
+    private static Scanner scanner = new Scanner(System.in);
+//    public static void main(String[] args) {
+//        int[] myIntArray = getIntegers(5);
+//    }
+
+    private static int[] getIntegers(int number) {
+        oln("Enter " + number + " integer values.\r");
+        int[] values = new int[number];
+        int i = 0;
+        while (i < values.length) {
+            o("Enter number " + (i + 1) + " : ");
+            if (scanner.hasNextInt()) {
+                values[i] = scanner.nextInt();
+                i++;
+            }
+            scanner.nextLine();
+            o("", false, false);
+        }
+        return values;
+    }
+    private static int getInt() {
+        oln("Enter " + number + " intege value.\r");
+        int i = 0;
+	o("Enter number " + (i + 1) + " : ");
+	if (scanner.hasNextInt()) {
+		i = scanner.nextInt();;
+	}
+	scanner.nextLine();
+        return i;
     }
 
 }
