@@ -32,17 +32,17 @@ https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 | Section 23 | Archived Videos                                            |            |
 | Section 24 | Bonus Material                                             |            |
 
-<a class="page-break" name="section-01"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+<a class="page-break" name="section-01"></a>
 
 ### Section 1, Course Introduction
 
-*14-01-2019, finished 14-01-2019*
+*14-01-2019, finished 14-01-2019*											[Go to Top](#top)	[Go to Bottom](#bottom) 
 
-<a name="section-02"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+<a name="section-02"></a>
 
 ### Section 2, Setup and First Steps
 
-*14-01-2019, finished 14-01-2019*
+*14-01-2019, finished 14-01-2019*											[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 We'll be using JDK11, and IntelliJ IDEA as IDE (Integrated Development Environment).
 
@@ -138,11 +138,11 @@ public class Hello {
 
 `main(String[] args)` means that any given arguments are strings,. When you run `$ java myProgram multiply 2 3`, `args[0] == "multiply"`, `args[1] == "2"` and `args[2] == "3"`.
 
-<a class="page-break" name="section-03"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+<a class="page-break" name="section-03"></a>
 
 ### Section 3, Variables, Datatypes and Operators
 
-*15-01-2019, finished 16-01-2019*
+*15-01-2019, finished 16-01-2019*											[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 IntelliJ has shortcuts to templates, if you type `sout + <Tab>`, it expands to `System.out.println()`
 
@@ -208,7 +208,7 @@ long myCreditCardNr = 1234_5678_1234_5678L ;
 
 **Value wrapping :** If you give an integer the maximum value and add 1, the result is its min value. And vice versa with subtracting 1 from minimum value. So if an integer exceeds the boundaries, it will wrap to the opposite.
 
-**Casting:**  Java converts results of calculations with all integers to `int`, to make sure the result fits in `byte` and `short` use `(datatype)` just before calculation :
+<a name="casting"></a>**Casting:**  Java converts results of calculations with all integers to `int`, to make sure the result fits in `byte` and `short` use `(datatype)` just before calculation : 
 
 ```java
 byte myByteValue = 100 ;
@@ -345,11 +345,11 @@ Summary of operators : https://docs.oracle.com/javase/tutorial/java/nutsandbolts
 
 Java Operator Precedence Table : http://cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html
 
-<a class="page-break" name="section-04"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+<a class="page-break" name="section-04"></a>
 
 ### Section 4, Java Tutorial: Expressions, Statements, Code blocks, Methods and more.
 
-*16-01-2019, finished 17-01-2019*
+*16-01-2019, finished 17-01-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 #### Keywords and Expressions (Lecture 24)
 
@@ -538,16 +538,16 @@ Constants in class, use `final`. More on this later.
 public class Main {
   private static final String INVALID_VALUE_MESSAGE = "Invalid Value";
   public static void main(Strings[] args) {
-  /* write your code here, or not, whatever */   } }
+  /* write your code here, or not, whatever */   } } // end class
 ```
 
 
 
-<a class="page-break" name="section-05"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+<a class="page-break" name="section-05"></a>
 
 ### Section 5, Control Flow Statements
 
-*17-01-2019, finished 24-01-2019*
+*17-01-2019, finished 24-01-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 CFS's dealt with  here :
 
@@ -576,8 +576,7 @@ switch (<checkValue>) {
     break;
   default:
     // code if none of above conditions is met
-    break; // Not really necessary, but recommended to do it anyway
-}
+    break; /* Not really necessary, but recommended to do it anyway*/ } // end switch
 ```
 
 #### For Loop (Lecture 42/43/44)
@@ -594,7 +593,7 @@ for ( int i = 0; i < 10; i++ ) {
   if (i == 3) continue; // jump to end loop, code below not executed
   /* code, not executed if i == 3 */
   if (i == 7) break;    // jump to end loop and exit loop
-  /* code, not executed if i == 3 or i == 7 */  }
+  /* code, not executed if i == 3 or i == 7 */  } // end for
 ```
 
 The `<init>` will be incremented with `<increment-by>` each time the loop reaches the end of the code block. Then the loop returns to the top and validates the `<loop-while-expression`. When it evaluates to `false`, the loop is exited.
@@ -723,14 +722,14 @@ public class Main {
     calcMinMax(scanner); /* runs fine */
     calcMinMax(scanner); /* runs fine as well */
     scanner.close();  }
-  private static void calcMinMax(Scanner scanner) { /* code ... */  }  }
+  private static void calcMinMax(Scanner scanner) { /* code ... */  }  } // end class
 ```
 
-<a class="page-break" name="section-06"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+<a class="page-break" name="section-06"></a>
 
 ### Section 6, OOP Part 1 - Classes, Constructors and Inheritance
 
-*24-01-2019, finished 25-01-2019*
+*24-01-2019, finished 25-01-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 #### Classes (Lecture 54/55)
 
@@ -752,21 +751,21 @@ public class Car {
   // State, accessible
   public  String description;  // default null
 
-  public void setModel(String model) { this.model = model; } /* setter */
-  public String getModel()           { return this.model; }  /* getter */  }
+  public void   setModel(String model) { this.model = model; } /* setter */
+  public String getModel()             { return this.model;  } /* getter */ } //<-class
 ```
 
 `public` is an *access modifier*, what access do we allow others to this class.
 
 - `public class`, unrestricted access.
-- `private class`, no other class can access.
+- `private class`, no other class can access this method/variable.
 - `protected class`, allows classes in same *package* access
 
-`encapsulation`, only allow object to access its fields `private int doors;`.
+*Encapsulation*, only allow object to access its fields `private int doors;`.
 
 Java automatically adds extra functionality to created classes,  because the new class automatically is sub-classed from class *Object* and gets all the functionality class *Object* has.
 
-For encapsulated fields, you need setters to set a value and getters to get a value. Public fields can be directly set and gotten.
+For *encapsulated* fields, you need setters to set a value and getters to get a value. Public fields can be directly set and gotten.
 
 Set-methods are a good place to do validation (and manipulate other encapsulated data).
 
@@ -781,7 +780,7 @@ public class Main {
     porsche.setModel("Carrera");               /* needs a 'setter'    */
     String myModel = porsche.getModel();       /* needs a 'getter'    */
     porsche.description = " This a nice car";  /* directly accessible */
-    String myDescription = porsche.description /* directly accessible */ } }
+    String myDescription = porsche.description /* directly accessible */ } } //<- class
 ```
 
 #### Constructors (Lecture 56/57)
@@ -808,12 +807,12 @@ Calling another constructor **must** be the first statement in the constructor c
 	private String brand, model; // defaults null, null
     private int doors, wheels;   // defaults 0, 0
 	public Car() { /* Empty constructor called*/ 
-    this(4, 4); }
+    this(4, 4); } /* calls constructor with params */
 	public Car(int doors, int wheels) {
     this("Brand", "Model", doors, wheels); }
   public Car(String brand, String model, int doors, int wheels) {
-    this.brand  = brand; this.model  = model;
-    this.doors  = doors; this.wheels = wheels; } // ...
+    this.brand = brand; this.model  = model;
+    this.doors = doors; this.wheels = wheels; }
 ```
 
 In the constructors the setter methods `setValue(value);` can be used. There is discussion in the community about what should be used. There are scenario's where setter methods do not work. By setting the value directly using `this.value = value;`, that will not be a problem.
@@ -838,7 +837,7 @@ public class Person {
     this.name = name; this.age = age; this.occupation = occupation; }
   public void printData() {
     System.out.println(occupation + " " + name + " is " + age + " years old."); }
-}
+} // end class
 public class Student extends Person {
   private String studies;
   public Student(String name, int age, String studies) {
@@ -847,19 +846,19 @@ public class Student extends Person {
   public void printData() {
     super.printData();             /* prints occupation, name, age */
     System.out.println(name + " studies " + studies) }
-}
+} // end class
 public class Teacher extends Person { 
   private String teaches; 
   public Teacher(String name, int age, String teaches) {
     super(name, age, "Teacher");   /* sets name, age, occupation */
-    this.teaches = teaches;	} 
+    this.teaches = teaches;	}
   public void printData() {
-    super.printData();             /* prints occupation, name, age */
+    super.printData();     /* prints occupation, name, age */
     System.out.println(name + " teaches " + teaches) }
   public void printDataReverse() {
     System.out.println(name + " teaches " + teaches) 
-    super.printData();             /* prints name, age, occupation */  }
-}
+    super.printData();     /* prints name, age, occupation */  }
+} // end class
 ```
 
 You can call any method in the superclass with `super.`. If a method is defined in the superclass, but not in the subclass, you don't have to use `super.`.
@@ -920,13 +919,13 @@ class  ClassName {
 ```java
 class Shape { 
   private int x, y; 
-  public Shape(int x, int y) { this.x = x; this.y = y; } }
+  public Shape(int x, int y) { this.x = x; this.y = y; } } // end class
 class Rectangle {
   private int width, height;
   public Rectangle(int width, int height) { this(width, height, 0, 0); }
   public Rectangle(int width, int height, int x, int y) {
     super(x, y);
-    this.width = width; this.height = height; } }
+    this.width = width; this.height = height; } } // end class
 ```
 
 #### Method Overloading vs Overriding Recap (Lecture 61)
@@ -970,10 +969,10 @@ Example of *subclass thereof*, covariant return type :
 class Burger {} /* ... */ }
 class HealthyBurger {} /* ... */ }
 class BurgerFactory {
-  public Burger createBurger() { return new Burger();  }  }
+  public Burger createBurger() { return new Burger();  }  } // end class
 class HealthyBurgerFactory {
   @Override
-  public HealthyBurger createBurger() { return new HealthyBurger();  }  }
+  public HealthyBurger createBurger() { return new HealthyBurger();  }  } // end class
 ```
 
 #### Static vs Instance methods (Lecture 63)
@@ -995,7 +994,7 @@ public class Main {
   public static void main(String[] args) {
     printResult("4 + 5", Calculator.sum(4,5)); /* short for Main.printResult */ }
   public static void printResult(String arguments, int result) {
-    System.out.println(arguments + " = " + result) } }
+    System.out.println(arguments + " = " + result) } } // end class
 ```
 
 `static` methods do not need an *instance* of it's class to be called.
@@ -1026,11 +1025,11 @@ Static variables
 class Person {
   private static String name;  /* static */
   public Person(String name) { Person.name = name; }
-  public String getName()    { return name; }  }
+  public String getName()    { return name; }  } // end class
 public class Main {
   public static void main {
     Person frank = new Person("Frank"); /* frank.getName() => "Frank" */
-    Person bob   = new Person("Bob");   /* frank.getName() => "Bob"   */ } }
+    Person bob   = new Person("Bob");   /* frank.getName() => "Bob"   */ } } // <-class
 ```
 
 Instance variables (fields)
@@ -1042,18 +1041,18 @@ Instance variables (fields)
 class Person {
   private String name;  /* non-static */
   public Person(String name) { this.name = name; }
-  public String getName()    { return name; }  }
+  public String getName()    { return name; }  } // end class
 public class Main {
   public static void main {
     Person frank = new Person("Frank"); /* frank.getName() => "Frank" */
-    Person bob   = new Person("Bob");   /* frank.getName() => "Frank" */ } }
+    Person bob   = new Person("Bob");   /* frank.getName() => "Frank" */ } } // <-class
 ```
 
-<a class="page-break" name="section-07"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+<a class="page-break" name="section-07"></a>
 
 ### Section 7, OOP Part 2 - Composition, Encapsulation, and Polymorphism
 
-*28-01-2019, finished 28-01-2019*
+*28-01-2019, finished 28-01-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 #### Composition Part 1 (Lecture 68/69)
 
@@ -1120,7 +1119,7 @@ public class Player {
   private String name; private int health;
   public Player(name, health) { this.name = name; this.health = health; }
   public getName() { return this.name; }
-  public setName(String name) { this.name = name; } }
+  public setName(String name) { this.name = name; } } // end class
 ```
 
 If a field name is changed, the *get* method name can stay the same, so calling code does not have to be changed. 
@@ -1132,7 +1131,7 @@ public class Player {
   private String fullName; private int health;
   public Player(name, health) { this.fullName = name; this.health = health; }
   public String getName() { return this.fullName; }
-  public String setName(String name) { this.fullName = name; } }
+  public String setName(String name) { this.fullName = name; } } // end class
 ```
 
 Internally we could keep the original *get* method and make it point to the right *get* method.
@@ -1191,20 +1190,22 @@ It is not explained very well, or rather, I don't yet understand it very well. B
 Thing I found out when I got stuck for a while :
 
 ```java
-class Burger {  /* ... */}
+class Burger { /* ... */ }
 class DeluxeBurger extends Burger { /* ... */ }
 Burger burger = DeluxeBurger();
-/* Now to access a method in DeluxeBurger : */
-((HealthyBurger) burger).<methodName()>;
+/* Now, to access a method in DeluxeBurger : */
+((DeluxeBurger) burger).<methodName()>;
 ```
 
+It is ofcourse good old [*casting*](#casting). We *cast* the *object* `burger` to the *class* `DeluxeBurger`.
 
 
-<a class="page-break" name="section-08"></a>[Go to Top](#top)	[Go to Bottom](#bottom)
+
+<a class="page-break" name="section-08"></a>
 
 ### Section 8, Arrays, Java inbuilt Lists, Autoboxing and Unboxing
 
-*29-01-2019, finished 31-01-2019
+*29-01-2019, finished 31-01-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 #### Arrays (Lecture 76/77/78)
 
@@ -1224,9 +1225,9 @@ for ( int i = 0; i < 10; i++ ) { myInts[i] = i * 100; }
 for ( int i = 0; i < myInts.length; i++ ) { myInts[i] = (i + 1) * 50; }
 /* Method overloading, argument type determines which method is called */
 public static void printArray(int[] array) 
-	{ for (int i = 0; i < array.length; i++) { /* ... */ } }
+	{ for (int i = 0; i < array.length; i++) { /* ... */ } } // end method
 public static void printArray(String[] array) 
-	{ for (int i = 0; i < array.length; i++) { /* ... */ } }
+	{ for (int i = 0; i < array.length; i++) { /* ... */ } } // end method
 ```
 
 An array can be initialized by using an array initializer block `{ , , }`, also known as an anonymous array.
@@ -1241,7 +1242,7 @@ Aside : when dividing 2 integers, make sure at least one of the actors is cast t
 
 ```java
 public static double averageArray(int[] array) {
-	return sumArray(array) / (double) array.length ;  }
+	return sumArray(array) / (double) array.length ;  } // end method
 ```
 
 3 methods to clone an array , all as fast as the other. `clone()` needs no argument ,but always does full copy :
@@ -1289,7 +1290,7 @@ public static void add1To0(int[] array) {
   array[0]++;
   /* Temporary argument-reference is reinitialized to new reference,
       no change to original */
-  array = new int[] {5,5,5,5};  }
+  array = new int[] {5,5,5,5};  } // end method
 ```
 
 #### List and ArrayList (Lecture 82-88)
@@ -1314,7 +1315,7 @@ private static int[] resizeArray(int[] array, int newLength) {
   int[] orgInts = array;
   array = new int[newLength];
   for (int i = 0; i < orgInts.length; i++) { array[i] = myOrgs[i]; }
-  return array;  }
+  return array;  } // end for
 ```
 
 Lists, another way of looking at arrays as an array is a list, a sequence of values/references.
@@ -1333,7 +1334,7 @@ Very much like arrays.
 
 *Wrapper classes* can be coded, but Java already provides these for each *primitive datatype*, e.g. `int` -> `Integer`.
 
-`ArrayList<String> myList = new ArrayList<String>();`  to initialize a List interface of type String. The `()` calls the constructor of the `class ArrayList`.
+`ArrayList<String> myList = new ArrayList<String>();`  to initialize a List interface of type String. The `()` calls the constructor of the `class ArrayList`. (The last `<String>` can be omitted these days)
 
  The class takes care of the sizing etc all by it self.
 
@@ -1390,8 +1391,7 @@ Double myDouble = 3.14;  double myPrimitiveDouble = myDouble.doubleValue();
 ArrayList<Integer> integerAList = new ArrayList<Integer>();
 for (int i = 0; i < 10; i++) {  integerAList.add( Integer.valueOf(i) );  }
 for (int i = 0; i < integerAList.size(); i++) {
-  System.out.println( i + " => " + integerAList.get( i ).intValue() );
-}
+  System.out.println( i + " => " + integerAList.get( i ).intValue() ); } // end for
 ```
 
 ```java
@@ -1401,8 +1401,7 @@ Double myDouble = 3.14;  double myPrimitiveDouble = myDouble;
 ArrayList<Integer> integerAList = new ArrayList<Integer>();
 for (int i = 0; i < 10; i++) {  integerAList.add( i );  }
 for (int i = 0; i < integerAList.size(); i++) {
-  System.out.println( i + " => " + integerAList.get( i ) );
-}
+  System.out.println( i + " => " + integerAList.get( i ) );  } // end for
 ```
 
 
@@ -1470,9 +1469,7 @@ private static void printLLString(LinkedList<String> linkedList) {
     while (i.hasNext()) {
         System.out.println("Value " + i.next());
     }
-    System.out.println("------------");
-}
-
+    System.out.println("------------");  } // end method
 ```
 
 Each Iterator has `.hasNext()`, `.next()`, `remove()` `(, .forEachRemaining( ...)` ).
@@ -1560,6 +1557,101 @@ for (<MyClass> checkedObject: this.objects) {
 
 
 
+<a class="page-break" name="section-09"></a>
+
+### Section 9, Arrays, Inner and Abstract Classes & Interfaces
+
+*01-02-2019, finished ..-..-....*										[Go to Top](#top)	[Go to Bottom](#bottom) 
+
+#### Interfaces (Lecture 100-104)
+
+An *interface* specifies *methods* that a particular *class*, that implements the *interface*, <u>must</u> implement.
+
+The *interface* itself is *abstract*. There is no code for any of the *methods*, you only supply the *method* names and their *arguments*. The code goes into the *class* that implements the *interface*.
+
+The idea is to standardize behavior for all *classes* implementing the same *interface*.
+
+Creating an *interface* is a commitment that the *interface*'s *methods* and *constant variables* will not change. This prevents code breaking in other *class*es using this *interface* by changes made to the code.
+
+It's good practice to start *Interface* names with a capital I and then the rest also starting with a capital. It makes it clear it is an *interface.*
+
+In IntelliJ, select *New - Java Class*, in the dialogue *Create New Class* select *Interface*. A new *interface* will be created.
+
+All *methods* with their *signatures* (return type, arguments count/type) are defined, but no code added.
+
+```java
+package <packagePath>;
+public interface IMyInterface {
+  public void methodOne()); // public is redundant
+  String methodTwo(int intValue);
+  boolean methodThree(String stringValue));
+}
+```
+
+The *access-modifier* keyword is useless here,  because the *interface* is implemented in a *class*. In the *class* the *access-modifier* can be specified.
+
+In the *class* implementing the *interface*, all of the *methods* from the *interface* have to be implemented and *access-modifiers* can be added. Even methods are not used or coded for, they <u>must</u> be implemented.
+
+```java
+package <packagePath>;
+public class MyClass implements IMyInterFace { 
+  public IMyClass () { /* constructor*/ }
+  @Override
+  public void methodOne()                          { /* not used */ }
+  @Override
+  public String methodTwo(int intValue)            { 
+    /* code goes here */
+    return intValue + " = " + intValue; }
+  @Override
+  private boolean methodThree(String stringValue)) { 
+    /* code goes here */
+    return stringValue.equalsIgnoreCase( "masterclass" ); }  } // end class
+```
+
+Several ways to *instantiate* an *object*, using a *class* implementing the *interface*, or using the interface *directly*.
+
+```java
+IMyInterface myObject;      // specify myObject as object of type <interface>
+myObject = new MyClass();   // create  myObject with class implementing <interface>
+// or ...
+MyClass myObject = new MyClass();
+```
+
+This is not valid, it does work, but defeats the purpose of *interfaces*.
+
+
+```java
+IMyInterFace myObject = new IMyInterface() {
+public void methodOne()                          { /* ... */ }
+  @Override
+  public String methodTwo(int intValue)            { return null; }
+  @Override
+  private boolean methodThree(String stringValue)) { return false; }
+}
+```
+
+(As IntelliJ inserts all the methods when you do it like above, maybe nice to do a quick *Implement Methods* )
+
+```java
+IMyInterface myObject;
+myObject = new MyClass1(); // MyClass1 implements IMyInterface, OK
+myObject = new MyClass2(); // MyClass2 implements IMyInterface, OK
+myObject = new MyClass3(); // MyClass3 does NOT implement IMyInterface, ERROR!
+```
+
+
+
+Java libraries make extensive use of *interfaces*, we could change `LinkedList<MyClass>`, `ArrayList<MyClass`, etc into `List<MyClass>` without any problem, because  they implement the `List<>` *interface*.
+
+It can sometimes be hard to decide to implement an *interface* or inherit from a base *class*. The way to decide that generally is to consider the relationship of the final *class* to the *object* it is extending or implementing.
+
+A *class* in Java can only inherit from one super *class*, but you can *implement* from many *interfaces*. Multiple inheritance is only possible by implementing several *interfaces*.
+
+E.g. a dog (`class Animal`) would implement `interface IWalk`, a bird (`class Animal`) would implement both `interface IWalk` and `interface IFly`.
+
+ *JavaPrograms//Section-09/S09-03-InterfacesChallenge* :
+
+Went fully overboard with a challenge, created a fully functioning ConnectFour game, with TDD and fully working interface. Took lot of time, but learned a lot.
 
 
 
@@ -1568,7 +1660,12 @@ for (<MyClass> checkedObject: this.objects) {
 
 
 
-<a name="bottom"></a>
+
+
+
+
+
+<a name="bottom"></a>							[Go to Top](#top)
 
 
 ### Bottom anchor
