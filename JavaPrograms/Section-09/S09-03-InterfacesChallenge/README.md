@@ -23,7 +23,7 @@
         System.out.println("Choose\n" +
                 "1 to enter a string\n" +
                 "0 to quit");
-    
+        
         while (!quit) {
             System.out.print("Choose an option: ");
             int choice = scanner.nextInt();
@@ -41,7 +41,8 @@
             }
         }
         return values;
-    }
+    Went fully overboard on this challenge, created a fully TDD tested application, with a fully working Connect Four interface.
 ```
 
 ```
+
