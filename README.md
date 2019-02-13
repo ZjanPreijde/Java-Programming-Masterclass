@@ -1228,6 +1228,9 @@ public static void printArray(int[] array)
 	{ for (int i = 0; i < array.length; i++) { /* ... */ } } // end method
 public static void printArray(String[] array) 
 	{ for (int i = 0; i < array.length; i++) { /* ... */ } } // end method
+// Alternative loop if you just want to use the values, not change them
+public static void printArray(String[] array) 
+	{ for ( String s : array ) { /* ... */ } } // end method
 ```
 
 An array can be initialized by using an array initializer block `{ , , }`, also known as an anonymous array.
@@ -1330,13 +1333,15 @@ Lists, another way of looking at arrays as an array is a list, a sequence of val
 
 Very much like arrays.
 
-`Class ArrayList<ElementType>`  is  a resizable array. `ElementType` is the data type you want to store, can be a Java *class* or own *class*, <u>not</u> a *primitive datatype*!.
+`Class ArrayList<ElementType>`  is  a resizable array. `ElementType` is the data type you want to store, can be a Java *class* or own *class*, <u>not</u> a *primitive datatype*!
+
+It stores *objects*! You can not store *primitive types*!
 
 *Wrapper classes* can be coded, but Java already provides these for each *primitive datatype*, e.g. `int` -> `Integer`.
 
 `ArrayList<String> myList = new ArrayList<String>();`  to initialize a List interface of type String. The `()` calls the constructor of the `class ArrayList`. (The last `<String>` can be omitted these days)
 
- The class takes care of the sizing etc all by it self.
+ The *class* takes care of the sizing etc all by it self.
 
 - `myList.add( <ObjectType> <object> );` adds an element to the list with given value
 - `myList.add( <index>, <ObjectType> <object> );` inserts an element to the list in given position with given value
@@ -1347,6 +1352,7 @@ Very much like arrays.
 - `myList.size()` for length
 - `myList.isEmpty()`, for ... :-)
 - `myList.indexOf( <object> )` to return `<index>` of `<object>` in myList, returns `-1` if not found
+- and more ...
 
 `ArrayList<String> myList = new ArrayList<String>( <otherListOfSameType> );`  will initialize a List interface of type string and initialize the contents with the contents of `<otherListOfSameType>`
 
@@ -1513,6 +1519,8 @@ private static boolean addInOrderLLString(
 
 Java has implemented the LinkedList as a *double link list*, links have pointers to both *next* and *previous* item.
 
+[ **a** -> b , a <- **b** -> c, b <- **c** -> d , c <- **d** ]
+
 Because of the nature of `LinkedList`s there is no  real pointer to where it is (or something, having to do with avoiding infinite loops), anyway, to make `.next()` and `.previous()` work like you would expect, there is a little more work to determine which way we are going. Check `boolean goingforward` and extra `.next()/.previous()` in *Section-08/S08-09-LinkedLists*.
 
 Something  like this (check well for `true`, `false` and `!`)  :
@@ -1550,8 +1558,8 @@ while (!quit) {
 Alternative loop
 
 ```java
-for (<MyClass> checkedObject: this.objects) {
-  if (checkedObject.getField().equals(<someValue>)) { /* do something */ }
+for (<MyClass> checkedObject: myObjects) {
+  if (checkedObject.getField().equals( <someValue> )) { /* do something */ }
     else { /* do domething else */ }  } // end for
 ```
 
@@ -1645,13 +1653,40 @@ Java libraries make extensive use of *interfaces*, we could change `LinkedList<M
 
 It can sometimes be hard to decide to implement an *interface* or inherit from a base *class*. The way to decide that generally is to consider the relationship of the final *class* to the *object* it is extending or implementing.
 
-A *class* in Java can only inherit from one super *class*, but you can *implement* from many *interfaces*. Multiple inheritance is only possible by implementing several *interfaces*.
+A *class* in Java can only inherit from one super *class*, but you can *implement* from many *interfaces*. Multiple inheritance is only possible by implementing several *interfaces*. An interface can extend multiple other interfaces.
+
+```java
+public class MyClassB extends MyClassA implements IA, IB { /* ... */ }
+public interface IB extends IC, ID { /* ... */ }
+```
+
+
 
 E.g. a dog (`class Animal`) would implement `interface IWalk`, a bird (`class Animal`) would implement both `interface IWalk` and `interface IFly`.
 
  *JavaPrograms//Section-09/S09-03-InterfacesChallenge* :
 
 Went fully overboard with a challenge, created a fully functioning ConnectFour game, with TDD and fully working interface. Took lot of time, but learned a lot.
+
+#### Time off, creating helper classes and creating a game app.
+
+Took time off from the course to create some helper Java *classes* (with basic *test-suites*) from snippets of code I've been using in a number of challenges, and to finish a *Connect Flex project* (Tic Tac Toe, Connect Four, Connect Five, Connect Flex (design your own game)), fully API-styled : *classes* return *responses* and don't do any output to the console, that's up to the code using the *classes*.
+
+If I have my TestMyClass.java next to MyClass.java (`package com.masterclass;`), I can  import all of its functionality with `import static com.masterclass.MyClass.*`.
+
+In my *CMResult.java*, I had to remove the *access-modifier* `class Result`
+
+If the .java file is called *CMName.java* (`package com.masterclass;`), and the *class* therein is  `class Name`, use `import com.masterclass.Name.*`.
+
+Just found out you can call Java from Javascript! That is something to look into.
+
+https://jxbrowser.support.teamdev.com/support/solutions/articles/9000013062-calling-java-from-javascript
+
+I created several classes and dozens of methods, each class with its own TDD-suite. I kept on improving the game and interface. The challenge, how it begun, got out of hand and it is now moved to a project I will keep on developing, as the course continues and my knowledge grows.
+
+2019-02-13, time to get back on track with the course.
+
+
 
 
 

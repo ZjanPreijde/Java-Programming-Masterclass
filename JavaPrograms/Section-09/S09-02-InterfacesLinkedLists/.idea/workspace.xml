@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15940673-e2b0-4db8-9887-3529ca291b60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-10-LinkedListsChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-10-LinkedListsChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../0. Snippets/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../0. Snippets/Snippets.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/ConnectFour.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/ConnectFour.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/out/production/S09-03-InterfacesChallenge/com/masterclass/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/src/com/masterclass/ConnectFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/src/com/masterclass/ConnectFour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/src/com/masterclass/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/src/com/masterclass/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-03-InterfacesChallenge/src/com/masterclass/Result.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-756">
-              <caret line="24" column="101" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
+            <state relative-caret-position="36">
+              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -68,7 +78,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,7 +101,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -143,7 +153,7 @@
     <frame x="1987" y="-2" width="1853" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08569839" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08681135" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -173,6 +183,13 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/Album.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
@@ -184,13 +201,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
-          <caret line="24" column="101" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
         </state>
       </provider>
     </entry>
