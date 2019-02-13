@@ -9,9 +9,11 @@ package com.masterclass;
 // Only 2 methods that actually directly use Scanner, getInt() and getString().
 //  Others make use of these.
 
+// import standard Java
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// import custom classes
 import static com.masterclass.OutputExtend.*;
 import static com.masterclass.ArrayExtend.*;
 

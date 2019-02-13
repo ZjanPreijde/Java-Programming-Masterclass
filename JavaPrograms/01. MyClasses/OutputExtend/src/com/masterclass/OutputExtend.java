@@ -2,10 +2,13 @@ package com.masterclass;
 /*
     Another great class by Zjan Preijde
 */
+
+// import standard Java
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+// import custom classes
 import static com.masterclass.ArrayExtend.*;
 
 // TODO Done: System.out shorthands : default prefix to ""

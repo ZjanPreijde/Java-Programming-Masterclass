@@ -1,19 +1,23 @@
 ## Class OutputExtend
 
-v.2019.02.11
+v.2019.02.12
+
+**Before testing, make sure the appropiate classes are copied into this folder**
 
 Started out as shorthand for `System.out.println()`, `.print()`, now also outputs `Arrays`, `ArrayLists` and `LinkedLists`
+
+
 
 ### Uses
 
 ```java
-// Standard Java
+// import standard Java
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
-// Does not exist yet :-)
-// import static com.masterclass.StringExtend.*;
+
+// import custom classes
+import static com.masterclass.ArrayExtend.*;
 ```
 
 
@@ -215,9 +219,7 @@ import static com.masterclass.OutputExtend.*;
 * Print array elements with bullits or numbers?
   * use Objects for method arguments, cut down on overloading.
   * 
-* Document `stringFormat()` if it remains `public`.
-* Document `printResult()`, `printTestResult()`.
-* Document `old()`, `olt()`, `olr()`?
+* 
 
 
 

@@ -1,14 +1,19 @@
 ## Class ArrayExtend
 
-v.2019.02.11
+v.2019.02.12
+
+**Before testing, make sure the appropiate classes are copied into this folder**
 
 Checking for winners in a Connect Four game app, I got a little carried away.
 
 #### Uses
 
 ```java
-// Standard Java
+// import standard Java
 import java.util.ArrayList;
+
+// import custom classes
+import static com.masterclass.OutputExtend.*;
 ```
 
 Does not do any do any output to console.
@@ -118,7 +123,7 @@ import static com.masterclass.ArrayExtend.*;
 
 
 
-#### Todo (2019-02-07)
+#### Todo
 
 - Create 'left side right' flip, reverse row contents?
 

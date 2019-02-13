@@ -3,7 +3,7 @@ package com.masterclass;
     Another great class by Zjan Preijde
 */
 
-
+// import standard Java
 import java.util.ArrayList;
 
 //TODO: Create 'left side right' flip, reverse row contents?
@@ -12,6 +12,9 @@ import java.util.ArrayList;
 //       so 12 becomes   1
 //          34          3 2
 //                       4
+
+// import custom classes
+// temp? : uses olt() only
 import static com.masterclass.OutputExtend.*;
 
 public class ArrayExtend {

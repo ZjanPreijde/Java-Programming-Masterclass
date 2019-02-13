@@ -1,20 +1,23 @@
 ## Class InputExtend
 
-v.2019.02.11
+v.2019.02.12
 
-Started out as extending functionality for getting user input using class `Scanner`
+**Before testing, make sure the appropiate classes are copied into this folder**
+
+Started out as extending functionality for getting `int`/`String` user input using class `Scanner`
 
 Now also shows menus and ask yes/no questions.
 
 ### Uses
 
 ```java
-// Standard Java
+// import Standard Java
 import java.util.ArrayList;
 import java.util.Scanner;
 
-// My class OutputExtend
+// import custom classes
 import static com.masterclass.OutputExtend.*;
+import static com.masterclass.ArrayExtend.*;
 ```
 
 
@@ -86,5 +89,24 @@ String[] getAMenu( String header, ArrayList<String[]> menuOptions)
 ```java
 import static com.masterclass.InputExtend;
 // Check it out!
+```
+
+
+
+
+
+### Todo
+
+- change getYesNo() result type to boolean?
+- 
+
+
+
+
+
+### Examples
+
+```java
+
 ```
 
