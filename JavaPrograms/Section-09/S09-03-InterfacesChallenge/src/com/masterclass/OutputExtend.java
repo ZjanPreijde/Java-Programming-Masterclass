@@ -3,238 +3,277 @@ package com.masterclass;
     Another great class by Zjan Preijde
 */
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import static com.masterclass.ArrayExtend.*;
+
+// TODO Done: System.out shorthands : default prefix to ""
+
 // TODO:
-// - prefix : should by default be false, more like System.out.print()
-// - menu   : bullitize choices, autonumber choices
-// - int[]              : printArray false by default
-// - String[]           : printArray false by default
+//  menu           : bullitize choices, autonumber choices, autoprefix choices?
+//  menu           : default printArray to false, newLine to true
+//  oln(), o()     : remove empty prefix where used in code
+//  oln(), o()     : rename to printLn(), print() in code, or keep shorthand?
+//  stringFormat() : create StringExtend class and move there
+//  phase out usage of olr(). Replace in code with printResult()
+//  phase out usage of olt()? Replace in code with printTestResult()
+//  remove the char overloaders? chars can be passed as "" + \ u xxxx
 // - ArrayList<Integer> : switch newLine and prefix
 // - ArrayList<String>  : switch newLine and prefix
+
+// printString() is the only one method doing the actual System.out.print() / .println()
+
 public class OutputExtend {
 
-  // QUICK AND DIRTY PASTE, EMBED LATER :
-  public static void olr(String text, boolean success) {
-      // olt = out line result
-      String result = ( success
-              ? stringFormat(text,"green")
-              : stringFormat(text,"redbold")
-      );
-      old(result);
-  }
-  public static void olt(String text, boolean success) {
-      // olt = out line TDD test
-      String result = ( success
-          ? stringFormat( text + " Passed :-)", "green")
-          : stringFormat( text + " !!! FAILED !!! :-(", "redbold")
-          );
-      old(result);
-  }
-  public static String stringFormat(
-                String string
-              , String format
-          ) {
-      // Only green, red, redbold now
-      String result = string;
-      String    red   = "\033[31"
-              , green = "\033[32"
-              , bold  = ";1"
-              , reset = "\033[0"
-              , end   = "m";
-      switch (format) {
-          case "green":
-              result = green + end + result;
-              break;
-          case "red":
-              result = red + end + result;
-              break;
-          case "redbold":
-              result = red + bold + end + result;
-              break;
-          default:
-              break;
-      }
-      result += reset + end;
-      return result;
-  }
-  // <- QUICK AND DIRTY PASTE
+    /* Overloaders */
+    public static void printString( String text) {
+        printString( text, "");
+    }
+    public static void printString( String text, String prefix ) {
+        printString( text, prefix, "");
+    }
+    public static void printString( String text, String prefix, String suffix, boolean inLine ) {
+        // Only method that actually does output!
+        if ( inLine ) {
+            System.out.print( prefix + text + suffix );
+        } else {
+            System.out.println( prefix + text + suffix );
+        }
+    }
+
+    /* Overloader */
+    public static void printHeader( String header ) {
+        printHeader( header, true, "=", "-", "", "");
+    }
+    public static void printHeader( String header, boolean boxIt
+            , String top, String bottom, String prefix, String suffix ) {
+        if ( boxIt ) {
+            printAString( stringBoxIt( header, top, bottom, prefix, suffix ) );
+        } else {
+            printString( header );
+        }
+    }
+    // If I ever build a StringExtend class,
+    //    stringFormat() and stringBoxIt() can go there.
+
+    //  http://www.santhoshreddymandadi.com/java/coloring-java-output-on-console.html
+    //  https://en.wikipedia.org/wiki/ANSI_escape_code#Escape_sequences
+    public static String stringFormat(
+            String string
+            , String format
+    ) {
+        // Only green, red, redbold for now
+        String result = string;
+        String    black  = "\033[30" // default
+                , red    = "\033[91" // Bright Red   , normal = 31
+                , green  = "\033[92" // Bright Green , normal = 32
+                , yellow = "\033[93" // Bright Yellow, normal = 33
+                , blue   = "\033[94" // Bright Blue  , normal = 34
+                , bold   = ";1", italics = ";3", underLine = ";4", blink = ";5", strikeThrough = ";9"
+                , reset  = "\033[0"
+                , end    = "m";
+        switch (format) {
+            case "green":
+                result = green + end + result;
+                break;
+            case "red":
+                result = red + end + result;
+                break;
+            case "redbold":
+                result = red + bold + end + result;
+                break;
+            default:
+                break;
+        }
+        result += reset + end;
+        return result;
+    }
+
+    public static String[] stringBoxIt( String string
+            , String top, String bottom, String prefix, String suffix ){
+        String[] result = new String[3];
+        result[0] = top.repeat(string.length() + 4);
+        result[1] = "| " + string + " |";
+        result[2] = bottom.repeat(string.length() + 4);
+        result    = arrayTableBeautify( result );
+        result[0] = prefix + result[0];
+        result[1] = prefix + result[1];
+        result[2] = prefix + result[2] + suffix;
+        return result;
+    }
+
+    public static void printString( String text, String prefix, String suffix ) {
+        printString( text, prefix, suffix, false);
+    }
+    // Generic print result in color
+    public static void printResult( String text, boolean success) {
+        printResult( text, success, false);
+    }
+    public static void printResult( String text, boolean success, boolean debug) {
+        String result = ( success
+                ? stringFormat(text,"green")
+                : stringFormat(text,"redbold")
+        );
+        if ( debug ) { old( result ); } else { printString( result ); }
+    }
+
+    public static void printTestResult( String text, boolean success) {
+        text += ( success ? " Passed :-)" : " !!! FAILED !!! :-(" );
+        printResult( text, success, true );
+    }
 
     /*     System.out.println() short hand     */
     /*        with extra functionality         */
     /* Overloaders */
     public static void oln( String text ) {
-        oln( text, true );  // default should be false
+        printString( text, "", "", false );
     }
     public static void oln( String text, boolean prefix ) {
-        oln( text, ( prefix ? "= " : "" ) );
-    }
-    public static void oln( String text, char prefix ) {
-        oln( text, "" + prefix );
+        // Use default prefix for oln()
+        printString( text, ( prefix ? "= " : "" ), "", false );
     }
     public static void oln( String text, String prefix ) {
-        oln( text, prefix, "" );
-    }
-    public static void oln( String text, char prefix, String suffix ) {
-        oln( "" + prefix, text, suffix );
-    }
-    // Quicky for debugging
-    public static void old( String text ) {
-      oln( text, "Debug : ", "" );
+        printString( text, prefix, "", false );
     }
     /* Print to console */
     public static void oln( String text, String prefix, String suffix ) {
-        System.out.println( prefix + text + suffix );
+        printString( text, prefix, suffix, false );
     }
 
     /*     System.out.println short hand     */
     /*        with extra functionality       */
     /* Overloaders */
     public static void o( String text ) {
-        o( text, true ); // default should be false
+        printString( text, "", "", true );
     }
     public static void o( String text, boolean prefix ) {
-        o( text, ( prefix ? "- " : "" ), "" );
-    }
-    public static void o( String text, char prefix ) {
-        o( text, "" + prefix, "" );
+        // Use default prefix for o()
+        printString( text, ( prefix ? "- " : "" ), "", true );
     }
     public static void o( String text, String prefix ) {
-        o( text, prefix, "" );
+        printString( text, prefix, "" , true);
     }
-    public static void o( String text, boolean prefix, String suffix ) {
-        o( text, ( prefix ? "- " : "" ), suffix );
-    }
-    public static void o( String text, char prefix, String suffix ) {
-        o( text, "" + prefix, suffix );
-    }
-    /* Print to console */
     public static void o( String text, String prefix, String suffix ) {
-        System.out.print( prefix + text + suffix );
+        printString( text, prefix, suffix, true );
     }
 
-    // Print int[] array
+    // Quicky for debugging
+    public static void old( String text ) {
+        old( text, false );
+    }
+    public static void old( String text, boolean inLine ) {
+        printString( text, "Debug : ", "", inLine);
+    }
+
+    // Print TDD test result while debugging
+    public static void olt( String text, boolean success ) {
+        printTestResult( text, success );
+    }
+
+    // Generic print result in color
+    public static void olr(String text, boolean success) {
+        printResult( text, success, false);
+    }
+    public static void olr(String text, boolean success, boolean debug) {
+        printResult( text, success, debug );
+    }
+
+    /* Print int[] */
     /* Overloaders */
     public static void printAInt( int[] array ) {
-        printAInt( array, true );  // default should be false
+        printAInt( array, "" );
     }
-    public static void printAInt( int[] array, boolean printArray ) {
-        printAInt( array, printArray, false );
+    public static void printAInt( int[] array, String prefix ) {
+        printAInt( array, prefix, "" );
+    }
+    public static void printAInt( int[] array, String prefix, String suffix ) {
+        printAInt( array, prefix, "", false );
     }
     /* Print to console */
-    public static void printAInt( int[] array, boolean printArray, boolean newLine ) {
-        if ( printArray ) {
-            // -> [0, 1, 2, 3, ...]
-            oln( Arrays.toString( array ), "");
-        } else {
-            for ( int i : array ) {
-                if ( newLine ) {
-                    oln( "" + i, "" );
-                } else {
-                    o( "" + i, "" );
-                }
-            }
-            if ( !newLine ) oln( "", "" );
+    public static void printAInt( int[] array, String prefix, String suffix, boolean inLine ) {
+        for ( int i : array ) {
+            printString( "" + i, prefix, suffix, inLine );
         }
+        if ( inLine ) printString( "" ); // When done printing inline, go to next line
     }
 
-    // Print int[] array  -> ["a", "b", "c", ...]
+    /* print String[] */
     /* Overloaders */
     public static void printAString( String[] array ) {
-        printAString( array, true ); // default should be false
+        printAString( array, "" );
     }
-    public static void printAString( String[] array, boolean printArray ) {
-        printAString( array, printArray, false );
+    public static void printAString( String[] array, String prefix ) {
+        printAString( array, prefix, "" );
+    }
+    public static void printAString( String[] array, String prefix, String suffix ) {
+        printAString( array, prefix, suffix, false );
     }
     /* Print to console */
-    public static void printAString( String[] array, boolean printArray, boolean newLine ) {
-        if ( printArray ) {
-            // -> ["a", "b", "c", ...]
-            oln( Arrays.toString( array ), "");
-        } else {
-            for ( String s : array ) {
-                if ( newLine ) {
-                    oln( s, "" );
-                } else {
-                    o( s, "" );
-                }
-            }
-            if ( !newLine ) oln( "", "" );
+    public static void printAString( String[] array, String prefix, String suffix, boolean inLine ) {
+        for ( String s : array ) {
+            printString( s, prefix, suffix, inLine );
         }
+        if ( inLine ) printString( "" ); // When done printing inline, go to next line
     }
 
-    // ArrayList
-    // Print ArrayList<Integer>
+    // ArrayLists
+    /* Print ArrayList<Integer> */
     /* Overloaders */
     public static void printALInteger( ArrayList<Integer> array ) {
-        printALInteger( array, true );
+        printALInteger( array, "" );
     }
-    public static void printALInteger( ArrayList<Integer> array,  boolean newLine ) {
-        printALInteger( array, newLine, "" );
+    public static void printALInteger( ArrayList<Integer> array,  String prefix ) {
+        printALInteger( array, prefix, "" );
+    }
+    public static void printALInteger( ArrayList<Integer> array,  String prefix, String suffix ) {
+        printALInteger( array, prefix, suffix, false );
     }
     /* Print to console */
-    public static void printALInteger( ArrayList<Integer> array, boolean newLine, String prefix ) {
+    public static void printALInteger( ArrayList<Integer> array, String prefix, String suffix, boolean inLine ) {
         array.forEach( element -> {
-            if ( newLine ) {
-                oln( "" + element, prefix );
-            } else {
-                o( "" + element, prefix );
-            }
+            printString( "" + element, prefix, suffix, inLine );
         } );
-        if ( !newLine ) oln( "", "" );
+        if ( inLine ) oln( "", "" ); // When done printing inline, go to next line
     }
 
-    // Print ArrayList<String>
+    /* Print ArrayList<String> */
     /* Overloaders */
     public static void printALString( ArrayList<String> array ) {
-        printALString( array, "- " );
+        printALString( array, "" );
     }
     public static void printALString( ArrayList<String> array, String prefix ) {
-        printALString( array, prefix, true );
+        printALString( array, prefix, "" );
     }
-    public static void printALString( ArrayList<String> array, String prefix
-            , boolean newLine ) {
-        printALString( array, prefix, newLine, "" );
+    public static void printALString( ArrayList<String> array, String prefix, String suffix) {
+        printALString( array, prefix, suffix, false );
     }
     /* Print to console */
-    public static void printALString( ArrayList<String> array, String prefix
-            , boolean newLine, String suffix ) {
+    public static void printALString( ArrayList<String> array, String prefix, String suffix, boolean inLine ) {
         array.forEach( element -> {
-            if ( newLine ) {
-                oln( element, prefix );
-            } else {
-                o( element, prefix );
-            }
+            printString( element, prefix, suffix, inLine );
         } );
-        if ( !newLine ) oln( "", "" );
+        if ( inLine ) oln( "", "" ); // When done printing inline, go to next line
     }
 
-    // LinkedList
-    // Print LinkedList<String>
+    // LinkedLists
+    /* Print LinkedList<String> */
     /* Overloaders */
     public static void printLLString( LinkedList<String> list ) {
-        printLLString( list, "- " );
+        printLLString( list, "" );
     }
-    public static void printLLString( LinkedList<String> list
-            , String prefix ) {
-        printLLString( list, prefix, true );
+    public static void printLLString( LinkedList<String> list, String prefix ) {
+        printLLString( list, prefix, "");
     }
-    public static void printLLString( LinkedList<String> list
-            , String prefix, boolean newLine ) {
-        printLLString( list, prefix, newLine, "" );
+    public static void printLLString( LinkedList<String> list, String prefix, String suffix ) {
+        printLLString( list, prefix, suffix, false );
     }
     /* Print to console */
-    public static void printLLString( LinkedList<String> list, String prefix
-            , boolean newLine, String suffix ) {
+    public static void printLLString( LinkedList<String> list, String prefix, String suffix, boolean inLine ) {
         Iterator <String> iterator = list.iterator();
         while ( iterator.hasNext() ) {
-            if ( newLine ) {
-                oln( iterator.next(), prefix );
-            } else {
-                o( iterator.next(), prefix );
-            }
+            printString( iterator.next(), prefix, suffix, inLine );
         }
+        if ( inLine ) oln( "", "" ); // When done printing inline, go to next line
     }
 }

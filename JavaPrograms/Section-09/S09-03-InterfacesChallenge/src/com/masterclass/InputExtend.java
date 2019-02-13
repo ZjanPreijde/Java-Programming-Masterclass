@@ -13,25 +13,26 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import static com.masterclass.OutputExtend.*;
+import static com.masterclass.ArrayExtend.*;
 
 public class InputExtend {
     private static Scanner scanner = new Scanner( System.in );
 
     // User input
     public static int getInt() {
-        return getInt( "\tEnter your choice and press ↵" );
+        return getInt( "\tEnter your choice" );
     }
     public static int getInt( String prompt ) {
         return getInt( prompt, false, 0, 0 );
     }
     public static int getInt( String prompt, boolean minMax, int min, int max ) {
-        String inputPrompt = prompt;
+        String inputPrompt = prompt + " and press ↵";
         if ( minMax ) {
             inputPrompt += " (" + min + "-" + max + ")";
         }
         int result = 0;
 
-        o( inputPrompt + " : " , "");
+        o( inputPrompt + " : " );
         while ( true ) {
             if ( scanner.hasNextInt() ) {
                 result = scanner.nextInt();
@@ -48,7 +49,7 @@ public class InputExtend {
     }
 
     public static String getString() {
-        return getString( "\tEnter your text and press ↵" );
+        return getString( "\tEnter your text" );
     }
     public static String getString( String prompt ) {
         return getString( prompt, false, "", "" );
@@ -56,7 +57,8 @@ public class InputExtend {
     public static String getString( String prompt
             , boolean minMax, String min, String max ) {
         // Signature String, boolean, String, String -> minMax
-        return getString( prompt, minMax, min, max, false );
+        // Default caseInsensitive now true
+        return getString( prompt, minMax, min, max, true );
     }
     public static String getString( String prompt
             , boolean caseInsensitive ) {
@@ -65,14 +67,14 @@ public class InputExtend {
     }
     public static String getString( String prompt
             , boolean minMax, String min, String max, boolean caseInsensitive ) {
-        String inputPrompt = prompt;
+        String inputPrompt = prompt + " and press ↵";
         String result, resultUp;
         int minCompare, maxCompare;
         if ( minMax ) {
             inputPrompt += " (" + min + "-" + max + ")";
         }
 
-        o( inputPrompt + " : ", "" );
+        o( inputPrompt + " : " );
         while ( true ) {
             result   = scanner.nextLine();
             resultUp = result.toUpperCase();
@@ -82,14 +84,14 @@ public class InputExtend {
             maxCompare = max.compareTo( ( caseInsensitive ? resultUp : result ) );
             if ( minCompare >= 0 && maxCompare >= 0 )
                 break;
-            o( "\tInvalid " + "(" + result + ")\n", "" );
-            o( inputPrompt + " : ", "" );
+            o( "\tInvalid " + "(" + result + ")\n" );
+            o( inputPrompt + " : " );
         }
         return result;
     }
 
     public static String getYesNo() {
-        return getYesNo( "\tMake your choice and press ↵", "Y", "N" );
+        return getYesNo( "\tMake your choice", "Y", "N" );
     }
     public static String getYesNo( String prompt ) {
         return getYesNo( prompt, "Y", "N" );
@@ -114,60 +116,72 @@ public class InputExtend {
 
     /*    Build menu from one or more ArrayList<String>s    */
     /* Overloaders */
-    public static String getMenu( String header, ArrayList<String> menuOptions ) {
+    public static String[] getMenu( String header
+            , ArrayList<String> menuOptions ) {
+        ArrayList<String> menuCodes   = new ArrayList<>();
         ArrayList<String> menuChoices = new ArrayList<>();
-        ArrayList<String> menuReturns = new ArrayList<>();
-        menuOptions.forEach( option -> {
+        for (int i = 0; i < menuOptions.size(); i++) {
+            String option = menuOptions.get( i );
             menuChoices.add( option.substring( 0,1 ) );
-            if ( option.substring( 1,2 ).equals( ". " ) ) {
-                option = option.substring( 3 );
-            }
-            menuReturns.add( option.toLowerCase().replace( " ", "-" ) );
-        } );
-        return getMenu( header, menuOptions, menuChoices, menuReturns );
+            menuCodes.add( option
+                    .strip()
+                    .replace( " ", "-" )
+                    .toLowerCase()
+            );
+        }
+        return getMenu( header, menuOptions, menuCodes, menuChoices );
     }
-    public static String getMenu( String header, ArrayList<String> menuOptions
+    public static String[] getMenu( String header
+            , ArrayList<String> menuOptions
             , ArrayList<String> menuChoices ) {
-        ArrayList<String> menuReturns = new ArrayList<>();
-        menuOptions.forEach( option -> {
-            if ( option.substring( 1,2 ).equals( ". " ) ) {
-                option = option.substring( 3 );
+        ArrayList<String> menuCodes = new ArrayList<>();
+        String option, code;
+        for (int i = 0; i < menuOptions.size(); i++) {
+            code = menuOptions.get( i );
+            if ( code.substring( 0,3 ).equals( menuChoices.get( i ) + ". " ) ) {
+                code = code.substring( 3 );
             }
-            // "    Menu choice    " -> "menu-choice"
-            menuReturns.add( option.toLowerCase()
-                .strip()
-                .replace( " ", "-" ) );
-        } );
-        return getMenu( header, menuOptions, menuChoices, menuReturns );
+            // "    Menu Option    " -> "menu-option"
+            menuCodes.add( code
+                    .strip()
+                    .replace( " ", "-" )
+                    .toLowerCase()
+            );
+        }
+        return getMenu( header, menuOptions, menuCodes, menuChoices );
     }
     /* Prepare for and call getAmenu() */
-    public static String getMenu( String header, ArrayList<String> menuOptions
-            , ArrayList<String> menuChoices, ArrayList<String> menuReturns ) {
+    public static String[] getMenu( String header
+            , ArrayList<String> menuOptions
+            , ArrayList<String> menuCodes
+            , ArrayList<String> menuChoices ) {
         ArrayList<String[]> options = new ArrayList<>();
-        String option, returns;
+        String option, choice, code;
+        boolean codesIsEmpty = menuCodes.isEmpty();
         for ( int i = 0; i < menuOptions.size(); i++ ) {
             option = menuOptions.get( i );
-            if ( option.substring( 0,3 ).equals( menuChoices.get(i) + ". " ) )
-                option = option.substring( 3 );
-            returns = ( menuReturns.isEmpty()
-                    ? option.toLowerCase().replace( " ", "-" )
-                    : menuReturns.get( i ) );
-            options.add( new String[] { menuChoices.get( i ), returns, option } );
+            choice = menuChoices.get( i );
+            if ( codesIsEmpty) {
+                code = option;
+                if ( code.substring( 0,3 ).equals( menuChoices.get(i) + ". " ) ) {
+                    code = code.substring( 3 );
+                }
+                code = code
+                        .strip()
+                        .toLowerCase()
+                        .replace( " ", "-");
+            } else {
+                code = menuCodes.get( i ) ;
+            }
+            options.add( new String[] { option, code, choice } );
         }
-        String result = getAMenu( header , options, true );
-        return result;
+        return getAMenu( header, options);
     }
 
     /*    Build menu from one ArrayList<String[]>    */
-    /* Overloader */
-    public static String getAMenu( String header, ArrayList<String[]> menuOptions
-            , boolean returnCode ) {
-        String[] result = getAMenu( header, menuOptions);
-        // [0] = "description", [1] = "code", [2] = "choiceChar"
-        return result[2];
-    }
+    /* Overloaded */
     public static String[] getAMenu( String header
-            , ArrayList<String[]> menuOptions ) {
+            , ArrayList<String[]> menuOptions) {
         // Expects ArrayList<String[ "description",  "code", "choiceID"  ]>
         //   e.g. ["Exit", "quit", "Q"]
         // Older and wiser, return full String[] of chosen option.
@@ -179,17 +193,19 @@ public class InputExtend {
 
         /* Print header if any */
         if ( !header.equals( "" ) ) {
-            oln( "\n"
-                    + "\n\t" + "=".repeat( header.length() )
-                    + "\n\t" + header
-                    + "\n\t" + "-".repeat( header.length() )
-            , "");
+            printHeader( header, true
+                    , "=", "-", "\t", "");
         }
 
         /* Print menu, build lists for return value */
         menuOptions.forEach( menuOption -> {
             choices.add( menuOption[ 2 ]);
-            oln( "\t" + menuOption[ 2 ] + ". " + menuOption[ 0 ], "");
+            /* "optionID. Menu Option" */
+            String option = menuOption[0], optionChar = menuOption[2];
+            if ( option.substring( 0,3 ).equals( optionChar + ". " ) ) {
+                option = option.substring( 3 );
+            }
+            oln( "\t" + optionChar + ". " + option, "" );
         } );
 
         /* Get valid choice */
@@ -205,7 +221,7 @@ public class InputExtend {
             }
             o( "\tInvalid " + "(" + choice + ")\n" );
         }
-        /* return */
+        /* returns ["Menu Option", "menu-option", "optionID"] */
         return result;
     }
 

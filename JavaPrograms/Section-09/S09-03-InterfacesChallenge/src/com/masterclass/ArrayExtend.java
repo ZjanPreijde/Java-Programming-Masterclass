@@ -17,175 +17,6 @@ import static com.masterclass.OutputExtend.*;
 public class ArrayExtend {
     public static String[] result;
 
-//    QUICK AND DIRTY PASTE, EMBED LATER
-    public static String[] arrayTableBeautify( String[] table ) {
-        // Maybe 2 later, no cells.
-        if ( table.length < 3 ) { return table; /* Nothing to do */ }
-
-        // Flip table, top to left side, eases translation
-        String[] result = arrayFlip( table, "backward" );
-        // First row is last column of table
-        String[] newTable = new String[ result.length ];
-
-        // temp, double verticals later?
-        //  maybe needs another flip?
-        String doubleBorders = ""
-            + "╔═══╦═══╗"
-            + "╠═══╬═══╣"
-            + "║   ║   ║"
-            + "╚═══╩═══╝";
-        // temp
-
-
-        for (int i = 0; i < result.length; i++) {
-            String  row         = result[ i ];
-            boolean firstColumn = ( i == result.length - 1 ); // Flipped backward
-            boolean lastColumn  = ( i == 0 );
-            boolean middleColumn = !( firstColumn || lastColumn );
-            int rowLength       = row.length();
-
-            String firstChars, between, lastChars;
-            String  newRow = ""; // Not necessary, but Java nags
-            if ( rowLength == 3 ) {
-                // Original table has one row
-                firstChars = row;
-                between    = "";
-                lastChars  = "";
-                if ( firstColumn ) {
-                    newRow =
-                        ( firstChars
-                            .replace("=|=", "╒│╘")
-                            .replace("-|-", "┌│└")
-                            .replace("=|-", "╒│└")
-                            .replace("-|=", "┌│╘")
-                        );
-                }
-                if ( middleColumn) {
-                    newRow =
-                        ( firstChars
-                            .replace("=|=", "╤│╧")
-                            .replace("-|-", "┬│┴")
-                            .replace("=|-", "╤│┴")
-                            .replace("-|=", "┬│╧")
-                            .replace("=", "═" )
-                            .replace("-", "─" )
-                        );
-
-                }
-                if ( lastColumn ) {
-                    newRow =
-                        ( firstChars
-                            .replace("=|=", "╕│╛")
-                            .replace("-|-", "┐│┘")
-                            .replace("=|-", "╕│┘")
-                            .replace("-|=", "┐│╛")
-                        );
-                }
-            } else {
-                int startAt = ( firstColumn || lastColumn ) ? 1: 2;
-                firstChars = row.substring( 0,startAt );
-                between    = row.substring( startAt, rowLength - 2 );
-                lastChars  = row.substring( rowLength - 2 );
-
-                if ( firstColumn ) {
-                    newRow = ""
-                        + ( firstChars
-                            .replace("=", "╒" )
-                            .replace("-", "┌" )
-                          )
-                        + ( between
-                            .replace("=", "╞" )
-                            .replace("-", "├" )
-                          )
-                        + ( lastChars
-                            .replace("=", "╘" )
-                            .replace("-", "└" )
-                          )
-                    ;
-                    newRow = newRow
-                            .replace("|", "│" )
-                    ;
-                } // firstColumn
-                if ( middleColumn ) {
-
-                    newRow = ""
-                            + ( firstChars
-                            .replace("=|", "╤" + "|" )
-                            .replace("-|", "┬" + "|" )
-                    )
-                            + ( between
-                            .replace("=|", "╪" + "|" )
-                            .replace("-|", "┼" + "|" )
-                            .replace("|=", "|" + "╪" )
-                            .replace("|-", "|" + "┼" )
-                    )
-                            + ( lastChars
-                            .replace("|=", "|" + "╧" )
-                            .replace("|-", "|" + "┴" )
-                    )
-                    ;
-                    newRow = newRow
-                            .replace("=", "═" )
-                            .replace("-", "─" )
-                            .replace("|", "│" )
-                    ;
-                } // middleColumn
-                if ( lastColumn ) {
-                    newRow = ""
-                        + ( firstChars
-                            .replace("=", "╕" )
-                            .replace("-", "┐" )
-                          )
-                        + ( between
-                            .replace("=", "╡" )
-                            .replace("-", "┤" )
-                          )
-                        + ( lastChars
-                            .replace("=", "╛" )
-                            .replace("-", "┘" )
-                          )
-                    ;
-                    newRow = newRow
-                            .replace("|", "│" )
-                    ;
-                } // lastColumn
-            } // <- rowLength == 3
-            newTable[ i ] = newRow;
-        }
-
-
-        // Flip back forward
-        newTable = arrayFlip( newTable, "forward" );
-        return newTable;
-    }
-
-    public static boolean arrayCompare( String[] array1, String[] array2) {
-        return arrayCompare( array1, array2, false);
-    }
-    public static boolean arrayCompare( String[] array1, String[] array2
-            , boolean debug ) {
-        boolean result = true;
-        if ( !( array1.length == array2.length) ) {
-            result = false;
-            if ( debug ) {
-                olt( "length " + array1.length
-                    + " != " + array2.length, false );
-            }
-        }
-        if ( result ) {
-            for (int i = 0; i < array1.length; i++) {
-                if ( !( array1[i].equals( array2[i] ) ) ){
-                    result = false;
-                    if ( debug ) {
-                        olt( "[" + i + "]. "
-                                + "string " + array1[i] + " != " + array2[i]
-                            , false );
-                    }
-                }
-            }
-        }
-        return result;
-    }
 // <-    QUICK AND DIRTY PASTE, EMBED LATER
 
     // boolean hasValue String[]
@@ -393,6 +224,7 @@ public class ArrayExtend {
         return result;
     }
 
+
     //TODO : In future ArrayListExtend ?
     private static String[] listToArray( ArrayList<String> list ) {
         String[] array = new String[ list.size() ];
@@ -401,5 +233,204 @@ public class ArrayExtend {
             array[ row ] = list.get( row );
         }
         return array;
+    }
+
+    public static String[] arrayTableBeautify( String[] table ) {
+        // Maybe 2 later, no cells.
+        if ( table.length < 3 ) { return table; /* Nothing to do */ }
+
+        // Flip table, top to left side, eases translation
+        String[] result = arrayFlip( table, "backward" );
+        // First row is last column of table
+        String[] newTable = new String[ result.length ];
+
+        // temp, double verticals later?
+        //  maybe needs another flip?
+        String doubleBorders = ""
+                + "╔═══╦═══╗"
+                + "╠═══╬═══╣"
+                + "║   ║   ║"
+                + "╚═══╩═══╝";
+        // temp
+
+
+        for (int i = 0; i < result.length; i++) {
+            String  row         = result[ i ];
+            boolean firstColumn = ( i == result.length - 1 ); // Flipped backward
+            boolean lastColumn  = ( i == 0 );
+            boolean middleColumn = !( firstColumn || lastColumn );
+            int rowLength       = row.length();
+
+            String firstChars, between, lastChars;
+            String  newRow = ""; // Not necessary, but Java nags
+            if ( rowLength == 3 ) {
+                // Original table has one row
+                firstChars = row;
+                between    = "";
+                lastChars  = "";
+                if ( firstColumn ) {
+                    newRow =
+                            ( firstChars
+                                    .replace("=|=", "╒│╘")
+                                    .replace("-|-", "┌│└")
+                                    .replace("=|-", "╒│└")
+                                    .replace("-|=", "┌│╘")
+                            );
+                }
+                if ( middleColumn) {
+                    newRow =
+                            ( firstChars
+                                    .replace("=|=", "╤│╧")
+                                    .replace("-|-", "┬│┴")
+                                    .replace("=|-", "╤│┴")
+                                    .replace("-|=", "┬│╧")
+                                    .replace("=", "═" )
+                                    .replace("-", "─" )
+                            );
+
+                }
+                if ( lastColumn ) {
+                    newRow =
+                            ( firstChars
+                                    .replace("=|=", "╕│╛")
+                                    .replace("-|-", "┐│┘")
+                                    .replace("=|-", "╕│┘")
+                                    .replace("-|=", "┐│╛")
+                            );
+                }
+            } else {
+                int startAt = ( firstColumn || lastColumn ) ? 1: 2;
+                firstChars = row.substring( 0,startAt );
+                between    = row.substring( startAt, rowLength - 2 );
+                lastChars  = row.substring( rowLength - 2 );
+
+                if ( firstColumn ) {
+                    newRow = ""
+                            + ( firstChars
+                            .replace("=", "╒" )
+                            .replace("-", "┌" )
+                    )
+                            + ( between
+                            .replace("=", "╞" )
+                            .replace("-", "├" )
+                    )
+                            + ( lastChars
+                            .replace("=", "╘" )
+                            .replace("-", "└" )
+                    )
+                    ;
+                    newRow = newRow
+                            .replace("|", "│" )
+                    ;
+                } // <- firstColumn
+                if ( middleColumn ) {
+                    //  Let's get some quickies out of the way.
+                    firstChars = firstChars
+                        .replace("=|","╤│" )
+                        .replace("-|","┬│" )
+                        .replace("= ","═ " )
+                        .replace("- ","─ " )
+                        .replace("|", "│" )
+                    ;
+                    between = between
+                        .replace("|", "│" )
+                    ;
+                    lastChars = lastChars
+                        .replace("|=", "│╧" )
+                        .replace("|-", "│┴" )
+                        .replace(" ="," ═" )
+                        .replace(" -"," ─" )
+                        .replace("|", "│" )
+                    ;
+                    newRow = firstChars + between + lastChars;
+
+                    // Replace works in a way that has me jumping through loops
+                    ArrayList<String[]> translate = new ArrayList <>(  );
+                    // Free lines
+                    translate.add( new String[]{ " = ", " ═ " } );
+                    translate.add( new String[]{ " - ", " ─ " } );
+                    // Crossings
+                    translate.add( new String[]{ "│=│", "│╪│" } );
+                    translate.add( new String[]{ "│-│", "│┼│" } );
+                    // T-crossings
+                    translate.add( new String[]{ " -│", " ┬│" } );
+                    translate.add( new String[]{ "│- ", "│┴ " } );
+                    translate.add( new String[]{ " =│", " ╤│" } );
+                    translate.add( new String[]{ "│= ", "│╧ " } );
+                    // OK, here we go
+                    for (int t = 0; t < translate.size(); t++) {
+                        String from = translate.get( t )[0];
+                        String to   = translate.get( t )[1];
+                        int counter = 1;
+                        while ( newRow.contains( from ) ) {
+                            newRow = newRow.replace( from, to );
+                            counter++;
+                            if (counter > 10) {
+                                // Something is wrong,
+                                //   should be not higher than 2
+                                break;
+                            }
+                        }
+                    }
+                    // Final replace (for filled cells)
+                    newRow = newRow
+                        .replace("=", "═" )
+                        .replace("-", "─" )
+                    ;
+                } // <- middleColumn
+                if ( lastColumn ) {
+                    newRow = ""
+                            + ( firstChars
+                            .replace("=", "╕" )
+                            .replace("-", "┐" )
+                    )
+                            + ( between
+                            .replace("=", "╡" )
+                            .replace("-", "┤" )
+                    )
+                            + ( lastChars
+                            .replace("=", "╛" )
+                            .replace("-", "┘" )
+                    )
+                    ;
+                    newRow = newRow
+                            .replace("|", "│" )
+                    ;
+                } // <- lastColumn
+            } // <- rowLength == 3
+            newTable[ i ] = newRow;
+        }
+
+        // Flip back forward
+        newTable = arrayFlip( newTable, "forward" );
+        return newTable;
+    }
+
+    public static boolean arrayCompare( String[] array1, String[] array2) {
+        return arrayCompare( array1, array2, false);
+    }
+    public static boolean arrayCompare( String[] array1, String[] array2
+            , boolean debug ) {
+        boolean result = true;
+        if ( !( array1.length == array2.length) ) {
+            result = false;
+            if ( debug ) {
+                olt( "length " + array1.length
+                        + " != " + array2.length, false );
+            }
+        }
+        if ( result ) {
+            for (int i = 0; i < array1.length; i++) {
+                if ( !( array1[i].equals( array2[i] ) ) ){
+                    result = false;
+                    if ( debug ) {
+                        olt( "[" + i + "]. "
+                                        + "string " + array1[i] + " != " + array2[i]
+                                , false );
+                    }
+                }
+            }
+        }
+        return result;
     }
 }

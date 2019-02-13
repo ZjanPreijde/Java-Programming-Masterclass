@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf57259-3111-481b-97ba-8e8b923d3705" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../01. MyClasses/OutputExtend/OutputExtend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0. Snippets/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../0. Snippets/Snippets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-10-LinkedListsChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-10-LinkedListsChallenge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../S09-00-Tests/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-00-Tests/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../S09-00-Tests/src/com/masterclass/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../S09-00-Tests/src/com/masterclass/Snippets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S09-03-InterfacesChallenge/com/masterclass/ConnectFour.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S09-03-InterfacesChallenge/com/masterclass/ConnectFour.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S09-03-InterfacesChallenge/com/masterclass/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S09-03-InterfacesChallenge/com/masterclass/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S09-03-InterfacesChallenge/com/masterclass/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/S09-03-InterfacesChallenge/com/masterclass/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/S09-03-InterfacesChallenge/com/masterclass/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/ConnectFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/ConnectFour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/masterclass/ArrayExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/ArrayExtend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/masterclass/InputExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/InputExtend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/masterclass/OutputExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/OutputExtend.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/PlayConnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="257" column="46" selection-start-line="257" selection-start-column="39" selection-end-line="257" selection-end-column="46" />
+            <state relative-caret-position="670">
+              <caret line="248" column="60" selection-start-line="248" selection-start-column="60" selection-end-line="248" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -43,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/OutputExtend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="2232">
+              <caret line="124" selection-start-line="124" selection-end-line="124" />
             </state>
           </provider>
         </entry>
@@ -88,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/InputExtend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="612">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -225,7 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,10 +232,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549826972491" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550047827741" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -347,9 +331,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1981" y="-2" width="1859" height="1082" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10981697" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11148086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -418,15 +401,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/PlayConnect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="257" column="46" selection-start-line="257" selection-start-column="39" selection-end-line="257" selection-end-column="46" />
+        <state relative-caret-position="670">
+          <caret line="248" column="60" selection-start-line="248" selection-start-column="60" selection-end-line="248" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/OutputExtend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="2232">
+          <caret line="124" selection-start-line="124" selection-end-line="124" />
         </state>
       </provider>
     </entry>
@@ -460,8 +443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/InputExtend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="612">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
         </state>
       </provider>
     </entry>
