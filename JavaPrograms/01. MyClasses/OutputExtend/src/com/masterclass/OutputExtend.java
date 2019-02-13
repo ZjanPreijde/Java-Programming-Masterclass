@@ -66,10 +66,10 @@ public class OutputExtend {
         // Only green, red, redbold for now
         String result = string;
         String    black  = "\033[30" // default
-                , red    = "\033[91" // Bright Red   , normal = 31
-                , green  = "\033[92" // Bright Green , normal = 32
-                , yellow = "\033[93" // Bright Yellow, normal = 33
-                , blue   = "\033[94" // Bright Blue  , normal = 34
+                , red    = "\033[31" // Bright Red   =91, normal = 31
+                , green  = "\033[32" // Bright Green =92, normal = 32
+                , yellow = "\033[33" // Bright Yellow=93, normal = 33
+                , blue   = "\033[34" // Bright Blue  =94, normal = 34
                 , bold   = ";1", italics = ";3", underLine = ";4", blink = ";5", strikeThrough = ";9"
                 , reset  = "\033[0"
                 , end    = "m";
