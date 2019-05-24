@@ -2445,7 +2445,7 @@ Collections.sort( theatre.getSeats(), Theatre.PRICE_ORDER_ASC);
 
 A Comparator that does not take all fields of an object into account is considered *inconsistent with* `.equals()`. The field(s) compared may be equal, but the objects may not be.
 
-#### Map interface
+#### Map interface and HashMap class
 
 Map interface is part of the *Collections framework*, but not a collection in the true sense of the word.
 
@@ -2506,6 +2506,89 @@ public class Location {
 > 4. If the instance fields include references to mutable objects, don't allow those objects to be changed:
 >    - Don't provide methods that modify the mutable objects.
 >    - Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
+
+If you use class instances as a key in a Map (`Map<Location, Integer>`) you want to make sure your class is immutable.
+
+Java will compile fine, but give a runtime error if a null value for a Map was passed at runtime when null value is passed on into Map constructor (`NullPointerException`).
+
+```java
+public class Location {
+  private final Map<String, Integer> values;
+  public Location(Map<String, Integer> values) {        // values = null
+    this.values = new HashMap<String, Integer>(values); /* boom */   }   }
+```
+
+```java
+		this.values = values == null 
+      ? new HashMap<String, Integer>()
+      : new HashMap<String, Integer>(values) ; /* no boom */
+```
+
+or
+
+```java
+		values == null ? new HashMap<String, Integer>() : values ;
+    this.values = values ; /* no boom */
+```
+
+#### Set interface & HashSet class
+
+Sets are used less often than Lists and Maps, but can be very useful.
+
+- a Set has no defined ordering (Oracle says chaotic :-) )
+- a Set can not contain duplicates
+  - `s.add()`, returns true if added, false if unable to add (duplicate)
+  - `s.remove()`, returns true if removed, false if not present
+  - `s.clear()`, `s.size()`,  `s.isEmpty()`
+  - `s.forEach( e -> { /* ...*/ })`
+  - `for (<Type> t : s) {/* ... */}`
+
+`HashSet` is the best performing class implementing the `Set` interface. It currently uses `HashMap` , storing the elements as key and a dummy Object as value, thus ensuring uniqueness of the values (`HashMap` can not have duplicate keys).
+
+#### .equals() and .hashcode()
+
+If you use your own objects as a key in a `Map`, or an element in a `Set`, the class should override the `.equals()` and the `.hashcode()` methods. As a programmer you have to decide what makes your objects unique, in order to maintain uniqueness in `Map`-keys and `Set`-elements.
+
+E.g. for a planet, the name should be unique, but for a person, that would not be enough.
+
+```java
+  @Override
+  public boolean equals( Object o ) {
+    if ( this == o ) return true;
+    if ( o == null || getClass() != o.getClass() ) return false;
+    Planet that = (Planet) o;
+    return name.equals( that.name );
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(name);
+  }
+```
+
+Rules for `.equals()` : <https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object->
+
+There was talk about hashcode collision, something about using hashCode() of a String field of an instance colliding with an actual String.hashCode() for a String with the same value. The teacher added a prime number to the returned hashcode to avoid that.
+
+```java
+// an instance planet with a field called name with the value "Pluto"
+planet.getName().hashCode(); // would return a int value
+// a String with the value "Pluto"
+"Pluto".hashCode();          // would return the same int value
+```
+
+To avoid that :
+
+```java
+  @Override
+  public int hashCode() {
+    // To avoid collisions with String.hashCode() for the same value,
+    //  add a prime number (not very well explained).
+    return this.getName().hashCode() + 57;
+  }
+```
+
+Not sure if the same applies to `Objects.hash(name)`.
 
 
 
