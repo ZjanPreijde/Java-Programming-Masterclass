@@ -6,7 +6,6 @@ import java.util.*;
 //import static com.masterclass.*;
 import static com.masterclass.OutputExtend.*;
 import static com.masterclass.InputExtend.*;
-import static com.masterclass.ArrayExtend.*;
 
 
 public class PlayConnect {

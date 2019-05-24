@@ -1,16 +1,18 @@
 package com.masterclass;
 
-// Create a base class called Car
-// It should have a few fields that would be appropriate for a generice car class.
-// engine, cylinders, wheels, etc.
-// Constructor should initialize cylinders (number of) and name, and set wheels to 4
-// and engine to true. Cylinders and names would be passed parameters.
-//
-// Create appropriate getters
-//
-// Create some methods like startEngine, accelerate, and brake
-//
-// show a message for each in the base class
+/*
+ Create a base class called Car
+ It should have a few fields that would be appropriate for a generice car class.
+ engine, cylinders, wheels, etc.
+ Constructor should initialize cylinders (number of) and name, and set wheels to 4
+ and engine to true. Cylinders and names would be passed parameters.
+
+ Create appropriate getters
+
+ Create some methods like startEngine, accelerate, and brake
+
+ show a message for each in the base class
+*/
 class Car {
     private String name;
     private boolean engineOn;

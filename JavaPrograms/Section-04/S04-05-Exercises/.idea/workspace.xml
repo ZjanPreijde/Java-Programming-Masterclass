@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11c20ae8-4fde-4d3f-b201-d8d7928b6969" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../S04-04-Methods/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/Connect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/Connect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/GameConnect.md.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/PlayConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/PlayConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/out/production/S09-01-Interfaces/META-INF/S09-01-Interfaces.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/MobilePhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/MobilePhone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/src/com/masterclass/MobilePhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/src/com/masterclass/MobilePhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/out/production/S09-02-InterfacesLinkedLists/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/out/production/S09-02-InterfacesLinkedLists/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/ISaveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/ISaveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/PlayConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/PlayConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,14 +33,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+            <state relative-caret-position="306">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
+                <element signature="method#SpeedConverter#0;class#Main#0" />
+                <element signature="method#MegaBytesConverter#0;class#Main#0" />
                 <element signature="method#printMegaBytesAndKiloBytes#0;class#Main#0" />
                 <element signature="method#BarkingDog#0;class#Main#0" />
                 <element signature="method#bark#0;class#Main#0" />
@@ -37,7 +62,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/SpeedConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -45,13 +86,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/SpeedConverter.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/SpeedConverter.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="260" />
-    <option name="y" value="40" />
+    <option name="x" value="2046" />
+    <option name="y" value="100" />
     <option name="width" value="1611" />
     <option name="height" value="1000" />
   </component>
@@ -63,13 +106,45 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="S04-05-Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S04-05-Exercises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="S04-05-Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S04-05-Exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="S04-05-Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S04-05-Exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="masterclass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="S04-05-Exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547729193848" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.masterclass" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -114,7 +189,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="40" width="1611" height="1000" extended-state="0" />
+    <frame x="2046" y="100" width="1611" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -123,19 +198,19 @@
       <window_info id="Learn" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25335893" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2623794" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32932693" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50032157" side_tool="true" visible="true" weight="0.32902467" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.32932693" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49967846" weight="0.32902467" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32932693" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -147,11 +222,20 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/SpeedConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        <state relative-caret-position="306">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
+            <element signature="method#SpeedConverter#0;class#Main#0" />
+            <element signature="method#MegaBytesConverter#0;class#Main#0" />
             <element signature="method#printMegaBytesAndKiloBytes#0;class#Main#0" />
             <element signature="method#BarkingDog#0;class#Main#0" />
             <element signature="method#bark#0;class#Main#0" />

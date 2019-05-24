@@ -4,12 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
         // Coding exercises
+        SpeedConverter();
 	    MegaBytesConverter();
 	    BarkingDog();
 	    LeapYear();
 	    DecimalComparator();
 	    EqualSumChecker();
 	    TeenNumberChecker();
+    }
+
+    // 0. Speedconverter, added to course later. Very lengthy explanation how
+    //     to commit exercise solutions and pitfalls
+    public static void SpeedConverter() {
+        System.out.println("0. SpeedConverter() :");
+        System.out.println("25.42, 25.42 km/h = 16 mi/h");
+        SpeedConverter.printConversion( 25.42 );
     }
 
     // 1. MegaBytesConverter

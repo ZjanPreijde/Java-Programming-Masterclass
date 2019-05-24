@@ -56,23 +56,25 @@ class StarWars extends Movie {
     }
 }
 
-class Forgetable extends Movie {
-    public Forgetable() {
-        super("Forgetable");
+class Forgettable extends Movie {
+    public Forgettable() {
+        super("Forgettable");
     }
     // no plot() method
 }
 public class Main {
 
     public static void main(String[] args) {
-//        Movie movie = new Movie("Polymorphism"); System.out.println(movie.plot());
-//        Starwars starwars = new StarWars();         System.out.println(starwars.plot());
-//        Forgetable forgetable = new Forgetable();     System.out.println(forgetable.plot());
+/*
+        Movie movie = new Movie("Polymorphism");     System.out.println(movie.plot());
+        Starwars starwars = new StarWars();          System.out.println(starwars.plot());
+        Forgettable forgettable = new Forgettable(); System.out.println(forgettable.plot());
+*/
         for (int i = 1; i < 11; i++) {
             Movie movie = randomMovie();
             System.out.println("movie #" + i
                     + " : " + movie.getName()
-                    + "\n" + movie.plot() + "\n");
+                    + "\nPlot : " + movie.plot() + "\n");
 
         }
 
@@ -90,7 +92,7 @@ public class Main {
             case 4:
                 return new StarWars();
             default:
-                return new Forgetable();
+                return new Forgettable();
         }
 
     }

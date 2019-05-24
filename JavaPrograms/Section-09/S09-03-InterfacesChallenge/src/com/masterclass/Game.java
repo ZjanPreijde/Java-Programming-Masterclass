@@ -13,8 +13,8 @@ public class Game implements ISaveable {
     private boolean   gameStarted;
     private boolean   gameOver;
     private int       winnerID, lastPlayerID;
-    private ArrayList <String> moves;
-    private ArrayList <String> players;
+    private ArrayList<String> moves;
+    private ArrayList<String> players;
 
     // Constructors
     public Game( String title, int minNrOfPlayers, int maxNrOfPlayers) {
@@ -266,12 +266,13 @@ public class Game implements ISaveable {
     }
     public boolean storeValue( String move, int playerID ) {
         this.lastPlayerID = playerID;
-        return storeValue(move, "");
+        return storeValue(move, "" + playerID );
 
     }
     @Override
     public ArrayList returnValues() {
         return moves;
     }
+
 
 }

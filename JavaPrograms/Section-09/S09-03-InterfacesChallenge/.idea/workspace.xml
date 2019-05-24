@@ -2,9 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf57259-3111-481b-97ba-8e8b923d3705" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/ArrayExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/ArrayExtend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/InputExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/InputExtend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/masterclass/OutputExtend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/OutputExtend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-08/S08-02-ArrayChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-08/S08-03-ReferenceVsValueTypes/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-08/S08-04-MinElementChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-08/S08-05-ReverseArrayChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/Connect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/Connect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/GameConnect.md.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/PlayConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/PlayConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/out/production/S04-05-Exercises/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/out/production/S04-05-Exercises/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-06/S06-01-Classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-06/S06-01-Classes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-02-Challenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-02-Challenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-03-Encapsulation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-03-Encapsulation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-03-Encapsulation/src/com/masterclass/Player2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-03-Encapsulation/src/com/masterclass/Player2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-04-EncapsulationChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-04-EncapsulationChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/out/production/S07-05-PolyMorphism/com/masterclass/Forgetable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/out/production/S07-05-PolyMorphism/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/out/production/S07-05-PolyMorphism/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-05-PolyMorphism/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Lincoln.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Lincoln.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Partner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Partner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Wreck.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/out/production/S07-06-PolymorphismChallenge/com/masterclass/Wreck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-06-PolymorphismChallenge/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-07/S07-07-OOPMasterChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-07/S07-07-OOPMasterChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-02-ArrayChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-02-ArrayChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-02-ArrayChallenge/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-02-ArrayChallenge/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-03-ReferenceVsValueTypes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-03-ReferenceVsValueTypes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-03-ReferenceVsValueTypes/out/production/S08-03-ReferenceVsValueTypes/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-03-ReferenceVsValueTypes/out/production/S08-03-ReferenceVsValueTypes/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-04-MinElementChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-04-MinElementChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-05-ReverseArrayChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-05-ReverseArrayChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-05-ReverseArrayChallenge/out/production/S08-05-ReverseArrayChallenge/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-05-ReverseArrayChallenge/out/production/S08-05-ReverseArrayChallenge/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-05-ReverseArrayChallenge/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-05-ReverseArrayChallenge/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/out/production/S08-06-ListAndArrayList/com/masterclass/GroceryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/out/production/S08-06-ListAndArrayList/com/masterclass/GroceryList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/out/production/S08-06-ListAndArrayList/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/out/production/S08-06-ListAndArrayList/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-06-ListAndArrayList/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-07-ArrayListChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-07-ArrayListChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-07-ArrayListChallenge/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-07-ArrayListChallenge/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-10-LinkedListsChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-10-LinkedListsChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/DeskPhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/DeskPhone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/ITelephone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/MobilePhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/MobilePhone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/DeskPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/DeskPhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/ITelephone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/Telephone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/MobilePhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../S09-01-Interfaces/src/com/masterclass/MobilePhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/S09-02-InterfacesLinkedLists.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/out/production/S09-02-InterfacesLinkedLists/com/masterclass/Album.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/out/production/S09-02-InterfacesLinkedLists/com/masterclass/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/out/production/S09-02-InterfacesLinkedLists/com/masterclass/Song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/src/com/masterclass/Album.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/src/com/masterclass/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../S09-02-InterfacesLinkedLists/src/com/masterclass/Song.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/masterclass/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/masterclass/ISaveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/ISaveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/masterclass/PlayConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/masterclass/PlayConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,35 +89,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/masterclass/PlayConnect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="248" column="60" selection-start-line="248" selection-start-column="60" selection-end-line="248" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/masterclass/OutputExtend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2232">
-              <caret line="124" selection-start-line="124" selection-end-line="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/masterclass/TicTacToe.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/ConnectFive.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,13 +133,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Connect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4176">
+            <state relative-caret-position="4068">
               <caret line="232" selection-start-line="232" selection-end-line="232" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/CMResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/TestConnect.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
@@ -97,10 +158,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/PlayConnect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="54" column="23" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="23" />
+            <state relative-caret-position="684">
+              <caret line="275" selection-start-line="275" selection-end-line="275" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/masterclass/ISaveable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -117,7 +196,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nflip</find>
       <find>printA</find>
       <find>get row</find>
       <find>makeMove()</find>
@@ -147,6 +225,7 @@
       <find>Make move</find>
       <find>Conn</find>
       <find>Connect</find>
+      <find>returnVal</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;TDD Error</replace>
@@ -174,7 +253,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/masterclass/IGame.java" />
-        <option value="$PROJECT_DIR$/src/com/masterclass/ISaveable.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/ConnectThree.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/Result.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/Main.java" />
@@ -183,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/com/masterclass/CMOutput.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/CMTestArray.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/CMArray.java" />
-        <option value="$PROJECT_DIR$/src/com/masterclass/Game.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/InputExtend.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/TestConnect.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/Connect.java" />
@@ -193,6 +270,8 @@
         <option value="$PROJECT_DIR$/src/com/masterclass/ConnectFlex.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/ConnectFour.java" />
         <option value="$PROJECT_DIR$/src/com/masterclass/PlayConnect.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/masterclass/ISaveable.java" />
       </list>
     </option>
   </component>
@@ -209,6 +288,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,16 +307,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="masterclass" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="S09-03-InterfacesChallenge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="S09-03-InterfacesChallenge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="masterclass" type="462c0819:PsiDirectoryNode" />
+              <item name="CMResult.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550047827741" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550060841763" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -330,9 +417,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1981" y="-2" width="1859" height="1082" extended-state="6" />
+    <frame x="1981" y="32" width="1859" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11148086" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11647254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -360,6 +448,35 @@
       <window_info anchor="right" id="Run" order="8" weight="0.41652802" />
       <window_info anchor="right" id="Debug" order="9" weight="0.39933443" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11480865" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3290461" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.3290461" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3290461" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Run" order="8" weight="0.41652802" />
+      <window_info anchor="right" id="Debug" order="9" weight="0.39933443" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/IGame.java" />
@@ -367,13 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="981" column="26" selection-start-line="981" selection-start-column="26" selection-end-line="981" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/ISaveable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -399,13 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/PlayConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="248" column="60" selection-start-line="248" selection-start-column="60" selection-end-line="248" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/OutputExtend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2232">
@@ -415,8 +518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        <state relative-caret-position="90">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -448,10 +551,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/CMResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/PlayConnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/Connect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4176">
+        <state relative-caret-position="4068">
           <caret line="232" selection-start-line="232" selection-end-line="232" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/ISaveable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="275" selection-start-line="275" selection-end-line="275" />
         </state>
       </provider>
     </entry>
@@ -459,13 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="23" />
         </state>
       </provider>
     </entry>

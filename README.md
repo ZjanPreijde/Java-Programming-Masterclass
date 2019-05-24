@@ -3,6 +3,8 @@
 Udemy Course :
 https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 
+Grr, he added lectures (and exercises) in parts of the course already finished, changing lecture numbers further on. Lecture numbers don't match any more.
+
 *14-01-2019 - ...*										[Go to Bottom](#bottom)	<a name="top"></a>
 
 | Section    | Description                                                | Finished   |
@@ -15,10 +17,10 @@ https://www.udemy.com/java-the-complete-java-developer-course/learn/v4/overview
 | [Section 6](#section-06)  | OOP Part 1 - Classes, Constructors and Inheritance         | 25-01-2019 |
 | [Section 7](#section-07) | OOP Part 2 - Composition, Encapsulation, and Polymorphism  | 28-01-2019 |
 | [Section 8](#section-08) | Arrays, Java inbuilt Lists, Autoboxing and Unboxing        | 31-01-2019 |
-| Section 9  | Inner and Abstract Classes & Interfaces                    |            |
-| Section 10 | Java Generics                                              |            |
-| Section 11 | Naming Conventions and Packages. static and final keywords |            |
-| Section 12 | Java Collections                                           |            |
+| [Section 9](#section-09) | Inner and Abstract Classes & Interfaces                    | 13-05-2019 |
+| [Section 10](#section-10) | Java Generics                                              | 14-05-2019 |
+| [Section 11](#section-11) | Naming Conventions and Packages, 'static' and 'final' Keywords. | 21-05-2019 |
+| [Section 12](#section-12) | Java Collections                                           |            |
 | Section 13 | JavaFX                                                     |            |
 | Section 14 | Basic Input & Output including java.util                   |            |
 | Section 15 | Concurrency in Java                                        |            |
@@ -181,7 +183,7 @@ Declare multiple variables of different types in one statement is not possible.
 Reassigning a value : `<varName> = <anotherValue> ;`
 
 - char myChar = "a" ; myChar = "b";
-- int myInteger = 5 + 7 - (3 * 2) ; myInteger = "10;
+- int myInteger = 5 + 7 - (3 * 2) ; myInteger = 10;
 - String myString = "abcdefg" ; myString = "hijklmnop";
 - boolean myBoolean = false ; myBoolean = true ;
 - double myDouble = 3.1415d ; myDouble = (double) (10 / 3) ; 
@@ -272,6 +274,11 @@ So, use `double`s :-)
     char myChar4 = '\u20AC'; // euro sign 
     ```
 
+- `char` is internally an int! 
+
+  - `char c = 'A'; c++; // -> c is now 'B'` 
+  - `char c = 'A' + 1; // -> c is now 66`
+
 - `boolean`, 1-bit, default `false`, `true` or `false`
 
 Unicode-table:
@@ -302,7 +309,7 @@ Unicode is extended (24-bit?), now holds more than 16-bit `char` can hold, so `c
 
 ```java
 String myString1 = "This is a string";
-System.out.println("myString : " + myString1);
+System.out.println("myString1 : " + myString1);
 myString1 += ", it has one or more characters";
 System.out.println("myString1 : " + myString1);
 // Other primitives concatenated and transformed to String by Java
@@ -329,7 +336,7 @@ myString3 = "My dog is " + myBoolean;
 - logical not, `!`, `!(<comparison>)`, `boolean isDone = false; isDone = !isDone; // now true`
 - logical and/or, `&&,` `||`
 - is equal, is not equal, `==`, `!=`   (learned later: to compare object values use `.equals()`)
-- Java does <u>not</u> know  is not equal `<>` 
+- (Java does <u>not</u> know  is not equal `<>` )
 - is greater than/is greater than or equal to, `>`, `>=`
 - is less than/less than or equal to, `<`, `<=`
 - when comparing expressions, put expressions between parentheses ( = round brackets)
@@ -357,9 +364,9 @@ Java keywords : https://en.wikipedia.org/wiki/List_of_Java_keywords
 
 > In the Java programming language, a keyword is one of 61 reserved words that have a predefined meaning in the language; because of this, programmers cannot use keywords as names for variables, methods, classes, or as any other identifier.
 
-`const` is reserved, but is not used and has not function, for defining constants use `final`.
+`const` is reserved, but is not used and has no function, for defining constants use `final`.
 
-`goto` is reserved, but is not used and has not function.
+`goto` is reserved, but is not used and has no function.
 
 `void`, was wondering about that. It is used to declare that a method does not return any value.
 
@@ -382,7 +389,7 @@ Semi-colon is used to end Java statement.
 
 Whitespace is needed between keywords and identifiers. Many times extra whitespace makes code more readable. Unnecessary whitespace is ignored by Java, use as much as you want.
 
-Identation also helps making code readable, Java does not need it. Do it as much as you like
+Indentation also helps making code readable, Java does not need it. Do it as much as you like
 
 #### Code Blocks And The If Then Else Control Statements (Lecture 26/27)
 
@@ -433,7 +440,7 @@ Variables declared inside code block are not accessible outside the code block, 
 
 #### Methods in Java (Lecture 28/29/30)
 
-Repeating code can be put in an other method, so it can be called multiple times (DRY = Don't Repeat Yourself). Also for readability it is useful to put blocks of code in an other method. Methods need meaningful names, so code blocks they are called from remain readable without too many comments.
+Repeating code can be put in another method, so it can be called multiple times (DRY = Don't Repeat Yourself). Also for readability it is useful to put blocks of code in another method. Methods need meaningful names, so code blocks they are called from remain readable without too many comments.
 
 Methods can receive arguments
 
@@ -454,11 +461,11 @@ public static int sumInts(int intOne, int intTwo) { return intOne + intTwo; }
 int sum = sumInts(1, 2);
 ```
 
-According to the teacher, in programming terms, return -1; is conventially used to indicate an error, and in searching algorithms, -1 indicates `invailid value` or `value not found`. Hmmm, OK.
+According to the teacher, in programming terms, return -1; is conventionally used to indicate an error, and in searching algorithms, -1 indicates `invalid value` or `value not found`. Hmmm, OK.
 
 *Procedure* as a term can also be used to indicate a method that returns nothing (`void`).
 
-In general, *function* as a term can also be used to indicated a method.
+In general, *function* as a term can also be used to indicate a method.
 
 #### DiffMerge Tool Introduction/Installation/Usage (Lecture 31/32/33)
 
@@ -528,9 +535,9 @@ Unique method signature is method name and number and type of arguments.
 Method overloading is commonly used in Java.
 
 - Improves code readability and re-usability
-- Is asier to remember one method name instead of multiple names.
+- It's easier to remember one method name instead of multiple names.
 - Achieves consistency in method naming.
-- Gives programmers the flexibility to call a similar methods with different types of data
+- Gives programmers the flexibility to call similar methods with different types of data
 
 Constants in class, use `final`. More on this later.
 
@@ -755,7 +762,7 @@ public class Car {
   public String getModel()             { return this.model;  } /* getter */ } //<-class
 ```
 
-`public` is an *access modifier*, what access do we allow others to this class.
+`public`/`private` are *access modifiers*, what access do we allow others to this class.
 
 - `public class`, unrestricted access.
 - `private class`, no other class can access this method/variable.
@@ -765,9 +772,9 @@ public class Car {
 
 Java automatically adds extra functionality to created classes,  because the new class automatically is sub-classed from class *Object* and gets all the functionality class *Object* has.
 
-For *encapsulated* fields, you need setters to set a value and getters to get a value. Public fields can be directly set and gotten.
+For *encapsulated* fields, you need *setters* to set a value and *getters* to get a value. Public fields can be directly set and gotten.
 
-Set-methods are a good place to do validation (and manipulate other encapsulated data).
+*Setter*-methods are a good place to do validation (and manipulate other encapsulated data).
 
 Now the *Car* class is available.
 
@@ -805,7 +812,7 @@ Calling another constructor **must** be the first statement in the constructor c
 // Car.java
 	// ...
 	private String brand, model; // defaults null, null
-    private int doors, wheels;   // defaults 0, 0
+  private int doors, wheels;   // defaults 0, 0
 	public Car() { /* Empty constructor called*/ 
     this(4, 4); } /* calls constructor with params */
 	public Car(int doors, int wheels) {
@@ -884,13 +891,17 @@ Each object has a location (in memory), this is known as a *reference*.
 
 #### this vs super (Lecture 60)
 
-Keyword `super` is used to access/call parent class members (variables/fields and methods).
+Keyword `super` is used to access/call *parent* class members (variables/fields and methods).
 
 In a *constructor* `super()` is called to call the superclass *constructor*, it **must** the first statement.
 
 Anywhere else the syntax is `super.someField` / `super.someMethod()`
 
-Keyword `this` is used to access/call current class members. `this` is required when we have a parameter with the same name as an instance variable (field). (not a great explanation.)
+Keyword `this` is used to access/call *current* class' members. `this` is required when we have a parameter with the same name as an instance variable (field).
+
+```java
+public void add2X (int x) { this.x += x; }
+```
 
 ! Both can be used anywhere in a class, **except `static`** areas (the static block or a static method). More on `static` later.
 
@@ -898,7 +909,7 @@ Keyword `this` is used to access/call current class members. `this` is required 
 
 `this()` is used to call a *constructor* from another overloaded *constructor* in the same *class*, can only be used in a *constructor* and  **must** be the first statement.
 
-The Java compiler puts a default call to `super()` (no arguments) if we don't add it.
+The Java compiler puts a default call to `super()` (no arguments) if we don't add it ourselves.
 
 Even *abstract classes* have *constructors*, but can not be *instantiated* using the `new` keyword.
 
@@ -932,7 +943,7 @@ class Rectangle {
 
 Method Overloading
 
-- providing multiple methods with same name but different arguments (type/count)
+- providing multiple methods with same name but different arguments (type/count), .
 - return type may be different, allows for reuse of the same method name
 - very handy, reduces duplicated code, no need to remember different method names
 - nothing to do with *polymorphism*, but often referred to as *Compile Time Polymorphism*
@@ -986,7 +997,7 @@ Static methods
 
 Whenever there is a method that does not use *instance fields*, that method should be declared `static`. Example : `main` is `static` method, called by the *JVM* when it starts an application.
 
-`static` methods are called as `methodName()` when in the same class, ClassName is inferred by JVM. Otherwise call as  `ClassName.methodName()`.
+`static` methods are invoked as `methodName()` when in the same class, ClassName is inferred by JVM. Otherwise call as  `ClassName.methodName()`.
 
 ```java
 class Calculator { public static int sum(int a, int b) { return a + b; } }
@@ -1066,14 +1077,14 @@ Composition deals with a *Has-a relationship*.
 
 ```java
 public class Engine {
-  private int capacity; }
+  private int cylinderCount; }
 public class Car extends Vehicle { /* Car IS a Vehicle */
   private Engine engine;           /* Car HAS an Engine */ }
 ```
 
 `private` / `public`
 
-If you declare the *engine* private, you will have to access the monitor with a getter
+If you declare the *engine* private, you will have to access it with a getter
 
 - `myCar.getEngine().capacity` 
 
@@ -1187,17 +1198,17 @@ It is not explained very well, or rather, I don't yet understand it very well. B
 
 *Challenge to use all to principles of OOP  learned so far.*
 
-Thing I found out when I got stuck for a while :
+Polymorphism:
 
 ```java
 class Burger { /* ... */ }
 class DeluxeBurger extends Burger { /* ... */ }
 Burger burger = DeluxeBurger();
 /* Now, to access a method in DeluxeBurger : */
-((DeluxeBurger) burger).<methodName()>;
+((DeluxeBurger) burger).<methodName>();
 ```
 
-It is ofcourse good old [*casting*](#casting). We *cast* the *object* `burger` to the *class* `DeluxeBurger`.
+It is ofcourse like good old [*casting*](#casting). We *cast* the *object* `burger` to the *class* `DeluxeBurger`.
 
 
 
@@ -1207,7 +1218,7 @@ It is ofcourse good old [*casting*](#casting). We *cast* the *object* `burger` t
 
 *29-01-2019, finished 31-01-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
-#### Arrays (Lecture 76/77/78)
+#### Arrays (Lecture 76/77/78)  
 
 Arrays can hold multiple values of the same type. Arrays are *zero indexed*, start at 0.
 
@@ -1216,7 +1227,7 @@ Arrays can hold multiple values of the same type. Arrays are *zero indexed*, sta
 int[] myInts;  myInts = new int[10];
 double[] myDoubles = new double[10];
 /* Elements are initialized with there default values, null for String objects!
-   myIntArray[0] == 0, myDoubleArray[1] == 0.0d */
+   myInts[0] == 0, myDoubles[1] == 0.0d */
 /* Assign a value */
 myInts[5] = (5 + 1); /*  arrays start at [0], 5 is in position 6 */
 /* Assign values with loop */
@@ -1229,6 +1240,7 @@ public static void printArray(int[] array)
 public static void printArray(String[] array) 
 	{ for (int i = 0; i < array.length; i++) { /* ... */ } } // end method
 // Alternative loop if you just want to use the values, not change them
+// Called For Each loop, but 'Each' not used
 public static void printArray(String[] array) 
 	{ for ( String s : array ) { /* ... */ } } // end method
 ```
@@ -1248,7 +1260,7 @@ public static double averageArray(int[] array) {
 	return sumArray(array) / (double) array.length ;  } // end method
 ```
 
-3 methods to clone an array , all as fast as the other. `clone()` needs no argument ,but always does full copy :
+3 methods to clone an array , all as fast as the other. `clone()` needs no argument, but always does full copy :
 
 ```java
 int[] copy = array.clone();
@@ -1266,7 +1278,7 @@ Array and String are Reference Types, the reference to a place in memory.
 int a = 0; int b = a; a = 1; // -> a == 1, b == 0
 ```
 
-Though Strings are objects, the behave the same as primitive data types
+Though Strings are objects, they behave the same as primitive data types
 
 ```java
 String a = "a"; String b = a; a = "z"; // a == "z", b == "a"
@@ -1275,7 +1287,7 @@ String a = "a"; String b = a; a = "z"; // a == "z", b == "a"
 Arrays are Reference Type objects, assigning an array the reference of another array, they both point to the same place in memory
 
 ```java
-int[] myInts1 = new int[] {1,2}; int myInts2 = ints1; myInts[0] = 9;
+int[] myInts1 = new int[] {1,2}; int myInts2[] = myInts1; myInts1[0] = 9;
 	// ints1[0] == 9, ints2[0] == 9
 ```
 
@@ -1286,8 +1298,8 @@ int[] myInts1 = new int[] {1,2}; int myInts2 = ints1; myInts[0] = 9;
 When an array is passed into a method, a new temporary reference is made in memory.  Reinitializing the array in the method will have no effect on the original array.
 
 ```java
-int[] myInts1 = new int[2]; // ints[0] == 0
-myInts1 = add1To0(myInts);  // ints[0] == 1
+int[] myInts1 = new int[2]; // myInts1[0] == 0
+add1To0(myInts);            // myInts1[0] == 1
 public static void add1To0(int[] array) { 
 	/* All references are updated */
   array[0]++;
@@ -1309,7 +1321,7 @@ private static void resizeArray(int newLength) {
   for (int i = 0; i < orgInts; i++) { myInts[i] = myOrgs[i] }  }
 ```
 
-Quite a silly example, as you can not pass the array, so array has to be called `myInts`. This is better :
+Quite a silly example, as you can not pass the array, so array <u>has</u> to be called `myInts`. This is better :
 
 ```java
 private static int[] myInts = new int[5]; // -> [0,0,0,0,0]
@@ -1341,7 +1353,23 @@ It stores *objects*! You can not store *primitive types*!
 
 `ArrayList<String> myList = new ArrayList<String>();`  to initialize a List interface of type String. The `()` calls the constructor of the `class ArrayList`. (The last `<String>` can be omitted these days)
 
- The *class* takes care of the sizing etc all by it self.
+Other way of initializing, *double brace initialization*. Apparently not advisable, creates anonymous classes, memory leaks, world wars. It uses an instance initializer block inside an anonymous class. Or something like that.
+
+> <https://memorynotfound.com/initialization-arraylist-one-line-example/>
+>
+> Method 4: Create and initialize an arraylist using anonymous inner class
+>
+> Using an anonymous inner class with an instance initializer (also known as an “double brace initialization”).
+>
+> ```
+> ArrrayList<String> planets = new ArrayList<String>() {{
+>     add("Earth");
+>     add("Mars");
+>     add("Venus");
+> }};
+> ```
+
+The *class* takes care of the sizing etc all by it self.
 
 - `myList.add( <ObjectType> <object> );` adds an element to the list with given value
 - `myList.add( <index>, <ObjectType> <object> );` inserts an element to the list in given position with given value
@@ -1361,7 +1389,7 @@ List to array :
 ```java
 // Assuming class for myList object has a getter getList()
 String[] myArray = new String[myList.size()];
-myArray = myList.getList().toArray(myArray); // myArray mentioned twice?
+myArray = myList.getList().toArray(myArray); 
 ```
 
 When you compare values between objects, always use  `<object>.equals()`  / `!<object>.equals()` in stead of `==` /  `!=`
@@ -1381,10 +1409,22 @@ contactList  = new ArrayList<Contact>(); /* Contact is not needed */
 contactList2 = new ArrayList<>();
 ```
 
+Alternative array loop
+
+```java
+ArrayList<Contact> contactList = new ArrayList<>();
+// .. add some contacts
+for ( Contact contact : contactList) { /* do something with contact */ }
+```
+
+I did find that these loops sometimes can not be used if you change something in the List being processing. I am sure that is fully logical, somehow :-) Probably immutability, set up loop and then changing contents is not a smart thing?
+
 #### Autoboxing and Unboxing (Lecture 89-92)
 
-- *Autoboxing*,  casting *primitive datatype* to corresponding *datatype  class*
-- *Unboxing*,  casting *datatype  class* to corresponding *primitive datatype*
+Classes like 
+
+- *Autoboxing*, casting *primitive datatype* to corresponding *datatype class*
+- *Unboxing*, casting *datatype  class* to corresponding *primitive datatype*
 - Java can do some of the  Autoboxing and Unboxing for us at compile time for proprietary *primitives* and *datatype classes* at compile time, Java adds appropriate code.
 - This way code can be much  concise and readable.
 
@@ -1397,7 +1437,7 @@ Double myDouble = 3.14;  double myPrimitiveDouble = myDouble.doubleValue();
 ArrayList<Integer> integerAList = new ArrayList<Integer>();
 for (int i = 0; i < 10; i++) {  integerAList.add( Integer.valueOf(i) );  }
 for (int i = 0; i < integerAList.size(); i++) {
-  System.out.println( i + " => " + integerAList.get( i ).intValue() ); } // end for
+  System.out.println( i + " => " + integerAList.get( i ).intValue() ); }
 ```
 
 ```java
@@ -1418,7 +1458,7 @@ Integer myInteger = 56;  // Java compiles it to : Integer myInt = Integer.valueO
 Integer myInteger = 5.5; // Can not compile, incompatible types Integer <-> double
 ```
 
-Very elaborate challenge : banks, branches, customers, transactions. Took me all day :
+Very elaborate challenge : banks, branches, customers, transactions. Hardly any autoboxing/unboxing going on. Took me all day :
 
 ```
 	/JavaPrograms/Section-08/S08-08-AutoboxUnboxChallenge
@@ -1461,7 +1501,7 @@ When inserting a value in an `ArrayList<E>`,  for all elements following from th
 
 - list = [a, c, d], links = [a->c, c->d]
 - insert **b** at (zero-based) position 1
-- list = [a, c, d, **b**], links = [a->**b**, c->d, **b**->c], 1 link us updated, 1 link is added
+- list = [a, c, d, **b**], links = [a->**b**, c->d, **b**->c], 1 link is updated, 1 link is added
 - remove **c** at (zero-based) position 3
 - list = [a, d, b], links = [a->b, b->d], 1 link is updated, 1 link is removed.
 - so in the actual lists, it is just added at the end, the links define what position they hold.
@@ -1479,6 +1519,8 @@ private static void printLLString(LinkedList<String> linkedList) {
 ```
 
 Each Iterator has `.hasNext()`, `.next()`, `remove()` `(, .forEachRemaining( ...)` ).
+
+When using `.remove()`, issue a `.next()` /`.previous()` afterward to keep iterator on track.
 
 `ListIterator<E>`  also has `.hasPrevious()`, `.previous()`, `.nextIndex()`, `.previousIndex()` and more.
 
@@ -1567,11 +1609,11 @@ for (<MyClass> checkedObject: myObjects) {
 
 <a class="page-break" name="section-09"></a>
 
-### Section 9, Arrays, Inner and Abstract Classes & Interfaces
+### Section 9, Inner and Abstract Classes & Interfaces
 
-*01-02-2019, finished ..-..-....*										[Go to Top](#top)	[Go to Bottom](#bottom) 
+*01-02-2019, finished 13-05-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
-#### Interfaces (Lecture 100-104)
+#### Interfaces (Lecture 100-101)
 
 An *interface* specifies *methods* that a particular *class*, that implements the *interface*, <u>must</u> implement.
 
@@ -1579,31 +1621,31 @@ The *interface* itself is *abstract*. There is no code for any of the *methods*,
 
 The idea is to standardize behavior for all *classes* implementing the same *interface*.
 
-Creating an *interface* is a commitment that the *interface*'s *methods* and *constant variables* will not change. This prevents code breaking in other *class*es using this *interface* by changes made to the code.
+Creating an *interface* is a commitment that the *interface*'s *methods* and their *signatures*, and *constant variables* will not change. This prevents code breaking in other *class*es using this *interface* by changes made to the code.
 
-It's good practice to start *Interface* names with a capital I and then the rest also starting with a capital. It makes it clear it is an *interface.*
+~~It's good practice to start *Interface* names with a capital I and then the rest also starting with a capital. It makes it clear it is an *interface.*~~ Edit: in Q&A discussions it appears this is an error on the teachers part, probably confused with C#.
 
 In IntelliJ, select *New - Java Class*, in the dialogue *Create New Class* select *Interface*. A new *interface* will be created.
 
 All *methods* with their *signatures* (return type, arguments count/type) are defined, but no code added.
 
+The *access-modifier* keyword is useless here,  because the *interface* is implemented in a *class*. In the *class* the *access-modifier* can be specified.
+
 ```java
 package <packagePath>;
-public interface IMyInterface {
+public interface MyInterface {
   public void methodOne()); // public is redundant
   String methodTwo(int intValue);
   boolean methodThree(String stringValue));
 }
 ```
 
-The *access-modifier* keyword is useless here,  because the *interface* is implemented in a *class*. In the *class* the *access-modifier* can be specified.
-
-In the *class* implementing the *interface*, all of the *methods* from the *interface* have to be implemented and *access-modifiers* can be added. Even methods are not used or coded for, they <u>must</u> be implemented.
+In the *class* implementing the *interface*, all of the *methods* from the *interface* have to be implemented and *access-modifiers* can(/must?) be added. Even methods not used or coded for, <u>must</u> be implemented.
 
 ```java
 package <packagePath>;
-public class MyClass implements IMyInterFace { 
-  public IMyClass () { /* constructor*/ }
+public class MyClass implements MyInterFace { 
+  public MyClass () { /* constructor*/ }
   @Override
   public void methodOne()                          { /* not used */ }
   @Override
@@ -1618,9 +1660,12 @@ public class MyClass implements IMyInterFace {
 
 Several ways to *instantiate* an *object*, using a *class* implementing the *interface*, or using the interface *directly*.
 
+Using Interface to declare object also allows using same instance being reused for object of another class implementing the same interface.
+
 ```java
-IMyInterface myObject;      // specify myObject as object of type <interface>
-myObject = new MyClass();   // create  myObject with class implementing <interface>
+MyInterface myObject;      // declare myObject as object of type <MyInterface>
+myObject = new MyClass();  // create myObject with MyClass implementing <MyInterface>
+myObject = new MyClass2(); // create myObject with MyClass2 implementing <MyInterface>
 // or ...
 MyClass myObject = new MyClass();
 ```
@@ -1629,8 +1674,8 @@ This is not valid, it does work, but defeats the purpose of *interfaces*.
 
 
 ```java
-IMyInterFace myObject = new IMyInterface() {
-public void methodOne()                          { /* ... */ }
+MyInterFace myObject = new MyInterface() {
+  public void methodOne()                          { /* ... */ }
   @Override
   public String methodTwo(int intValue)            { return null; }
   @Override
@@ -1638,18 +1683,28 @@ public void methodOne()                          { /* ... */ }
 }
 ```
 
-(As IntelliJ inserts all the methods when you do it like above, maybe nice to do a quick *Implement Methods* )
-
 ```java
-IMyInterface myObject;
+MyInterface myObject;
 myObject = new MyClass1(); // MyClass1 implements IMyInterface, OK
 myObject = new MyClass2(); // MyClass2 implements IMyInterface, OK
 myObject = new MyClass3(); // MyClass3 does NOT implement IMyInterface, ERROR!
 ```
 
+Java libraries make extensive use of *interfaces*, we could change `LinkedList<Class>`, `ArrayList<Class>`, etc into `List<Class>` when defining return type or argument type without any problem, because  they implement the `List` *interface*.
 
+##### *Nice find*
 
-Java libraries make extensive use of *interfaces*, we could change `LinkedList<MyClass>`, `ArrayList<MyClass`, etc into `List<MyClass>` without any problem, because  they implement the `List<>` *interface*.
+Just found out  you can leave out data type with `ArrayList` and `LinkedList`, and just add any data type to the lists. (`Vector` is another *class* implementing `List` *interface*.)
+
+```java
+List test = new List() // impossible, List is an Interface
+List test = new ArrayList();
+test.add( 1 ); test.add( 1L ); test.add( false );
+Vector test2 = new Vector();
+test2.add( "trueOrFalse" ); test2.add( true );
+test.add( test2 );
+List<String> test3 = new ArrayList<>(); test3.add( 3 ); // -> Error
+```
 
 It can sometimes be hard to decide to implement an *interface* or inherit from a base *class*. The way to decide that generally is to consider the relationship of the final *class* to the *object* it is extending or implementing.
 
@@ -1662,35 +1717,795 @@ public interface IB extends IC, ID { /* ... */ }
 
 
 
-E.g. a dog (`class Animal`) would implement `interface IWalk`, a bird (`class Animal`) would implement both `interface IWalk` and `interface IFly`.
+E.g. a dog (`class Animal`) would implement `interface IWalk`, a bird (`class Animal`) would implement both `interface IWalk` and `interface IFly`. Most fish would implement neither :-)
 
- *JavaPrograms//Section-09/S09-03-InterfacesChallenge* :
+
+
+##### *Interlude*
+
+2019-02-01 Took time off course, creating helper classes and creating a game app.
+
+ *JavaPrograms/Section-09/S09-03-InterfacesChallenge* :
 
 Went fully overboard with a challenge, created a fully functioning ConnectFour game, with TDD and fully working interface. Took lot of time, but learned a lot.
 
-#### Time off, creating helper classes and creating a game app.
-
 Took time off from the course to create some helper Java *classes* (with basic *test-suites*) from snippets of code I've been using in a number of challenges, and to finish a *Connect Flex project* (Tic Tac Toe, Connect Four, Connect Five, Connect Flex (design your own game)), fully API-styled : *classes* return *responses* and don't do any output to the console, that's up to the code using the *classes*.
 
-If I have my TestMyClass.java next to MyClass.java (`package com.masterclass;`), I can  import all of its functionality with `import static com.masterclass.MyClass.*`.
+- If I have my TestMyClass.java next to MyClass.java (`package com.masterclass;`), I can  import all of its functionality with `import static com.masterclass.MyClass.*`.
+- In my *CMResult.java*, I had to remove the *access-modifier* `class Result`
+- If the .java file is called *CMName.java* (`package com.masterclass;`), and the *class* therein is  `class Name`, use `import com.masterclass.Name.*`.
+- Just found out you can call Java from Javascript! That is something to look into :-)
+- https://jxbrowser.support.teamdev.com/support/solutions/articles/9000013062-calling-java-from-javascript
 
-In my *CMResult.java*, I had to remove the *access-modifier* `class Result`
-
-If the .java file is called *CMName.java* (`package com.masterclass;`), and the *class* therein is  `class Name`, use `import com.masterclass.Name.*`.
-
-Just found out you can call Java from Javascript! That is something to look into.
-
-https://jxbrowser.support.teamdev.com/support/solutions/articles/9000013062-calling-java-from-javascript
-
-I created several classes and dozens of methods, each class with its own TDD-suite. I kept on improving the game and interface. The challenge, how it begun, got out of hand and it is now moved to a project I will keep on developing, as the course continues and my knowledge grows.
+I created several classes and dozens of methods, each class with its own TDD-suite. I kept on improving the classes, game and user interface. The challenge, how it begun, got out of hand and it is now moved to a project I will keep on developing, as the course continues and my knowledge grows.
 
 2019-02-13, time to get back on track with the course.
 
 
 
+#### Interfaces (Lectures 101-103)
+
+It may  be a good idea to <u>declare</u> the *object* with the *interface* and <u>instantiate</u> the object with the *class* implementing the *interface*. That way you are more flexible, depending on circumstances, the actual class will be chosen.
+
+```java
+// definition, list type unknown? You can use an Interface here
+List list;
+// ...
+// instantiation later on, use class implementing interface desired
+list = new ArrayList<String>;
+```
+
+Piece of interesting code, you need to *cast* the *object* to the *class*, when <u>declaring</u> it with an *interface* and <u>instantiating</u> it with a *class* implementing the *interface*.
+
+```java
+ISaveable werewolf = new Monster("Werewolf");
+System.out.println("Monster is " + ((Monster) werewolf).getName() );
+```
+
+> All **variables** declared inside **interface** are implicitly public static final **variables** (constants). All methods declared inside Java **Interfaces** are implicitly public and abstract, even if you don't use public or abstract keyword. **Interface** can extend one or more other **interface**.
+
+#### Inner classes (Lecture 104-106)
+
+In Java you can nest a *class* inside another *class.*
+
+There are four types of nested classes
+
+- <u>static nested class</u>
+  - mainly used to associate a class with its outer class
+  - identical to top level class, but packaged in its outer class, not in the package
+  - therefor can not access non-static methods or members of its outer class without creating instance of that class
+- <u>non-static nested class</u>, that's an inner class
+  - instance of inner class has access to all members of outer class, even private ones
+  - `OuterClass.this.<member>`
+  - instantiate by chaining
+  - OuterClass.InnerClass innerObject = outerObject.new InnerClass();
+- <u>local class</u>, inner class defined inside of a scope block (usually a method)
+  - scope restricted to that block
+  - not very often needed / useful
+- <u>anonymous class</u>, a nested class without a class name
+  - also local class, but has no name
+  - has to be declared and instantiated at the same time, because has no name, so there is no reference to it, no way to instantiate later
+  - used when a local class is required only once
+  - very common for touch-screen event handlers to use in an user interface
+
+Inner (non-static nested) classes are quite useful, because it often does not make sense to refer to a class without its outer class.
+
+Outer class `GearBox`, inner class `Gear`, no sense referring to gear without gearbox.
+
+```java
+// public (non static) inner class Gear
+public class Gearbox { 
+  private ArrayList<Gear> gears;
+  private int currentGear;
+  public GearBox() { /* constructor Gearbox */ }
+  public class Gear {  private int gearNumber;
+    public Gear() { /* constructor Gear */ }   }
+}
+Gearbox gearBox = new GearBox();
+// Syntax : <type> <variable name> <outerclass>.new <innerclas>() !!
+Gearbox.Gear neutral = gearBox.new Gear( 0 ); // OK for public non-static
+// this does NOT work :
+Gearbox.Gear first = new Gearbox.Gear( 1 );
+// this does NOT work for public non-static, OK for public static class Gear():
+Gearbox.Gear second = new gearBox.Gear( 2 );
+```
+
+```java
+// private inner class Gear
+public class Gearbox { 
+  private ArrayList<Gear> gears;
+  private int currentGear;
+  public GearBox() { /* constructor Gearbox */ }
+  public addGear() {/* adds new Gear( <int> ) to gears */}
+  private class Gear {  private int gearNumber;
+    public Gear() { /* constructor Gear */ }   }
+}
+Gearbox gearBox = new GearBox();
+gearBox.addGear( 0 ) ; // OK
+```
+
+Usually the inner classes will have a `private` access modifier. Instances will be created and manipulated by the outer class' methods.
 
 
 
+##### Interlude 2
+
+Paused Java course to 
+
+- do preparational courses for a NodeJS Masterclass I was supposed to do from April on. End of March I was told this Masterclass will not happen :-)
+- prepare new house I got :-) Painting, flooring, packing, moving, unpacking.
+
+Restarted 2019-05-08 by going back a few Sections.
+
+
+
+There are 2 special cases of inner classes.
+
+- local classes
+- anonymous classes
+
+Local classes are declared inside a block (method or if-statement). Their scope is restricted to that block.
+
+Unlike anonymous classes, which are used quite often, local classes are used less often.
+
+Local  class :
+
+Can be used for different objects in scope.
+
+```java
+// Button.java
+public class Button {
+  private String title;
+  private OnClickListener onClickListener;
+  public Button(String title) { this.title = title; }
+  public String getTitle() { return title; }
+  public void setOnClickListener(OnClickListener onClickListener) {
+		    this.onClickListener = onClickListener;
+  }
+  public void onClick() { this.onClickListener.onClick( this.title ); }
+  public interface onClickListener { public void onClick(String title); }
+} // <- Button.java
+
+// Main.java
+private static Button btnPrnt = new Button("Print");
+private static Button btnExit = new Button("Exit");
+// local class implements interface :
+class ClickListener implements Button.OnClickListener {
+  public ClickListener() { /* Listener has been attached */ }
+  @Override (interfaces onClick method)
+  public void onClick(String title) { /* Button has been clicked */ }
+}
+bntPrnt.setOnClickListener(new ClickListener());
+bntExit.setOnClickListener(new ClickListener());
+```
+
+> Teacher:
+>
+> Local class `ClickListener` , how it is actually been defined, is applicable just for that block only.
+>
+> This particular method using a local class could probably be pretty useful if you want to assign exactly the same object, say to several buttons, if you had several buttons on the screen at the same time, for example. The class is not used anywhere, so making it local in this particular scenario makes sense. Because we are not using it in a shared environment or anywhere else, implementing it as a local class within this method does actually make sense.
+
+Vague, investigate further. Why define an interface and then create a local class implementing it, in stead of having it all done in Button class itself?
+
+Anonymous class :
+
+Also a local class, but has no name. Have to be declared and instantiated at the same time, because has no name. Can be used only once. Useful in e.g. mobile development, each button reacts different to click.
+
+```java
+// Main.java
+private static Button btnPrnt = new Button("Print");
+private static Button btnExit = new Button("Exit");
+// anonymous class implements interface, 
+//  used only once for this button
+bntPrnt.setOnClickListener(new Button.OnClickListener) {
+  @Override
+  public void onClick(String title) { /* Print has been clicked, do something */ }
+};
+bntExit.setOnClickListener(new Button.OnClickListener) {
+  @Override
+  public void onClick(String title) { /* Exit has been clicked, do something else */ }
+};
+```
+
+
+
+#### Abstract Classes
+
+*Abstraction* is when you define the required functionality for something without actually implementing the  details. Focus on what needs to be done, not how it is done. *Interfaces* are purely *abstract*.
+
+```java
+public abstract class Animal {
+  private String name;
+  public Animal(String name) { this.name = name; }
+  public abstract void eat();
+  public abstract String breathe();
+  public String getName() { return name };
+};
+```
+
+This forces classes extending the abstract class to implement these methods.
+
+Interfaces are purely abstract, no implementation whatsoever. In abstract classes it can be a mix of non-abstract code and abstract methods.
+
+Subclasses derived from abstract classes can also be abstract.
+
+```java
+public abstract class Bird extends Animal {
+  public Bird( name ) { super( name ); }
+  /* implement eat(), breathe()*/
+  public abstract void fly(); /* to be implemented by subclasses of Bird */   }
+```
+
+```java
+public class Pinguin extends Bird {
+  public Bird( name ) { super( name ); }
+  /* implement fly() even if he can't */   }
+```
+
+Difference *abstract class* <-> *interface* : *Is-a*-relationship or *Has-a*-relationship.
+
+A pinguin *Is-a* bird, a car *Has-a* gearbox.
+
+As bats and insects are not birds, but can fly, in the above example it would be better to have a CanFly interface with fly()-method, which both birds and bats and insects can implement.
+
+As all animals eat and breathe, it is better to put these methods in an abstract class for animals.
+
+An abstract class can have member variables that are inherited, this can not be done in an interface.
+
+Interfaces can have variables, but they are all public static final variables, essentially constant values that should never change, with a static scope. They have to be static, because non-static variables require an instance, interfaces can not be instantiated.
+
+Interfaces can not have constructors, abstract classes can. Interface methods are automatically public, abstract class methods can have any visibility. Abstract classes can have defined methods, methods with an implementation, all methods in an interface are abstract.
+
+In the AbstractClassChallenge-solution, in the class definition, variables were initiated of the type of the abstract class itself!! Weird!!
+
+```java
+public abstract class ListItem {
+    protected ListItem rightLink = null, leftLink = null;
+    protected Object value; // Object -> can be any type when implemented
+}
+```
+
+We also built a binary search tree, it uses recursion. Java has a maximum recursion depth of 63.
+
+First node added will be the root, other nodes added to the tree according to value. Traversing the tree uses recursion. Removing a node is very complicated.
+
+<a class="page-break" name="section-10"></a>
+
+### Section 10, Java Generics
+
+*13-05-2019, finished 14-05-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
+
+#### Generics
+
+Generics allow us to  pass *types* to classes, *type parameters*. We have used them before.
+
+```java
+// Pass the type String to class ArrayList
+ArrayList<String> items = new ArrayList<>();
+```
+
+Using a class like ArrayList without passing a *type* results in an object of the *raw type*.
+
+```java
+ArrayList items = new ArrayList<>();
+```
+
+*Raw types* used to be the only thing available, before generics entered the scene (Java 1.5). Some ancient code may still have them.
+
+Generics were introduced to help find bugs at compile time. It tells the compiler which type is expected, and helps it find code that does not meet that expectation.
+
+```java
+ArrayList<Integer> items = new ArrayList<>();
+items.add(0);
+items.add("0"); // Compile time error
+```
+
+```java
+public abstract class Player {/**/}
+public class Team<T> { 
+  public static void addPlayer(T player) {
+    /* ((Player) player).getName(), casting needed now */   }   }
+public class SoccerPlayer extends Player {/**/}
+SoccerPlayer matthijs = new SoccerPlayer("Matthijs de Ligt");
+DartsPlayer raymond   = new DartsPlayer("Raymond van Barneveld");
+Team<SoccerPlayer> ajax = new Team<>(); // using generics
+ajax.addPlayer(matthijs); // OK
+ajax.addPlayer(raymond);  // compile time error, wrong type of player
+```
+
+Any type can now be passed to Team, this is unwanted. 
+
+Enter *bounded type parameters*, restrict types allowed to be passed into class.
+
+```java
+public class Team<T extends Player> {
+  public static void addPlayer(T player) {
+    /* player.getName(), casting not needed any more */   }   }
+```
+
+*Types* passed as parameter can be either a class or an interface.
+
+You can pass 1 class and multiple interfaces as types. Always pass the class first.
+
+```java
+public class Team<T extends Player & Coach & Manager> {/**/}
+```
+
+Implement *compareTo()* method from *Comparable* interface.
+
+```java
+public class Team<T extends Player> implements Comparable<Team<T>> {
+  public static int compareTo(Team<T> otherTeam) {/**/}
+}
+ArrayList<Team> teams; /* ... */
+Collections.sort(teams); // uses compareTo() method defined in Team class.
+```
+
+
+
+<a class="page-break" name="section-11"></a>
+
+### Section 11, Naming Conventions and Packages, 'static' and 'final' Keywords
+
+*14-05-2019, finished ..-..-....*										[Go to Top](#top)	[Go to Bottom](#bottom) 
+
+#### Naming Conventions
+
+Makes code easier for others to read, and for yourself if you read it back way later.
+
+Things programmer names :
+
+- Packages
+  - always lower case
+  - should be unique
+  - use your internet domain name, reversed, as a prefix for the package name (??)
+    - invalid characters in a domain name (i.e. '-') should be replaced by underscore
+    - domain name components starting with a number should instead start with an underscore
+    - domain name components starting with a Java keyword should instead start with an underscore
+  - Oracle : https://docs.oracle.com/javase/specs/jls/se6/html/packages.html#7
+- Classes
+  - CamelCase, start with capital
+  - name should be a noun (they represent things)
+  - each word in the name should also start with a capital
+- Interfaces
+  - CamelCase
+  - consider what objects implementing the interface will become, or what they will be able to do (e.g. List, Comparable, Serializable)
+- Methods
+  - mixedCase, start with lowercase
+  - often verbs
+  - reflect the function performed or the result returned
+  - e.g. size(), getName(), addPlayer()
+- Constants
+  - UPPERCASE
+  - separate words with an underscore
+  - declared using the *final* keyword
+  - e.g. static final int MAX_INT; static final double PI = 3.141592653;
+- Variables
+  - mixedCase, start with lowercase
+  - meaningful and indicative
+  - no underscores
+  - e.g. i, league, boxLength
+- Type Parameters
+  - single character, capital letter
+    - E - Element (used extensively by the Java Collections Framework)
+    - K - Key
+    - N - Number
+    - T - Type
+    - V - Value
+    - S,U,V etc. - 2nd, 3rd, 4th types
+  - <https://docs.oracle.com/javase/tutorial/java/generics/types.html>
+
+
+
+#### Packages
+
+Over 9 million Java developers worldwide, therefor Class/Interface naming conflicts are inevitable.
+
+Mechanism is needed to fully specify class. Allow use of classes with the same name in the same project (or, even, the same class).
+
+```java
+import javafx.scene.Node;
+public class Main {
+  public static void main(String[] args) {
+    Node node = null;   /* using the import */}   }
+```
+
+```java
+// When using classes with same name from different packages,
+//   names have to be specified when declaring
+public class Main {
+  public static void main(String[] args) {
+    javafx.scene.Node nodeFx  = null;
+  	org.w3c.dom.Node  nodeW3C = null;  }   }
+```
+
+or if most of your nodes are from 1 class, and one or a few from another class :
+
+```java
+import javafx.scene.Node;
+public class Main {
+  public static void main(String[] args) {
+    Node nodeFx = null;              /* JavaFX */
+  	org.w3c.dom.Node nodeW3C = null; /* W3C */   }   }
+```
+
+Reasons to use packages :
+
+- programmers can easily determine that the classes are related
+- it is easy to know where to find the classes and interfaces that can provide the functions provided by the package
+- because package creates a new namespace, class and interface name conflichts are avoided
+- classes within the package can have unrestricted access to one another while still restricting access for classes outside the package
+
+When importing `java.awt.*` like this :
+
+```java
+import java.awt.*;			// Java Abstract Window Tootkit
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+```
+
+it does not import `java.awt.event.Windowadapter`  because `java.awt.event` is a separate package.
+
+IntelliJ : keep `<Ctrl>` pressed and hover with cursor over a class name (e.g. `myFrame extends Frame`, hover over `Frame`), it will show you the package it is from, it's version and the class declaration for the class (e.g. `[<11>] java.awt, public class Frame extends Window implements MenuContainer`) 
+
+Create your own packages, with Java package names starting with `com.example` or `org.example` is reserved for packages that you are never going to distribute, you can also use your own `com.yourname.yourpackage`.
+
+IntelliJ: when creating a  new class, you can specify the package name, e.g. `org.example.game.Player`. It will create a new subdir of `game` for dir `org.example` and create the class `Player` t here.
+
+Packages are published in a .JAR-file (Java ARchive).
+
+> A **JAR** (Java ARchive) is a package file format typically used to aggregate many Java class files and associated metadata and resources (text, images, etc.) into one file for distribution. **JAR** files are archive files that include a Java-specific manifest file.
+
+In IntelliJ, to publish a package, 
+
+- go to (menu) *File*-*Project structure*
+- under *Project Settings*,choose *Artifacts*
+- click the *plus-sign*
+- choose *JAR*
+- choose *From modules with dependencies*
+- for an executable package, specify main class
+- choose *extract to the target JAR*
+- press *OK*
+- go to (menu) *Build*-*Build Project*
+
+The project is now built. To generate the .JAR-file
+
+- go to (menu) *Build*-*Build Artifacts*
+- in popup choose *Build*
+
+A .JAR-file is now created : `./out/artifacts/<projectname>_jar/<projectname>.jar`.
+
+
+
+To use the built library in another project, in the other project
+
+- go to (menu) *File*-*Project Structure*
+- under *Project Settings*, choose *Libraries*
+- click on *plus-sign*
+- navigate to .JAR-file, select it and click *OK*
+- in popup *Choose Modules*, click *OK*
+
+Now the package is `import`-able, or package names can be prefixed to class name/interface name.
+
+
+
+#### Scope
+
+Grant or restrict access to objects (visibility of class, member, variable). Easy once you understand it, but confusing until then.
+
+*Enclosing block*, if Java can not find an object in the current code block, it will look for it in enclosing blocks.
+
+Declaration of an object/variable (`<type> var = ...`) creates a new scope.
+
+```java
+// accesibility from outside
+public class ScopeCheck {
+  public int publicVar = 1;          // accessible as <object>.publicVar
+  private int privateVar = 2;        // only accessible through public getter()
+  private int privateVar2 = 3;       // ditto
+  /* privateVar * privateVar2 = 6 */
+  public static publicStaticVar = 4; // accessible as ScopeCheck.publicStaticVar
+  public void methodOne() {
+    int privateVar = 20; /* privateVar now private to methodOne()*/
+    /* privateVar * privateVar2 = 60, privateVar2 found in enclosing block */
+    for (int privateVar = 1; privateVar < 10; privateVar++) {
+      /* privateVar now private to for loop code block */
+    }
+    for (privateVar = privateVar; privateVar > 0; privateVar--) {
+      /* privateVar of methodOne is used (and altered) */
+    }
+    public class InnerClass {
+      public int privateVar = 200; /* public/private, new var is created in this scope */
+      public InnerClass() {
+        /* privateVar for this scope is now 200 */
+      }
+      public int getPrivateVar() { return privateVar ; /* returns 200 */}
+      public int getPrivateVar2() { return ScopeCheck.this.privateVar ; /* returns 2 */}
+    }   }   }
+```
+
+#### Visibility
+
+Visibility is determined by *scope* and *access modifiers*.
+
+(*package-private*, no *access modifier*, `public class C {private v = 1; int getV { return v; }}`)
+
+A *private* var in an inner class is visible to it's outer class, but not from outside the outer class.
+
+A *public* var in an inner class is visible from outside the outer class.
+
+```java
+OuterClass oc = new OuterClass();
+OuterClass.InnerClass ic = oc.new InnerClass();
+// ic.varOne not accesible here
+// ic.varTwo accesible here
+public class OuterClass {
+  private InnerClass ic = new InnerClass();
+  // ic.varOne and ic.varTwo accesible here
+  public class InnerClass {
+    private int varOne = 1;
+    public  int varTwo = 2;   }   }
+```
+
+Scope challenge, crazy solution :-)
+
+```java
+import java.util.Scanner;
+public class Main {
+   public static void main(String[] args) {
+        new X( new Scanner(System.in) ).x();   }   }
+class X {
+    private int x;
+    public X( Scanner x  {
+        System.out.println("Gimme a number : ");
+        this.x = x.nextInt();   }
+    public void x() {
+        for (int x = 1; x <= 12; x++) {
+            System.out.println(x + " * " + this.x + " = " + x * this.x);
+        }   }   }
+```
+
+#### Access modifiers
+
+If you expose fields of your classes (make them `public`), anyone using the class can manipulate them.
+
+```java
+class Account {
+  public int balance = 0;   }
+Account.acc = new Account(); acc.balance = 1000000;
+```
+
+Making them `private` solves this. `public` methods can be used to manipulate these fields.
+
+Four access modifiers. 
+
+Access control is granted by the top level or at the member level.
+
+At top level, you can make your classes and interfaces `public` or `package-private`. You can not define a `private` class at top level.
+
+Top Level
+
+- only classes, interfaces and *enums* can exist at the top level, everything else must be included within one of these
+- *public* (`public`), the object is visible to all classes everywhere, whether they are in the same package or have imported the package containing the public class
+- *package-private* (no modifier), the object is only available within its own package and is visible to every class within the same package. Omit the modifier `public` to make a class *package-private*
+
+Member Level (inside a class)
+
+- *public* (`public`), public class members, fields, and methods can be accessed from anywhere
+- *package-private* (no modifier), visible to every class within the same package, not to classes from other packages
+- *private* (`private`), visible only within the class it is declared in. Also <u>not visible</u> in subclasses of its class
+- *protected* (`protected`), visible anywhere in its own package but also in subclasses even if they are in another package
+
+
+
+Before Java8 : When defining an interface, all variables declared are implicitly `public static final` (constants) and all methods are implicitly `public abstract`.
+
+Java8: interfaces can have methods defined using `static` (can not be overwritten) or `default` (can be overwritten)
+
+Since Java9, `private`  and `private static` methods can be defined for interfaces, enables encapsulation.
+
+#### Static
+
+Declaring a variable `static` means it belongs to the *class*, not the *object* instantiated from the class.  It is also called a *class variable*. This `static` variable is shared by all instances of that class. It holds 1 place in memory, how ever many instances of the class are created.
+
+If you have a method that works on `static` fields only, it makes sense to make that method also `static`. We can access the method without having to use a classes instance.
+
+Static methods and fields belong to the class, not to the instances of the class.
+
+```java
+public class StaticTest {
+  private int numInstances1 = 0;
+  private static int numInstances2 = 0;
+  public StaticTest() {
+    numInstances1++;
+    numInstances2++;
+  }
+  public int getNumInstances1() { return numInstances1; }
+  public static int getNumInstances2() { return numInstances2; }
+}
+StaticTest.getNumInstances2(); // -> 0
+StaticTest st1 = new StaticTest(); // numInstances1 = 1, numInstances2 = 1
+StaticTest st2 = new StaticTest(); // numInstances1 = 1, numInstances2 = 2
+StaticTest.getNumInstances2(); // -> 2
+```
+
+```java
+public class Main {
+  public static void main(String[], args) {
+    // this must be static to give Java an entry point, 
+    //  main() can now be called without a class instantiation.     }   }
+```
+
+Class *Main* does not have to be called *Main*, but it is convention to do so at the highest level of a project. We can look for the *main* method, entry point to our project, in the *Main* class.
+
+Normal class fields require an instance of the class. You can not reference normal class fields/methods from a static context **in its own class**, because the instance may not have been created yet.
+
+The reverse is not true. When an instance is created the *class variables* and *methods* (`static`) are available.
+
+#### Final
+
+In general used to define constant values. Strictly speaking, `final` fields are not actually constants, because they can be modified, but only once. Modification must be done before the class constructor finishes. So either when defining the variable (`private final int nr = 1;`) OR assign it a value in the constructor method.
+
+Set variables as `final` if the value should not be changed after initial assignment.
+
+Real constants are usually declared as  `static final` and written in upper case, e.g. `Math.PI` : 
+
+```java
+// no class can extend a final class
+public final class Math {
+  // empty private constructor, this class can never be instantiated.
+  private Math() {}
+  public static final double PI = 3.14159265358979323846;   }
+```
+
+By marking a class `final`, you can prevent it being subclassed.
+
+```java
+public class MyMath extends Math { /* ... */ } // impossible, Math is final
+Math m = new Math();                           // impossible, private empty constructor
+```
+
+To protect methods from being overridden in subclasses, use the `final` keyword.
+
+```java
+public final void storePassword() { /* ... */ }
+```
+
+#### Static initializers
+
+*Static initialization blocks*, a static equivalent of a constructor. It is an advanced feature, there's rarely a case to use them.
+
+The constructors we have seen until now are instance constructors, used to initialize an object created from a class, they are not static.
+
+```java
+public class SomeClass {
+  static { /*  code */ }
+  public SomeClass() { /* constructor */ }
+  static { /*  more code */ }
+}
+```
+
+All static initialization blocks are run before the constructor is called.
+
+<a class="page-break" name="section-12"></a>
+
+### Section 12, Java Collections
+
+*21-05-2019, finished ..-..-....*										[Go to Top](#top)	[Go to Bottom](#bottom) 
+
+#### Collections
+
+*Interface* `List` and *classes* `ArrayList` and `LinkedList` form part of the *Java Collections framework*.
+
+`Set`s, `Map`s, `Tree`s and `Queue`s are also included in this framework, at the top level of the collections framework is the `Collections` class (a `Map` is not a true collection).
+
+```java
+List<Seat> seats = new LinkedList<>(); seats.add(new Seat("A01"));
+int foundSeat = Collections.binarySearch( seats, new Seat("A01"), null );
+return seats.get(foundSeat).getPrice();
+// Making it generic. Has its drawbacks though,
+//  lot of casting because of methods class Collection does not have,
+//  but interface List does
+Collection<Seat> seats = new LinkedList<>(); seats.add(new Seat("A01"));
+int foundSeat = Collections.binarySearch( ((List) seats), new Seat("A01"), null );
+return ((Seat) ((List) seats).get(foundSeat)).getPrice();
+```
+```java
+// implement Comparable interface and compareTo() method to use these methods
+public class <E> implements Comparable { 
+  @Override
+  public int compareTo(E e) { /* ... */ }   }
+Collections.sort(<List>);
+Collections.reverse(<List>);
+Collections.shuffle(<List>);
+Collections.min(<List>);
+Collections.max(<List>);
+Collections.binarySearch(<List>) // binary search is very efficient.
+```
+
+When *shallow copying* a `List`, the order in the copy may be changed, but the objects in the original and the copy are one, change the object in the copy and it will also be changed in the original.
+
+#### Comparable and Comparator interfaces
+
+When implementing the `Comparable` interface on a class, you implement the `compareTo()` method in that class, returning an int of 1, 0, or -1. This method is used for searching, sorting, etc.
+
+You can also create one or more Comparators
+
+```java
+public class Theatre {  /* ... */
+  // anonymous inner class implementing the Comparator interface
+  // static, available as Theatre.PRICE_ORDER_ASC
+  static final Comparator<Seat> PRICE_ORDER_ASC = new Comparator<Seat>() {
+    @Override
+    public int compare( Seat seat1, Seat seat2 ) { 
+      /* return positive, 0 or negative int */ }   }   }
+/*...*/
+Collections.sort( theatre.getSeats(), Theatre.PRICE_ORDER_ASC);
+```
+
+A Comparator that does not take all fields of an object into account is considered *inconsistent with* `.equals()`. The field(s) compared may be equal, but the objects may not be.
+
+#### Map interface
+
+Map interface is part of the *Collections framework*, but not a collection in the true sense of the word.
+
+It is a collection of *key - value* pairs. The *keys* are unique.
+
+`.put(<key>, <value>)` returns `null` if the *key* did not yet exist, otherwise the old *value* that got overwritten. 
+
+`.putIfAbsent(<key>, <value>)` stores the *key* and *value* if the *key* did not yet exist and returns `null`, otherwise returns the existing *value*.
+
+There is no order in the HashMap, key-value pairs added later may appear earlier in loops.
+
+`.remove(<key>)` if `<key>` is present removes pair and returns old value, otherwise returns `null`.
+
+`.remove(<key>, <value>)` if `<key>` is present and its value equals `<value>`  removes pair and returns `true`, otherwise returns `false`.
+
+`.replace(<key>, <value>)`  if `<key>` exists replaces value and returns old value, otherwise returns `null` .
+
+`replace(<key>, <oldValue>, <newValue>)` if `<key>` is present and its value equals `<oldValue>`  replaces value and returns `true`, otherwise returns `false`.
+
+```java
+Map<String, String> myMap = new HashMap<>();
+myMap.put("key1", "valueA");    // -> null
+myMap.put("key1", "valueB");    // -> "valueA"
+myMap.get("key1");              // -> "valueB"
+myMap.forEach((key, value) -> { /* ... */ });     // not in order of adding pairs
+for (String key: languages.keySet()) { /*...*/ }; // not in order of adding pairs
+myMap.containsKey("key1");      // -> true
+myMap.containsValue("valueX");  // -> false
+myMap.put("key2", "valueC");
+myMap.remove("key2", "valueD"); // -> false
+myMap.remove("key2");           // -> "valueC"
+```
+
+#### Immutable classes
+
+*Immutable classes* can't be changed once they are created. Valuable if you want instances of your classes to be immutable, but also to increase encapsulation and reduce errors if external code is allowed to modify the class instances (objects).
+
+Lecture is somewhat unclear. Do not allow outside code to make any changes to an instances fields.
+
+```java
+public class Location {
+  private final Map<String, Integer> values;
+  public Location(Map<String, Integer> values) {
+    // create new object in stead of just this.values = values;
+    //  otherwise if variable used in code to instantiate this object
+    //   was altered, it would also alter in the instance.
+    this.values = new HashMap<String, Integer>(values);   }
+  public Map<String, Integer> getValues() {
+    // return a new object initialized with instance variable
+    return new HashMap<String, Integer>(this.values));   }   }
+```
+
+<https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html>    for more information.
+
+> 1. Don't provide "setter" methods — methods that modify fields or objects referred to by fields.
+> 2. Make all fields `final` and `private`.
+> 3. Don't allow subclasses to override methods. The simplest way to do this is to declare the class as `final`. A more sophisticated approach is to make the constructor `private` and construct instances in factory methods.
+> 4. If the instance fields include references to mutable objects, don't allow those objects to be changed:
+>    - Don't provide methods that modify the mutable objects.
+>    - Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
 
 
 

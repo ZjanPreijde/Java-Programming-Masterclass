@@ -2,13 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="061a3b4b-a528-44f4-8b6b-f768902cdce1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/S05-08-ReadingUserInput.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-08-ReadingUserInput-Save/src/com/masterclass/Main.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/Connect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/Connect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/GameConnect.md.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/PlayConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../05. MyProjects/03-GameConnect/out/production/03-GameConnect/com/masterclass/PlayConnect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/out/production/S04-05-Exercises/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/out/production/S04-05-Exercises/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-04/S04-05-Exercises/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-05/S05-07-Exercises/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-06/S06-01-Classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-06/S06-01-Classes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-08/S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-08/S08-08-AutoboxUnboxChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/out/production/S09-01-Interfaces/META-INF/S09-01-Interfaces.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/MobilePhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/out/production/S09-01-Interfaces/com/masterclass/MobilePhone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/src/com/masterclass/MobilePhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-01-Interfaces/src/com/masterclass/MobilePhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/out/production/S09-02-InterfacesLinkedLists/com/masterclass/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/out/production/S09-02-InterfacesLinkedLists/com/masterclass/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-02-InterfacesLinkedLists/src/com/masterclass/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/ISaveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/ISaveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/PlayConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Section-09/S09-03-InterfacesChallenge/src/com/masterclass/PlayConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
+            <state relative-caret-position="1098">
               <caret line="61" selection-start-line="61" selection-end-line="61" />
             </state>
           </provider>
@@ -32,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="342">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
@@ -41,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Dimensions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="270">
               <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
             </state>
           </provider>
@@ -50,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Access.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="216">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -59,16 +76,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Door.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
+            <state relative-caret-position="-72">
               <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/masterclass/Window.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
+            <state relative-caret-position="359">
               <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
             </state>
           </provider>
@@ -98,10 +115,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="97" />
-    <option name="y" value="47" />
-    <option name="width" value="1803" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2031" />
+    <option name="y" value="194" />
+    <option name="width" value="1793" />
     <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -112,7 +129,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -136,10 +152,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548677201067" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,78 +203,78 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="32" width="1853" height="1048" extended-state="6" />
+    <frame x="2031" y="194" width="1793" height="789" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958494" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2625216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3297062" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3297062" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4796875" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3297062" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1098">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="342">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Dimensions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Access.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/Door.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="-72">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/masterclass/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="359">
           <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Access.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Dimensions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/masterclass/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>

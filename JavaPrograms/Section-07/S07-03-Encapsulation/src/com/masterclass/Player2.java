@@ -1,16 +1,16 @@
 package com.masterclass;
 
 public class Player2 {
-    // renaming health to hitpoints does not affect the code using this class
+    // renaming health to hitpoints does not affect the code using this class thanks to encapsulation
     private String name, weapon;
 //    private int health = 100;
     private int hitpoints = 100;
 
-    public Player2(String name, String weapon, int health) {
+    public Player2(String name, String weapon, int hitpoints) {
         this.name = name;
         this.weapon = weapon;
-        if ( health > 0 && health <= this.hitpoints) {
-            this.hitpoints = health;
+        if ( hitpoints > 0 && hitpoints <= this.hitpoints) {
+            this.hitpoints = hitpoints;
         }
     }
 

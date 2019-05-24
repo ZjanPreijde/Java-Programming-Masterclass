@@ -4,11 +4,12 @@ package com.masterclass;
     Creation : 2019-02-01, 11:43
 */
 
-public class MobilePhone implements ITelephone {
+public class MobilePhone implements Telephone {
     private int myNumber;
     private boolean isRinging;
     private String phoneType;
     private boolean isOn;
+    // private int batteryLevel, minBatteryLevel // :-)
 
     public MobilePhone( int myNumber ) {
         this.myNumber = myNumber;

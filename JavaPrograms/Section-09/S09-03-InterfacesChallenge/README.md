@@ -75,3 +75,5 @@ The application I created for this challenge will be saved as a project and will
 
 2019-02-11 : Week well spent, learned a lot. Time to 'get back on course'.
 
+My game is totally different than the teacher created, as it turns out.
+

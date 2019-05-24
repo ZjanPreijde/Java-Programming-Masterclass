@@ -6,7 +6,7 @@ public class Main {
         int deskNumber   = 2345677;
         int mobileNumber = 998877665;
 
-        ITelephone myDeskPhone, myMobilePhone;
+        Telephone myDeskPhone, myMobilePhone;
         myDeskPhone   = new DeskPhone( deskNumber );
         myMobilePhone = new MobilePhone( mobileNumber );
 

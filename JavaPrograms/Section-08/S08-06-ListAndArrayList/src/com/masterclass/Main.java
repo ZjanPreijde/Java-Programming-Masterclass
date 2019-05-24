@@ -67,7 +67,7 @@ public class Main {
         }
     }
     private static void modifyItem() {
-        System.out.print("Enter item to change : ");
+        System.out.print("Enter item to change (text): ");
         String currentItem = scanner.nextLine(), newItem = "";
         if (!currentItem.equals("")) {
             System.out.print("Enter new item : ");
@@ -80,7 +80,7 @@ public class Main {
         }
     }
     private static void removeItem() {
-        System.out.print("Enter item to remove : ");
+        System.out.print("Enter item to remove (text): ");
         String item = scanner.nextLine();
         if (!item.equals(" ")) {
             Result result = myList.removeGroceryItem(item);

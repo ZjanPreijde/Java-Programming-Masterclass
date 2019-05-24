@@ -4,7 +4,7 @@ package com.masterclass;
     Creation : 2019-02-01, 10:38
 */
 
-public class DeskPhone implements ITelephone {
+public class DeskPhone implements Telephone {
     private int myNumber;
     private String phoneType;
     private boolean isRinging;
