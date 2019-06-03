@@ -31,4 +31,5 @@ public class Dog {
     public int hashCode() {
         return Objects.hash(name);
     }
+
 }

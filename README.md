@@ -20,8 +20,8 @@ Grr, he added lectures (and exercises) in parts of the course already finished, 
 | [Section 9](#section-09) | Inner and Abstract Classes & Interfaces                    | 13-05-2019 |
 | [Section 10](#section-10) | Java Generics                                              | 14-05-2019 |
 | [Section 11](#section-11) | Naming Conventions and Packages, 'static' and 'final' Keywords. | 21-05-2019 |
-| [Section 12](#section-12) | Java Collections                                           |            |
-| Section 13 | JavaFX                                                     |            |
+| [Section 12](#section-12) | Java Collections                                           | 03-06-2019 |
+| [Section 13](#section-13) | JavaFX                                                     |            |
 | Section 14 | Basic Input & Output including java.util                   |            |
 | Section 15 | Concurrency in Java                                        |            |
 | Section 16 | Lambda Expressions                                         |            |
@@ -2391,7 +2391,7 @@ All static initialization blocks are run before the constructor is called.
 
 ### Section 12, Java Collections
 
-*21-05-2019, finished ..-..-....*										[Go to Top](#top)	[Go to Bottom](#bottom) 
+*21-05-2019, finished 03-06-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 #### Collections
 
@@ -2547,34 +2547,47 @@ Sets are used less often than Lists and Maps, but can be very useful.
 
 #### .equals() and .hashcode()
 
-If you use your own objects as a key in a `Map`, or an element in a `Set`, the class should override the `.equals()` and the `.hashcode()` methods. As a programmer you have to decide what makes your objects unique, in order to maintain uniqueness in `Map`-keys and `Set`-elements.
+If you use your own objects as a key in a `Map`, or an element in a `Set`, the class should override the `.equals()` and the `.hashcode()` methods. As a programmer you have to decide what makes your objects unique, in order to maintain uniqueness in `Map`-keys and `Set`-elements (make the class *immutable*).
 
 E.g. for a planet, the name should be unique, but for a person, that would not be enough.
 
+Use the same field(s) computing the hashcode as you do to determine equality.
+
 ```java
   @Override
-  public boolean equals( Object o ) {
-    if ( this == o ) return true;
-    if ( o == null || getClass() != o.getClass() ) return false;
-    Planet that = (Planet) o;
-    return name.equals( that.name );
-  }
-
+  public boolean equals( Object obj ) {
+    /* if object == object, return true */
+    if ( this == obj ) return true;
+    /* given object null or different class, return false */
+    if ( obj == null || getClass() != obj.getClass() ) return false;
+    /* cast object to this class */
+    Planet that = (Planet) obj;
+    /* determine if it is equal, in this case String.equals() */
+    return name.equals( that.name );   } // equals()
   @Override
   public int hashCode() {
-    return Objects.hash(name);
-  }
+    return Objects.hash(name);   } // hashCode()
 ```
 
 Rules for `.equals()` : <https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object->
 
-There was talk about hashcode collision, something about using hashCode() of a String field of an instance colliding with an actual String.hashCode() for a String with the same value. The teacher added a prime number to the returned hashcode to avoid that.
+There is discussion about using `instanceof` or `getClass()` in `equals()`, regarding subclassing and the symmetry rule :
+
+- `obj1.equals(obj2) == obj2.equals(obj1)`
+
+- <https://stackoverflow.com/questions/596462/any-reason-to-prefer-getclass-over-instanceof-when-generating-equals>
+
+`getClass()` is *inheritance unfriendly*.
+
+When using `instanceof`, it is advisable to make the `equals()` method `final` in the super class, so it can not be overridden in a sub class.
+
+There was talk about *hashcode collision*, something about using hashCode() of a String field of an instance colliding with an actual String.hashCode() for a String with the same value. The teacher added a prime number to the returned hashcode to avoid that.
 
 ```java
-// an instance planet with a field called name with the value "Pluto"
-planet.getName().hashCode(); // would return a int value
-// a String with the value "Pluto"
-"Pluto".hashCode();          // would return the same int value
+// an instance planet with a field called name with the value "Earth"
+planet.getName().hashCode(); // would return an int value
+// a String with the value "Earth"
+"Earth".hashCode();          // would return the same int value
 ```
 
 To avoid that :
@@ -2588,13 +2601,136 @@ To avoid that :
   }
 ```
 
-Not sure if the same applies to `Objects.hash(name)`.
+Not sure if the same applies to `Objects.hash(name)`, this method was used by a generated `equals()/hashCode()` override by IntelliJ (java 7+ template).
+
+#### Sets - Symmetic & Asymmetric
+
+Bulk operations
+
+- `<Set1>.addAll( <Set2> )`
+- `<Set1>.containsAll( <Set2> )`
+- `<Set1>.retainAll( <Set2> )`
+- `<Set1>.removeAll( <Set2> );`
+
+Bulk operations on sets are destructive, they modify the Set they are used on, except `.containsAll()`, it just returns `true` or `false`.
+
+```java
+set1.addAll( set2 );   // set1 altered
+```
+
+```java
+Set<Integer> union = new HashSet<>( set1 ); // pass set1 to constructor
+union.addAll( set2 );  // set1 unaltered
+```
+
+ *Symmetric* and *asymmetric* operations on sets, algebraic terms
+- *symmetric* : an operation on Set A using Set B yields the same result as the same operation on set B using set A.
+- *asymmetric*: operations yield different results.
+
+For instance, finding duplicates in 2 sets (intersection) is *symmetric*, comparing Set A to Set B, or Set B to Set A, will result in the same set of duplicates.
+
+Unifying the sets and removing the duplicates, will also have the same result set, and is *symmetric*.
+
+Removing duplicates from either set will result in different sets (assuming the sets are different) and is *asymmetric*.
+
+*Asymmetric difference* : values contained in Set A, but not in Set B, or vice versa.
+
+- *Set A.removeAll( Set B )*
+- different from :
+- *Set B.removeAll( Set A )*
+
+*Symmetric difference* : values contained in Set A OR Set B, but not both (union minus intersection).
+
+- *Set C = A.retainAll( Set B )*
+- *Set A.addAll( Set B )*
+- *Set A.removeAll ( Set C )*
+- now Set A holds union (Set A + Set B) minus intersection
+- I can switch Set A and Set B and the outcome is the same -> *symmetric*
+
+Check whether Set A is a superset of Set B (Set B is a subset of Set A)
+
+- *Set A.containsAll( set B )*
+- returns `true` or `false`
+
+- If `( Set A.containsAll( set B ) && Set B.containsAll( Set A ) ) == true`, both sets hold same elements.
 
 
 
+In challenge solution *enums* were used :
+
+```java
+public class HeavenlyBody {
+  private final BodyTypes bodyType;
+  public enum BodyTypes { STAR, PLANET, MOON /* ...*/}
+	public HeavenlyBody( String name, double orbitalPeriod , BodyTypes bodyType ) {
+    /* ... */ }   }
+/* now these constants can be referred to as e.g. BodyTypes.MOON */
+public class Moon extends HeavenlyBody {
+    public Moon( String name, double orbitalPeriod ) {
+        super( name, orbitalPeriod, BodyTypes.MOON );   }   }
+```
+
+In `.equals()` comparing `enum`s it is better to use `==` . Something to do with compiletime versus runtime error detection by Java.
+
+```java
+return name.equals(that.getName()) && bodyType == that.getBodyType();
+```
+
+When outputting the value of a field of the enum type, it will print the constants name. BodyTypes.MOON will print out as MOON.
+
+The constants defined in the enum are objects that have methods that can be overwritten. There is also a final method `name()` for enum constants objects. There is also a final method `name()` for enum constants objects, it always returns the name in uppercase.
+
+```java
+  public enum BodyTypes { 
+    STAR, 
+    PLANET, 
+    MOON { public String toString() { return "Moon"; }},
+    /* ...*/    }
+BodyTypes.MOON.toString(); // -> Moon
+BodyTypes.MOON.name();     // -> MOON
+```
+
+#### Sorted Collections
+
+*HashMap* and *HashSet* are in no particular order (*chaotic* according to Oracle).
+
+The *LinkedHashMap* and *LinkedHashSet* maintain *insertion order* (by default).
 
 
+Get value for key, or default value if not found :
+```java
+.getOrDefault( <key>, <defaultValue>)
+```
 
+Create an unmodifiable *view* of a map :
+```java
+javaCollections.unmodifiableMap(<SourceMap>)
+```
+
+Loop through *HashMap* / *LinkedHashMap* :
+```java
+for (Map.Entry<String, StockItem> item : stockList.entrySet()) { /* ... */ }
+```
+
+Create a *LinkedHashMap*, items ordered in order of insertion.
+
+```java
+private final Map<String, StockItem> stockList = new LinkedHashMap<>();
+```
+
+Create a *TreeMap*, items ordered in order defined by *Comparable* / *.compareTo()* or *Comparator* (*natural ordering*). Calls compare method each time an item is added, so more work for system.
+
+```java
+private final Map<StockItem, Integer> shoppingBasket = new TreeMap<>();
+```
+
+In Java, it is OK for a class to have a variable and a method with the same name.
+
+<a class="page-break" name="section-13"></a>
+
+### Section 13, JavaFX
+
+*04-06-2019, finished ..-06-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
 
 
 
