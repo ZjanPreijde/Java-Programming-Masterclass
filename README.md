@@ -2139,7 +2139,7 @@ Reasons to use packages :
 When importing `java.awt.*` like this :
 
 ```java
-import java.awt.*;			// Java Abstract Window Tootkit
+import java.awt.*;			// Java Abstract Window Toolkit
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 ```
@@ -2603,7 +2603,7 @@ To avoid that :
 
 Not sure if the same applies to `Objects.hash(name)`, this method was used by a generated `equals()/hashCode()` override by IntelliJ (java 7+ template).
 
-#### Sets - Symmetic & Asymmetric
+#### Sets - Symmetric & Asymmetric
 
 Bulk operations
 
@@ -2712,6 +2712,12 @@ Loop through *HashMap* / *LinkedHashMap* :
 for (Map.Entry<String, StockItem> item : stockList.entrySet()) { /* ... */ }
 ```
 
+Alternatively :
+
+```java
+stockList.forEach( (key, value) -> { priceList.put(key, value.getPrice());   });
+```
+
 Create a *LinkedHashMap*, items ordered in order of insertion.
 
 ```java
@@ -2731,6 +2737,519 @@ In Java, it is OK for a class to have a variable and a method with the same name
 ### Section 13, JavaFX
 
 *04-06-2019, finished ..-06-2019*										[Go to Top](#top)	[Go to Bottom](#bottom) 
+
+*(We used JavaFX earlier in the course in Section 11 to discuss Packages)*
+
+#### JavaFX Introduction
+
+JavaFX is a serie of APIs that we use to build user interfaces in Java, serie of *packages*, successor to Swing.
+
+Can be used to build user interfaces for desktop applications, internet applications and applications for mobile devices, we'll focus on desktop applications.
+
+JavaFX was part of core JDK for a few releases (8-10), but since JDK11 not any more.
+
+In IntelliJ, when creating a new project, one option is to create a JavaFX project.
+
+Everytime (with SDK11) we create a new project, we have to manually add the JavaFX library to the project.
+
+- From the menu choose *Files* - *Project Structure* - *Platform Settings-Global Libraries*, right-click on *JavaFX*, choose *Add to Modules*, click *OK*, click *OK*.
+
+- Create a *module-info.java* file in the *./src*-folder : right-click on src, select New, choose module-info.java. It will open in the editor, it seems to derive the `module JavaFX` below from the project name (JavaFX-101 in my case). Edit the file and add the `requires` and `opens` lines.
+
+- ```java
+  module JavaFX {
+      requires javafx.fxml;
+      requires javafx.controls;
+      opens sample;
+  }
+  ```
+
+Now it's ready to go.
+
+JavaFX was designed with the *Model-View-Controller* pattern in mind. MVC pattern separates data handling code from UI code.
+
+- *Model*, application data model
+- *View*, UI, the *FXML*, user interface
+- *Controller*, middle man, broker, handles events/user interaction
+
+Don't mix data handling code and UI code in same class. JavaFX does not enforce MVC-pattern, but good practice to follow.
+
+Entry code for application, `public class Main extends Application` (javafx.application)
+
+```java
+// Main.java
+/* imports done here */
+public class Main extends Application { /*...*/ }
+```
+
+Most important methods of Main class are `init()`, `start()` and `stop()`.
+
+- `start()` is declared *abstract* in `Application`, so must be defined/overridden.
+- `init()` and `stop()` can be overridden, they are both empty methods in `Application`. `main()` method calls `launch()` to launch the application, `launch()` runs `init()` first, then `start()`.
+- When the application ends (e.g. user closes the window), `stop()` will be run.
+
+Basic JavaFX application
+
+```java
+// Main.java
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+public class Main extends Application {
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("Hello World");
+        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.show();   }
+  public static void main(String[] args) {
+        launch(args);   }   }
+```
+
+- import modules to be used
+- class Main extends Application
+- start() 
+  - receives the primary stage (top level)
+  - loads the (UI) FXML-file and assigns it to variable root of type Parent
+    - `getClass().getResource( <resource> )`, method of class `Class` that returns full path to given resource (if available), core Java
+  - sets the title of the primary stage
+  - sets the scene for the primary stage by initializing an object of class Scene with values root and dimensions (w,h)
+  - shows the primary stage to the user
+- main(), runs (Application.)launch(), which runs init() and then start()
+
+UI can be loaded from FXML-file or set manually.
+
+```xml
+// sample.fxml
+<GridPane fx:controller="sample.Controller"
+  xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+</GridPane>
+// Main.java
+  Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+```
+
+is equivalent to 
+
+```java
+// Main.java
+	GridPane root = new GridPane();
+  root.setAlignment( Pos.CENTER );
+  root.setVgap( 10 );
+  root.setHgap( 10 );
+```
+
+```java
+// root.getChildren() returns a list, add an element to the list
+  Label greeting = new Label("Hi there!");
+  root.getChildren().add( greeting );
+// or
+  root.getChildren().add( new Label("Hi there!") );
+```
+
+I was having issues with some of the examples in the course,
+
+- `greeting.setTextFill( Color.GREEN )` does not work, it wants a Paint object, but Paint does not have constants for color
+- `greeting.setFont( Font.font("Times New Roman", FontWeight.BOLD, 70) )`, `Font` does not have a method called `font()`
+
+Reason was IntelliJ automatically added `import java.awt`, I removed it and manually added imports
+
+`import javafx.scene.text.Font;`
+`import javafx.scene.paint.Color;`
+`import javafx.scene.text.FontWeight;`
+
+Conflicting packages, can be a bitch.
+
+Using FXML to add the same label
+
+```xml
+    <Label text="Welcome to JavaFX!" textFill="green" >
+        <font>
+            <Font name="Times New Roman bold" size="70"/>
+        </font>
+    </Label>
+```
+
+So, it *is* possible to create UI components through code, but defining them through FXML is best practice, to separate code from UI.
+
+JavaFX has 8 layouts, allow us to add UI components (controls) to a container. These layouts manage positioning and resizing of components.
+
+#### Layouts
+
+- GridPane
+- AnchorPane
+- StackPane
+- HBox
+- VBox
+- FlowPane
+- TitlePane
+- BorderPane
+- TextFlow
+
+Preferred size (width, height) of  controls, controls compute their preferred size based on its contents when they are displayed. E.g. a button stretching itself by default to make button  text visible.
+
+All layouts are extending (abstract?) Pane layout, share many parameters, but also have their own.
+
+It is possible to nest layouts, to create layouts of specific sections of the parent layout.
+
+#### Gridpane Layout
+
+- `<GridPane></GridPane>`
+- `gridLinesVisible="true/false"`
+- `vgap="10"` in pixeld
+- `hgap="10"` in pixels
+
+Gridpane lays out its children in *flexible rows and columns* (grid), position in *grid* is called *cell*.
+
+In the Gridpane layout, each row has the height of the tallest control in that row and each column has the width of the widest control in that column.
+
+`<GridPane gridLinesVisible="true" vgap="10" hgap="10" ...`  shows the grid lines around its rows and columns, and `vgap` and `hgap` between them. `vgap` and `hgap` can have negative values.
+
+Controls in a Gridpane parent need `Gridpane.rowIndex=".."` and `Gridpane.columnIndex=".."` to position them in the grid, otherwise they will be stacked on top of each other. Row and column indices are zero-based.
+
+FXML, set number of columns and their widths in percentage :
+
+```xml
+<Gridpane><columnConstraints>
+    <ColumnConstraints percentWidth="20.0"/>
+    <ColumnConstraints percentWidth="50.0"/>
+    <ColumnConstraints percentWidth="30.0"/>
+</columnConstraints></Gridpane>
+```
+
+Padding, child of GridPane
+
+```xml
+<GridPane alignment="top_center" hgap="10" vgap="10">
+    <padding>  <Insets top="10"/> </padding> </GridPane>
+```
+
+`GridPane.columnSpan=".."` to span component over multiple columns
+
+`GridPane.halignment="LEFT/CENTER/RIGHT"`, horizontal alignment of cell
+
+`GridPane.valignment="BASELINE/BOTTOM/CENTER/TOP"`, vertical alignment of cell
+
+#### HBox/VBox Layout
+
+HBox lays out its children horizontally in a single row and sizes its children to their preferred widths. It will stretch itself in stead of its children if there is horizontal space left.
+
+If its `fillHeight="true"`, it will stretch itself vertically to fill up vertical space, and if  `fillHeight="false"`, it will stretch its children vertically if possible.
+
+HBox layout is often used to lay out a horizontal menu of buttons.
+
+Use `spacing=".."` property  to set spacing between Nodes.
+
+VBox does pretty much the same as HBox, just in a vertical direction.
+
+#### BorderPane layout
+
+One of the most used layouts for top-level windows.
+
+Controls placed into 1 of 5 positions : top, bottom, left, right, center. All positions can be used, if  a position is not used, its takes up no space. Top and bottom are full width. Left, center and right are positioned between top and bottom.
+
+Inside the `<BorderPane>` tag, tags can be placed for the 5 sections `<top>`, `<left>`, `<center>`, `<right>` and `<bottom>`. Inside these sections, you can set the layout for that section by adding e.g. `<HBox>` tags.
+
+Inside the `<BorderPane>` tag, use tags like  `<padding><Insets left="10/></padding>"` to set properties for the BorderPane as a whole.
+
+Alignment, padding etc within the sections is done in the nested layouts per section, not on the BorderPane layout itself.
+
+From within the sections it is possible to ask the Borderpane to position an element.
+
+```xml
+<BorderPane><top><Label text="text" BorderPane.alignment="CENTER"/></top></BorderPane>
+```
+
+There is also a `BorderPane.margin` property, but I can not get that to work : *"Unable to coerce ... to class javafx.geometry.Insets"*.
+
+#### AnchorPane layout
+
+Somewhat similar to BorderPane. BorderPane creates (up to) 5 real areas in its  layout in which content is placed. AnchorPane is divided in 5 areas in order to anchor on, 5 logical areas. Components within the AnchorPane are anchored to up to 5 positions, top, right,  bottom, left, center. It is like setting a fixed margin in those directions (except for center, setting all margins??).
+
+#### FlowPane layout
+
+It is like VBox (single column) and HBox (single row), but when space is up, it will wrap its children. By default it will go from left to right, before wrapping to the next row (property `orientation="HORIZONTAL"`). But can be set to start vertically and wrap to next column (property `orientation="VERTICAL"`). Upon resizing FlowPane will wrap / unwrap its children.
+
+VBox/HBox use `spacing="10"`, FlowPane uses `vgap="10" hgap="10"` like GridPane.
+
+#### TilePane layout
+
+Very similar to FlowPane, but lays out its components in a grid, every cell the same size, components centered in each cell.
+
+#### StackPane layout
+
+All components inside the layout are stacked on top of each other, last one added on top (0th child on bottom). Can be useful for instance to have an image and a text stacked on top of it. It is like having layers of content.
+
+#### Controls :
+
+##### Buttons
+
+Buttons can have text, an image, or both.
+
+```xml
+<Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="Click me!">
+  <font> <Font name="Arial italic" size="20"/> </font>
+  <graphic> <ImageView>
+    <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+  </ImageView> </graphic> </Button>
+```
+
+##### RadioButtons
+
+To define several radio buttons as a group :
+
+```xml
+<fx:define>  <ToggleGroup fx:id="colorToggleGroup"/>  </fx:define>
+<VBox>
+  <RadioButton text="Red" toggleGroup="$colorToggleGroup"/>
+  <RadioButton text="Green" toggleGroup="$colorToggleGroup" selected="true"/>
+  <RadioButton text="Blue" toggleGroup="$colorToggleGroup"/>
+</VBox>
+```
+
+The `$` before `colorToggleGroup` tells JavaFX to look for that id defined in `<fx:define>...`.
+
+##### CheckBox
+
+Checkbox has two normal states, *checked* and *unchecked*, but also an optional *indeterminate* state, represented by a dash in the checkbox. This means the checkbox has not been touched. Once it is checked/unchecked, indeterminate state is no longer possible.
+
+```xml
+<CheckBox text="I really like JavaFX/FXML" selected="false" disable="true"/>
+<CheckBox text="I really hate JavaFX/FXML" indeterminate="true"/>
+<VBox spacing="5">
+  <CheckBox text="Dog"/>
+  <CheckBox text="Pussy" selected="true"/>
+  <CheckBox text="Horse" indeterminate="true"/>
+</VBox>
+```
+
+##### TextField and PasswordField
+
+```xml
+<!-- Has paste, select all, copy, cut capabilities -->
+<TextField text="" promptText="Enter your name"/>
+<!-- Has paste, select all capabilities, password so no copy or cut -->
+<!-- Masks input with bullets -->
+<PasswordField text="" promptText="Enter your password"/>
+```
+
+##### ComboBox
+
+Select in popup from list. Initial value empty, unless specified.
+
+```xml
+<!-- ComboBox -->
+<ComboBox>  <items>  <FXCollections fx:factory="observableArrayList">
+    <String fx:value="Go to first"/>
+    <String fx:value="Go to previous"/>
+    <String fx:value="Go to next"/>
+    <String fx:value="Go to last"/>
+  </FXCollections>  </items>
+  <value>
+    <!-- Setting the default value -->
+    <String fx:value="Go to next"/>
+    <!-- If value is not in list, it will still show -->
+    <String fx:value="Go to hell"/>
+    <!-- Setting the default value again will reset to new value -->
+    <String fx:value="Go to previous"/>
+  </value>
+</ComboBox>
+```
+
+ComboBox can be set to editable. User can enter a value or choose from list.
+
+```xml
+<ComboBox editable="true"> <!-- ... --> </ComboBox>
+```
+
+##### ChoiceBox
+
+Select in popup from list, chosen item gets a *tick* sign in front of it. Initial value empty, unless specified.
+
+Not very different from ComboBox, but apparently ComboBox is better for a large number of  items, and ChoiceBox is better for a small number of items.  Also, ChoiceBox can *not* be set to editable.
+
+Therefore, just stick with ComboBox, it can also be used for a small number of items, who needs the *tick*.
+
+##### Slider
+
+Used to provide the user with a numeric value.
+
+```xml
+<Label text="How happy are you?"/>
+<Slider min="0" max="100" value="50" blockIncrement="10"
+        majorTickUnit="25" minorTickCount="4"
+        showTickLabels="true" showTickMarks="true" snapToTicks="true"/>
+```
+
+##### Spinner
+
+Used to provide the user with a numeric value, has a field showing the value with up and down arrows next to it. Field showing the value can be editable. If edited in field,  `<Enter>` has to be pressed to make the change (and have it validated, check for upper and lower boundaries).
+
+```xml
+<Spinner min="0" max="100" initialValue="50" amountToStepBy="5" editable="true"/>
+```
+
+##### ColorPicker
+
+Button with default color (white if no default supplied), both in color sample and text. When  clicked Color Picker pops up.
+
+```xml
+<ColorPicker prefWidth="270" prefHeight="70" customColors="" styleClass="split-button">
+  <value>
+    <!-- Set default value -->
+    <Color fx:value="red"/>
+    <Color fx:value="#669999"/>
+    <Color fx:value="rgb(0,155,0)"/>
+  </value>
+</ColorPicker>
+```
+
+There is an option to choose a custom color, but when I click on that, execution freezes and I have to stop the process manually in IntelliJ.
+
+##### DatePicker
+
+```xml
+<DatePicker>
+  <value>
+    <!-- Unable to initialize from FXML, except through a custom builder -->
+    <!-- Can be set from the controller -->
+  </value>
+</DatePicker>
+
+```
+
+##### TitledPane / Accordion
+
+Name ends on *Pane*, but it is not a layout. It is a panel the width of its parent, with an arrow to collapse or expand the content. The content consists of 1 or more *Nodes*.
+
+```xml
+<TitledPane text="(Im)press me to show you my content"
+            collapsible="true" animated="true" expanded="false">
+  <Label text="Sometimes I'm hidden, other times not"/>
+</TitledPane>
+```
+
+Useful alone, but especially when combined into an *Accordion*, a group of titled panes where only 1 or zero panes can  be expanded at the time. By default none is expanded.
+
+```xml
+<Accordion expandedPane="$tp2"><panes> <!-- tp2 expanded by default -->
+  <TitledPane text="Pane1" fx:id="tp1"> <Label text="Content1"/> </TitledPane>
+  <TitledPane text="Pane2" fx:id="tp2"> <Label text="Content2"/> </TitledPane>
+  <TitledPane text="Pane2" fx:id="tp3"> <Label text="Content3"/> </TitledPane>
+  <expandedPane> 
+    <!-- I don't know how to set default expanded here -->
+  </expandedPane>
+  </panes></Accordion>
+```
+
+#### Events and Event Handlers
+
+A procedural driven program versus an event driven program : 
+
+- Applications without an user interface are *procedural driven*. Run from entry point to the last line of code.
+- User interface applications are *event driven*, user dictates what code will be run and when by clicking on controls.
+
+When the user interacts with a control (click, type), an *event* is raised on the *UI thread*. The UI thread will check if an *event handler* (aka *event listener*) has been defined for that particular event.
+
+`public class Controller` in `Controller.java` handles the user input (MVC-pattern).
+
+Add a `@FXML` annotation to the event handler, not necessary, but makes it clear to other developers what is does.
+
+I think event handlers can always be defined as returning no value (`void`).
+
+Use the event passed into the handler to find out the source of the event using `.getSource()`. Makes it possible to use the same handler for multiple controls.
+
+```xml
+<!-- sample.fxml -->
+<Button text="Say Hello" fx:id="helloButton" onAction="#handleButtonClick" 
+        defaultButton="true" cancelButton="false" />
+<Button text="Stop Program" onAction="#handleButtonClick" />
+<TextField onAction="handleTextInput"/>
+```
+
+```java
+// Controller.java, class Controller
+  @FXML    /* add annotation for clearity */
+	public void handleButtonClick(ActionEvent event) {
+    /* event.eventType -> "ACTION" 
+       event.getSource().getClass() -> "class javafx.scene.control.Button
+       event.getSource().getTypeSelector() -> "Button" */
+    Button button = (Button) event.getSource();
+    /* For "Say Hello" button :
+       button.id -> "helloButton"
+       button.isDefaultButton() -> true
+       button.isCancelButton() -> false
+       button.getText() -> "Say Hello" */
+    if (button.getText() == "Stop Program") { Platform.exit(); }   }
+```
+
+To associate Controller variables with input fields we must use the `@FXML` annotation.
+
+```xml
+<!-- sample.fxml -->
+<TextField fx:id="firstName"/> <TextField fx:id="lastName"/>
+```
+
+```java
+// Controller.java
+public class Controller extends Application {
+  @FXML   /* add annotation to associate variables with controls */
+  private TextField firstName, lastName;
+  @FXML   /* every declaration line needs annotation */
+  private Button helloButton;   }
+```
+
+The controller can define a `initialize()` method, which will be called at initialization.
+
+```java
+  public void initialize() {
+    boolean disable = firstName.getText().isEmpty() && lastName.getText().isEmpty();
+    helloButton.setDisable( disable );   }
+```
+
+Event handlers are run on the *UI thread*, so as long as the handler is handling an event, the UI thread is 'stuck', unable to react to other events or user interaction. To illustrate, we used this in a handler :
+
+```java
+try { Thread.sleep(5000); } catch(InterruptedException excEvent) { /* I don't care! */ }
+```
+
+So, to prevent having an unresponsive interface, it is important to handle things as quick as possible in the event handlers.
+
+#### Thread class and Runnable interface
+
+To run longer lasting tasks without slowing down the user interface, run  those tasks on another *thread*.
+
+The thread running the task on the background, is referred to as the ... *background thread* (as opposed to the *UI thread*).
+
+The background thread notifies the UI when it is done.
+
+JavaFX does not allow for changes to the UI from a background thread for safety/integrity reasons. These changes can be done by creating yet a new thread and passing it to `Platform.runLater()`. It will then be run in the UI thread when the background thread has finished.
+
+```java
+Runnable task = new Runnable() {
+  @Override
+  public void run() {
+    try {
+      /* Running in the background thread */
+      Thread.sleep(5000);
+      Platform.runLater(new Runnable() {
+        @Override
+        public void run() {
+          /* Running in the UI thread */
+          lblProgress.setText("Task completed");
+        }
+      })
+    } catch(InterruptedException excEvent) { /* ... */ }
+  }
+};
+lblProgress.setText("Starting task ...");
+new Thread(task).start();
+```
+
+JavaFX also has other tools to run background threads and communicate with the UI, the JavaFX.concurrent package, we'll  get to that later on.
+
+
 
 
 

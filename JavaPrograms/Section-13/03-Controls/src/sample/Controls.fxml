@@ -1,0 +1,195 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<!--<BorderPane fx:controller="sample.Controller"-->
+<!--            xmlns:fx="http://javafx.com/fxml">-->
+<!--    <bottom>-->
+<!--        <HBox alignment="BOTTOM_CENTER">-->
+<!--            <padding>-->
+<!--                <Insets bottom="10" right="10" left="10"/>-->
+<!--            </padding>-->
+<!--            <Button text="OK" style="-fx-background-color: lightgrey;" defaultButton="true" />-->
+<!--            <Button text="Cancel" style="-fx-background-color: lightgrey;" cancelButton="true" />-->
+<!--        </HBox>-->
+<!--    </bottom>-->
+<!--</BorderPane>-->
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import java.lang.Integer?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.paint.Color?>
+<?import java.util.Date?>
+<?import javafx.scene.control.skin.SplitPaneSkin.Content?>
+<GridPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxlm"
+          alignment="TOP_LEFT" hgap="20" vgap="40" gridLinesVisible="false">
+    <padding>
+        <Insets left="20" top="20"/>
+    </padding>
+
+    <Button GridPane.rowIndex="0" GridPane.columnIndex="0" text="You can click my button any time!">
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/TipOfTheDay24.gif"/>
+            </ImageView>
+        </graphic>
+    </Button>
+    <Label GridPane.rowIndex="0" GridPane.columnIndex="1" text="This is a label" >
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/Information24.gif"/>
+            </ImageView>
+        </graphic>
+    </Label>
+    <Label GridPane.rowIndex="1" GridPane.columnIndex="1" text="This is a label, Font name=Arial italic not working"
+           textFill="blue" wrapText="true">
+        <font>
+            <Font name="Ani" size="18"/>
+        </font>
+        <graphic>
+            <ImageView>
+                <Image url="@/toolbarButtonGraphics/general/Information24.gif"/>
+            </ImageView>
+        </graphic>
+    </Label>
+
+    <VBox GridPane.rowIndex="1" GridPane.columnIndex="0" spacing="5">
+        <fx:define>
+            <ToggleGroup fx:id="colorToggleGroup"/>
+        </fx:define>
+        <RadioButton text="Red" toggleGroup="$colorToggleGroup"/>
+        <RadioButton text="Green" toggleGroup="$colorToggleGroup" selected="true"/>
+        <RadioButton text="Blue" toggleGroup="$colorToggleGroup"/>
+    </VBox>
+
+    <CheckBox GridPane.rowIndex="2" GridPane.columnIndex="1"
+              text="I really like JavaFX/FXML" selected="true" disable="true"/>
+    <CheckBox GridPane.rowIndex="3" GridPane.columnIndex="1"
+            text="I really hate JavaFX/FXML" selected="true" indeterminate="true"/>
+    <VBox GridPane.rowIndex="4" GridPane.columnIndex="0" spacing="5">
+        <CheckBox text="Dog"/>
+        <CheckBox text="Pussy" selected="true" disable="true"/>
+        <CheckBox text="Horse" indeterminate="true"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="4" GridPane.columnIndex="1" spacing = "5">
+        <ToggleButton text="Toggle Me"/>
+        <ToggleButton text="Toggle You"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="5" GridPane.columnIndex="0">
+        <HBox>
+            <Label text = "Name : "/>
+            <TextField text="" promptText="Enter your name"/>
+        </HBox>
+        <HBox>
+            <Label text="Password : "/>
+            <PasswordField text="" promptText = "Enter your password"/>
+        </HBox>
+        <TilePane prefColumns="2">
+            <Label TilePane.alignment="CENTER_LEFT" text = "Name :"/>
+            <TextField promptText="Enter your name"/>
+            <Label TilePane.alignment="CENTER_LEFT" text = "Password :"/>
+            <TextField promptText="Enter your password"/>
+        </TilePane>
+    </VBox>
+
+    <VBox GridPane.rowIndex="5" GridPane.columnIndex="1" GridPane.valignment="TOP">
+        <ComboBox>
+            <!-- editable="true" -->
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Go to first"/>
+                    <String fx:value="Go to previous"/>
+                    <String fx:value="Go to next"/>
+                    <String fx:value="Go to last"/>
+                </FXCollections>
+            </items>
+            <value>
+                <!-- Setting the default value -->
+                <String fx:value="Go to next"/>
+                <String fx:value="Go to previous"/>
+            </value>
+
+        </ComboBox>
+        <ChoiceBox>
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Go to first"/>
+                    <String fx:value="Go to previous"/>
+                    <String fx:value="Go to next"/>
+                    <String fx:value="Go to last"/>
+                </FXCollections>
+            </items>
+            <value>
+                <!-- Setting the default value -->
+                <String fx:value="Go to next"/>
+            </value>
+        </ChoiceBox>
+
+    </VBox>
+
+    <VBox GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.valignment="TOP">
+        <Label text="How happy are you?"/>
+        <Slider min="0" max="100" value="50" blockIncrement="10" majorTickUnit="25" minorTickCount="4"
+                showTickLabels="true" showTickMarks="true" snapToTicks="true">
+
+        </Slider>
+    </VBox>
+    <HBox GridPane.rowIndex="6" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+        <Label text="How happy are you really?   " GridPane.valignment="CENTER"/>
+        <Spinner min="0" max="100" initialValue="50" amountToStepBy="5"
+                 editable="true"
+                 prefWidth="70" GridPane.valignment="CENTER">
+        </Spinner>
+    </HBox>
+
+    <VBox GridPane.rowIndex="7" GridPane.columnIndex="0" GridPane.valignment="TOP">
+        <Label text="What is your favorite color?  "/>
+        <ColorPicker prefWidth="170" prefHeight="70" styleClass="split-button">
+            <value>
+                <Color fx:value="red"/>
+                <Color fx:value="#669999"/>
+                <Color fx:value="rgb(0,155,0)"/>
+            </value>
+
+        </ColorPicker>
+    </VBox>
+
+    <VBox GridPane.rowIndex="7" GridPane.columnIndex="1" GridPane.valignment="TOP">
+        <DatePicker>
+            <value>
+                <!-- Unable to initialize from FXML, unless you create and register a custom builder -->
+            </value>
+        </DatePicker>
+    </VBox>
+
+    <VBox GridPane.rowIndex="8" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <Accordion expandedPane="$tp2">
+            <panes>
+                <TitledPane text="This is a TitledPane 1" fx:id="tp1"
+                            collapsible="true" animated="true" expanded="true">
+                    <Label text="Sometimes I'm hidden, other times not" alignment="CENTER_LEFT"/>
+                </TitledPane>
+                <TitledPane text="This is a TitledPane 2" fx:id="tp2"
+                            collapsible="true" animated="true" expanded="false">
+                    <Label text="Sometimes I'm hidden, other times not" alignment="CENTER_LEFT"/>
+                </TitledPane>
+                <TitledPane text="This is a TitledPane 3" fx:id="tp3"
+                            collapsible="true" animated="true" expanded="false">
+                    <Label text="Sometimes I'm hidden, other times not" alignment="CENTER_LEFT"/>
+                </TitledPane>
+            </panes>
+            <expandedPane>
+<!--                <TitledPane fx:id="$tp2"/>-->
+            </expandedPane>
+        </Accordion>
+    </VBox>
+
+</GridPane>

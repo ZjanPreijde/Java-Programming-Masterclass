@@ -1,0 +1,22 @@
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.TilePane?>
+<TilePane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml"
+          orientation="VERTICAL" vgap="10" hgap="10">
+    <padding>
+        <Insets top="10" bottom="10" left="10" right="10"/>
+    </padding>
+    <Button text="Button 1"/>
+    <Button text="Button Two"/>
+    <Button text="Button One+One+One"/>
+    <Button text="Button 4"/>
+    <Button text="Button 5"/>
+    <Button text="Button 6"/>
+    <Button text="Button 7"/>
+    <Button text="Button 8"/>
+    <Button text="Button 9"/>
+    <Button text="Button 2 times 5"/>
+
+</TilePane>

@@ -55,8 +55,14 @@ public class StockList {
 
     public Map<String, Double> priceList() {
         Map<String, Double> priceList = new LinkedHashMap<>();
-        for (Map.Entry<String, StockItem> item : stockList.entrySet()) {
-            priceList.put( item.getKey(), item.getValue().getPrice());
+        if (false) {
+            stockList.forEach( (key, value) -> {
+                priceList.put(key, value.getPrice());
+            });
+        } else {
+            for (Map.Entry<String, StockItem> item : stockList.entrySet()) {
+                priceList.put( item.getKey(), item.getValue().getPrice());
+            }
         }
         return Collections.unmodifiableMap( priceList );
     }
